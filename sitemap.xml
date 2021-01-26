@@ -2,7 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://shenyanwu.gitee.io/2021/01/26/hello-world/</loc>
+    <loc>https://shenyanwu.gitee.io/friends/index.html</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shenyanwu.gitee.io/contact/index.html</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shenyanwu.gitee.io/about/index.html</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shenyanwu.gitee.io/categories/index.html</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shenyanwu.gitee.io/tags/index.html</loc>
+    
+    <lastmod>2021-01-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shenyanwu.gitee.io/posts/16107/</loc>
     
     <lastmod>2021-01-26</lastmod>
     
