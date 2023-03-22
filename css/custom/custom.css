@@ -1,0 +1,1214 @@
+/* 全局伪类变量 */
+:root {
+    --trans-light: rgba(255, 255, 255, 0.5);
+    --trans-dark: rgba(25, 25, 25, 0.5);
+    --border-style: 1px solid rgba(169, 169, 169, 0.7);
+    --backdrop-filter: blur(5px) saturate(150%);
+}
+
+
+/* 全局黑夜适配变量 */
+
+
+/* ********************************************************************************************************************************* */
+/* 字体导入 */
+@font-face {
+    font-family: LXGW;
+    src: url(https://shenyanwu.oss-cn-guangzhou.aliyuncs.com/fonts/LXGWWenKaiRegular.woff2);
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: TTQHB;
+    src: url(https://shenyanwu.oss-cn-guangzhou.aliyuncs.com/fonts/%E7%94%9C%E7%94%9C%E5%9C%88%E6%B5%B7%E6%8A%A5%E5%AD%97%E4%BD%93.woff2);
+    font-display: swap;
+}
+
+
+/* 除主页外页面的字体样式 */
+#page-site-info #site-title{
+    font-family: LXGW !important;
+}
+
+/* ********************************************************************************************************************************* */
+/* 文章双栏分布启动时会出现此翻页按钮bug,此样式删除bug */
+/* 翻页按钮居中 */
+#pagination {
+    width: 100%;
+    margin: auto;
+}
+/* 文章底部 Github 徽标 */
+.github-badge img:hover {
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ********************************************************************************************************************************* */
+/* 页脚与头图透明 */
+#footer {
+    background: transparent !important;
+}
+#page-header {
+    background: transparent !important;
+}
+/* 白天模式遮罩透明 */
+#footer::before {
+    background: transparent !important;
+}
+#page-header::before {
+    background: transparent !important;
+}
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+    background: transparent !important;
+}
+
+[data-theme="dark"] #page-header::before {
+    background: transparent !important;
+}
+
+/* ********************************************************************************************************************************* */
+/* 一级菜单居中 */
+#nav .menus_items {
+    position: absolute !important;
+    width: max-content !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+#nav .menus_items .menus_item {
+    padding: 0 0 0 8px !important;
+}
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+    display: flex !important;
+}
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+    left: -125px;
+}
+/* 文章封面加圆角 */
+#recent-posts > .recent-post-item .post_cover {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+/* ********************************************************************************************************************************* */
+/* 侧边栏个人信息卡片动态渐变色 */
+/* #aside-content > .card-widget.card-info {
+    background: linear-gradient(
+      -45deg,
+      #e8d8b9,
+      #eccec5,
+      #a3e9eb,
+      #bdbdf0,
+      #eec1ea
+    );
+    box-shadow: 0 0 5px rgb(66, 68, 68);
+    position: relative;
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite !important;
+}
+@-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+@-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+} */
+  
+/* 黑夜模式适配 */
+[data-theme="dark"] #aside-content > .card-widget.card-info {
+    background: #191919ee;
+}
+  
+/* 个人信息Follow me按钮 */
+#aside-content > .card-widget.card-info > #card-info-btn {
+    background-color: #3eb8be;
+    border-radius: 8px;
+}
+
+/* ********************************************************************************************************************************* */
+/* 黑夜霓虹灯主页名字效果 */
+/* 日间模式不生效 */
+[data-theme="light"] #site-name,
+[data-theme="light"] #site-title,
+[data-theme="light"] #site-subtitle,
+[data-theme="light"] #post-info {
+  animation: none;
+}
+/* 夜间模式生效 */
+[data-theme="dark"] #site-name,
+[data-theme="dark"] #site-title {
+  animation: light_15px 10s linear infinite;
+}
+[data-theme="dark"] #site-subtitle {
+  animation: light_10px 10s linear infinite;
+}
+[data-theme="dark"] #post-info {
+  animation: light_5px 10s linear infinite;
+}
+/* 关键帧描述 */
+@keyframes light_15px {
+  0% {
+    text-shadow: #5636ed 0 0 15px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 15px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 15px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 15px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 15px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 15px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 15px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 15px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 15px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 15px;
+  }
+}
+
+@keyframes light_10px {
+  0% {
+    text-shadow: #5636ed 0 0 10px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 10px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 10px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 10px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 10px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 10px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 10px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 10px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 10px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 10px;
+  }
+}
+
+@keyframes light_5px {
+  0% {
+    text-shadow: #5636ed 0 0 5px;
+  }
+  12.5% {
+    text-shadow: #11ee5e 0 0 5px;
+  }
+  25% {
+    text-shadow: #f14747 0 0 5px;
+  }
+  37.5% {
+    text-shadow: #f1a247 0 0 15px;
+  }
+  50% {
+    text-shadow: #f1ee47 0 0 5px;
+  }
+  50% {
+    text-shadow: #b347f1 0 0 5px;
+  }
+  62.5% {
+    text-shadow: #002afa 0 0 5px;
+  }
+  75% {
+    text-shadow: #ed709b 0 0 5px;
+  }
+  87.5% {
+    text-shadow: #39c5bb 0 0 5px;
+  }
+  100% {
+    text-shadow: #5636ed 0 0 5px;
+  }
+}
+
+/* ********************************************************************************************************************************* */
+/* 夜间背景宇宙星光  */
+#universe{
+    display: block;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */
+    z-index: -1;
+}
+
+/* ********************************************************************************************************************************* */
+/* 调整整体页面样式，适配夜间模式 */
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item {
+    background: var(--trans-light);
+    backdrop-filter: var(--backdrop-filter);
+    border-radius: 25px;
+    border: var(--border-style);
+} 
+/* 首页侧栏卡片 */
+#aside-content .card-widget {
+    background: var(--trans-light);
+    backdrop-filter: var(--backdrop-filter);
+    border-radius: 18px;
+    border: var(--border-style);
+} 
+/* 文章页、归档页、普通页面 */
+div#post,
+div#page,
+div#archive {
+    background: var(--trans-light);
+    backdrop-filter: var(--backdrop-filter);
+    border: var(--border-style);
+    border-radius: 20px;
+}
+/* 导航栏 */
+#page-header.nav-fixed #nav {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: var(--backdrop-filter);
+}
+[data-theme="dark"] #page-header.nav-fixed #nav {
+    background: rgba(0, 0, 0, 0.7) !important;
+}
+/* 页脚字体颜色 */
+#footer-wrap, #footer-wrap a {
+    color: var(--font-color);
+}
+/* 网站标题字体颜色 */
+#page-header #site-title {
+    color: var(--font-color);
+}
+#nav a {
+    color: var(--font-color);
+}
+#nav a:hover {
+    color: #3eb8be;
+}
+/* 网站 post 页面字体颜色 */
+#post-info .post-title, #post-info #post-meta{
+    color: var(--font-color);
+}
+/* post 页面顶部下滑横线 */
+#post-info .post-title:after {
+    border-bottom: 1px solid #78818a; 
+    content: '';
+    width: 10em;
+    display: block;
+    margin: 0.5em auto;
+    height: 1px;
+}
+/* 右侧昼夜转换 月亮图标居中 */
+a.icon-V.hidden svg {
+  margin-top: 10%;
+}
+/* 夜间模式遮罩 */
+[data-theme="dark"] #recent-posts > .recent-post-item,
+[data-theme="dark"] #aside-content .card-widget,
+[data-theme="dark"] div#post,
+[data-theme="dark"] div#archive,
+[data-theme="dark"] div#page {
+    background: var(--trans-dark);
+}
+/* 夜间模式页脚页头遮罩透明 */
+[data-theme="dark"] #footer::before {
+    background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+    background: transparent !important;
+}
+/* 阅读模式 */
+.read-mode #aside-content .card-widget {
+    background: rgba(158, 204, 171, 0.5) !important;
+}
+.read-mode div#post {
+    background: rgba(158, 204, 171, 0.5) !important;
+}
+/* 夜间模式下的阅读模式 */
+[data-theme="dark"] .read-mode #aside-content .card-widget {
+    background: rgba(25, 25, 25, 0.9) !important;
+    color: #ffffff;
+}
+[data-theme="dark"] .read-mode div#post {
+    background: rgba(25, 25, 25, 0.9) !important;
+    color: #ffffff;
+}
+
+/* ********************************************************************************************************************************* */
+/* 相关图标引入,暂时使用alicdn,不稳定后可下载下来使用 */
+/* Socialicon 社交个人信息图标 */
+/* @import url(//at.alicdn.com/t/c/font_3949965_zlxge6oopd.css); */
+/* 已在配置项 inject 中引入 */
+/* 调整 SocialIcon Size */
+svg.social_icon {
+    width: 1.20em;
+    height: 1.20em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+/* icon 也可以在pug中已使用了内联样式调整 */
+svg.menu_icon {
+    width: 1.30em;
+    height: 1.30em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+/* 调整 PostIcon Size */
+svg.post_icon {
+  width: 1.30em;
+  height: 1.30em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+/* ********************************************************************************************************************************* */
+/* 文章页顶部进度条,js在配置项中引入 */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    z-index: 2000;
+    position: fixed;
+    margin: auto;
+    top: 4px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    border-radius: 8px;
+    width: 7rem;
+    background: #eaecf2;
+    border: 1px #e3e8f7;
+    overflow: hidden
+}
+
+.pace-inactive .pace-progress {
+    opacity: 0;
+    transition: .3s ease-in
+}
+
+.pace .pace-progress {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    max-width: 200px;
+    position: absolute;
+    z-index: 2000;
+    display: block;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    /* linear-gradient(to right, #3494e6, #ec6ead) */
+    background: linear-gradient(to right, #43cea2, #3866ca);
+    animation: gradient 2s ease infinite;
+    background-size: 200%
+}
+
+.pace.pace-inactive {
+    opacity: 0;
+    transition: .3s;
+    top: -8px
+}
+
+/* ********************************************************************************************************************************* */
+/* 主页个人信息状态小圈样式 */
+.card-info-avatar .author-status-box {
+    position: absolute;
+    bottom: 0;
+    left: calc(100% - 28px);
+    width: 28px;
+    height: 28px;
+    border: 1px solid #d0d7de;
+    border-radius: 2em;
+    background-color: #f8f8f8f8;
+    transition: 0.4s;
+    overflow: hidden;
+}
+[data-theme="dark"] .card-info-avatar .author-status-box {
+    background-color: #222222f2;
+    border: 1px solid #5c6060;
+}
+.card-info-avatar .author-status-box .author-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    padding: 0 5px;
+}
+.card-info-avatar .author-status-box:hover {
+    width: 105px;
+}
+.card-info-avatar .author-status-box:hover .author-status span {
+    width: 105px;
+    margin-left: 4px;
+}
+.card-info-avatar .author-status-box .author-status span {
+    width: 0;
+    font-size: 12px;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: 0.4s;
+}
+.card-widget .card-info-avatar {
+    display: inline-block;
+    position: relative;
+}
+
+/* ********************************************************************************************************************************* */
+/* 个人信息卡片背景图 */
+[data-theme="light"] #aside-content > .card-widget.card-info {
+    background-image: url(https://shenyanwu.oss-cn-guangzhou.aliyuncs.com/image/background_author.png);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100%;
+    background-position: top;
+}
+[data-theme="dark"] #aside-content > .card-widget.card-info {
+    background-image: url(https://sourcebucket.s3.ladydaily.com/img/aurora.webp);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100%;
+}
+
+/* ********************************************************************************************************************************* */
+/* 头像鼠标 hover 动效 */
+.avatar-img img:hover{
+  transform: none;
+  animation: avatar-img-anime 0.5s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes avatar-img-anime {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+/* 头像呼吸灯 */
+[data-theme="light"] .avatar-img {
+    animation: huxi_light 4s ease-in-out infinite;
+}
+[data-theme="light"] .avatar-img:hover {
+    animation: none;
+}
+[data-theme="dark"] .avatar-img {
+    animation: huxi_dark 4s ease-in-out infinite;
+}
+@keyframes huxi_light {
+    0% {
+      box-shadow: 0px 0px 1px 1px #e9f5fa;
+    }
+    50% {
+      box-shadow: 0px 0px 5px 5px #e9f5fa;
+    }
+    100% {
+      box-shadow: 0px 0px 1px 1px #e9f5fa;
+    }
+}
+@keyframes huxi_dark {
+    0% {
+      box-shadow: 0px 0px 1px 1px #39c5bb;
+    }
+    50% {
+      box-shadow: 0px 0px 5px 5px #39c5bb;
+    }
+    100% {
+      box-shadow: 0px 0px 1px 1px #39c5bb;
+    }
+}
+
+/* ********************************************************************************************************************************* */
+/* 隐藏侧边栏时 Page 页面宽度调整 */
+.layout.hide-aside {
+    max-width: 1400px ;
+}
+
+/* ********************************************************************************************************************************* */
+/* 友链一行显示更多 */
+.site-card {
+    width: calc(100% / 5 - 16px) !important;
+    border-radius: 18px !important;
+}
+.site-card .img {
+    height: 150px !important;
+    border-radius: 18px !important;
+}
+/* 适应宽度不同的设备 */
+@media screen and (max-width: 1200px) {
+    .site-card {
+      width: calc(100% / 4 - 16px) !important;
+    }
+}
+@media screen and (max-width: 900px) {
+    .site-card {
+      width: calc(100% / 3 - 16px) !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .site-card {
+      width: calc(100% / 2 - 16px) !important;
+    }
+}
+/* 卡片下方字对齐右移 */
+.site-card .info .title{
+  margin-left: 45px;
+}
+.site-card .info .desc {
+  margin-left: 45px;
+}
+
+/* ********************************************************************************************************************************* */
+/* 头像样式加载栏 */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    z-index: 2000;
+    position: fixed;
+    margin: auto;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    border-radius: 8px;
+    width: 4rem;
+    background: #eaecf2;
+    border: 1px #e3e8f7;
+    overflow: hidden;
+}
+.pace-inactive .pace-progress {
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+.pace .pace-progress {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    max-width: 200px;
+    position: absolute;
+    z-index: 2000;
+    display: block;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 1.5s ease infinite;
+    background-size: 200%;
+} 
+.pace.pace-inactive {
+    opacity: 0;
+    transition: 0.3s;
+    top: -8px;
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+/* 自定义加载头像 */
+.loading-img {
+    background: url(https://cdn.chrelyonly.cf/gh/Shenyan-Wu/BlogImages/img/ShenyanWu.png) no-repeat center center;
+    background-size: cover;
+}
+
+/* ********************************************************************************************************************************* */
+/*哔哩哔哩视频适配*/
+.aspect-ratio {
+    position: relative;
+    width: 90%;
+    height: auto;
+    padding-bottom: 75%;
+    margin: 3% auto;
+    text-align: center;
+}
+.aspect-ratio iframe {
+    position: absolute;
+    width: 100%;
+    height: 86%;
+    left: 0;
+    top: 0;
+}
+
+/* ********************************************************************************************************************************* */
+/* 音乐播放页面CSS */
+body[data-type=music] #page{
+  width: 100% !important;
+}
+
+#page:has(#anMusic-page) {
+  border: 0;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+#an_music_bg {
+  display: none;
+  filter: blur(63px);
+  opacity: 0.6;
+  position: fixed;
+  z-index: -999;
+  background-attachment: local;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  transform: rotate(0deg);
+}
+body:has(#anMusic-page) #an_music_bg {
+  display: block;
+}
+
+body:has(#anMusic-page) {
+  background: rgb(13, 13, 13);
+}
+
+#anMusic-page meting-js .aplayer {
+  display: flex;
+  flex-direction: row-reverse;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: none;
+}
+
+body:has(#anMusic-page) #web_bg {
+  display: none;
+}
+body:has(#anMusic-page) #footer,
+body:has(#anMusic-page) #nav-music {
+  display: none;
+}
+
+#anMusic-page .aplayer-body {
+  width: 40%;
+  height: 75vh;
+}
+
+#anMusic-page ol > li:hover {
+  background: #ffffff33;
+  border-radius: 6px;
+}
+#anMusic-page .aplayer-pic {
+  float: none;
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+#anMusic-page .aplayer-info {
+  margin: 0 20px 0 20px;
+  border-bottom: none;
+}
+
+#anMusic-page .aplayer-info .aplayer-music {
+  text-align: center;
+  height: auto;
+  margin: 15px;
+}
+
+#anMusic-page .aplayer-info .aplayer-music .aplayer-author,
+#anMusic-page .aplayer-info .aplayer-music .aplayer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+#anMusic-page .aplayer-info .aplayer-lrc {
+  height: 220%;
+  margin-top: 80px;
+  mask-image: linear-gradient(to bottom, #000, #000, #000, #000, #000, #000, #000, #000, #000, #000, #0000, #0000);
+}
+#anMusic-page .aplayer-info .aplayer-lrc p {
+  font-size: 14px;
+  color: #fff;
+}
+#anMusic-page .aplayer .aplayer-lrc:after,
+#anMusic-page .aplayer .aplayer-lrc:before {
+  display: none;
+}
+
+/* 控制器 */
+#anMusic-page .aplayer-info .aplayer-controller {
+  position: fixed;
+  max-width: 1500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: -40px;
+}
+#anMusic-page .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+  margin: 0 160px 0 150px;
+}
+#anMusic-page .aplayer-info .aplayer-controller .aplayer-played {
+  background: var(--anzhiyu-white) !important;
+}
+#anMusic-page .aplayer-info .aplayer-controller .aplayer-thumb {
+  -webkit-transform: none;
+  transform: none;
+  background: #fff !important;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-back,
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-forward,
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-play {
+  display: inline;
+  position: fixed;
+}
+#anMusic-page .aplayer-info .aplayer-time {
+  position: absolute;
+  width: 100%;
+  bottom: 21px;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-time-inner {
+  margin-right: 18px;
+  margin-top: -8px;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-back {
+  position: absolute;
+  left: 0;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-play {
+  position: absolute;
+  left: 40px;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-forward {
+  position: absolute;
+  left: 80px;
+}
+
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 15px;
+}
+
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-menu {
+  display: none;
+}
+
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon path {
+  fill: var(--anzhiyu-white);
+  opacity: 0.8;
+}
+
+#anMusic-page .aplayer-list {
+  width: 60%;
+  max-height: none !important;
+  height: 100%;
+}
+#anMusic-page ol {
+  max-height: 75vh !important;
+  padding-right: 25px;
+}
+#anMusic-page ol > li {
+  border-top: 1px solid transparent;
+  font-size: 14px;
+}
+#anMusic-page ol > li.aplayer-list-light {
+  background: rgb(255 255 255 / 20%);
+  border-radius: 6px;
+}
+
+#anMusic-page ol > li span {
+  color: var(--anzhiyu-white);
+}
+
+#anMusic-page ol > li.aplayer-list-light .aplayer-list-cur {
+  display: none;
+}
+#anMusic-page ol > li span.aplayer-list-author {
+  opacity: 0.6;
+}
+
+/* 导航栏 */
+.page:has(#anMusic-page) #nav {
+  backdrop-filter: none !important;
+  background: 0 0 !important;
+  border-bottom: none !important;
+}
+
+.page:has(#anMusic-page) #page-header.not-top-img #nav a,
+.page:has(#anMusic-page) #page-header #nav .back-home-button {
+  color: var(--anzhiyu-white);
+}
+
+body:has(#anMusic-page) .s-sticker div {
+  color: var(--anzhiyu-white) !important;
+}
+
+body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-loop {
+  margin-right: 15px;
+}
+
+[data-theme="dark"] .page:has(#anMusic-page) #page-header:before {
+  background-color: transparent;
+}
+
+/* **** 移动端样式 ***** */
+@media screen and (max-width: 768px) {
+  body:has(#anMusic-page) #rightside {
+    display: none;
+  }
+  body:has(#anMusic-page) #content-inner,
+  body:has(#anMusic-page) #page {
+    z-index: auto;
+  }
+  /* 歌曲列表 */
+  #anMusic-page .aplayer-list {
+    position: fixed;
+    z-index: 1002;
+    width: 100%;
+    bottom: -76%;
+    left: 0;
+    background: var(--sidebar-bg);
+    height: auto;
+    border-radius: 15px 15px 0px 0px;
+    padding: 15px 0px;
+  }
+  #anMusic-page .aplayer-list.aplayer-list-hide {
+    bottom: 0% !important;
+  }
+  #anMusic-page ol {
+    max-height: 60vh !important;
+    padding-right: 0px;
+  }
+  #anMusic-page ol > li {
+    display: flex;
+    margin: 0 10px;
+  }
+  #anMusic-page ol > li span {
+    color: var(--font-color);
+  }
+  #anMusic-page ol > li span.aplayer-list-title {
+    width: 30%;
+  }
+  #anMusic-page ol > li.aplayer-list-light {
+    background: #33a673;
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+  #anMusic-page ol > li.aplayer-list-light span {
+    color: #fff;
+  }
+  #anMusic-page ol > li span.aplayer-list-title {
+    max-width: 55%;
+    width: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+  #anMusic-page ol > li span.aplayer-list-author {
+    position: absolute;
+    right: 10px;
+    width: auto;
+    max-width: 35%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+  #anMusic-page ol > li.aplayer-list-light span.aplayer-list-author {
+    right: 15px;
+  }
+  /* 歌词信息 */
+  #anMusic-page .aplayer-body {
+    width: 100%;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+  }
+  #anMusic-page .aplayer-info .aplayer-lrc {
+    margin-top: 40px;
+    height: auto;
+    max-height: 200%;
+    min-height: 100%;
+    mask-image: linear-gradient(to bottom, #000, #000, #000, #000, #0000, #0000);
+  }
+  #anMusic-page .aplayer-info .aplayer-lrc p.aplayer-lrc-current {
+    color: #33a673;
+  }
+  /* 控制按键和进度条 */
+  #anMusic-page .aplayer-info .aplayer-controller {
+    width: 100%;
+    bottom: 100px;
+  }
+  #anMusic-page .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+    margin: 0 30px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time {
+    bottom: -40px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-time-inner {
+    position: absolute;
+    width: 100%;
+    margin-right: 0;
+    margin-top: -33px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-time-inner .aplayer-dtime {
+    position: absolute;
+    right: 30px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-time-inner .aplayer-ptime {
+    position: absolute;
+    left: 35px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-back {
+    margin: auto;
+    right: 110px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-play {
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-forward {
+    margin: auto;
+    left: 110px;
+    right: 0;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-order {
+    position: absolute;
+    left: 22px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-loop {
+    position: absolute;
+    right: 25px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-menu {
+    display: inline;
+    position: absolute;
+    right: 25px;
+    top: -90px;
+  }
+  #anMusic-page .aplayer-volume-bar-wrap {
+    bottom: 0px;
+    right: 7px;
+  }
+  #anMusic-page .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap {
+    left: -66px;
+  }
+}
+
+/* ********************************************************************************************************************************* */
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(35, 168, 242);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: var(--theme-color);
+}
+
+/* ********************************************************************************************************************************* */
+/* 评论表情包样式以及右下角闭眼睛样式 */
+/* twikoo评论美化 */
+/* 自定义twikoo评论输入框高度 */
+#twikoo .el-textarea textarea {
+  min-height: 120px !important;
+  background-size: 90px;
+}
+
+/* 自定义表情优化 */
+#twikoo .OwO-body {
+  max-width: 100% !important;
+}
+/* 选择某个框 #twikoo .OwO .OwO-body .OwO-items:nth-child(1) */
+#twikoo .OwO .OwO-body .OwO-items {
+  max-height: 250px !important;
+}
+
+.OwO .OwO-body .OwO-items-image .OwO-item {
+  max-width: calc(9% - 10px);
+  box-sizing: content-box;
+}
+.OwO .OwO-body .OwO-items-image .OwO-item[title|="Heybox"],
+.OwO .OwO-body .OwO-items-image .OwO-item[title|="Tieba"],
+.OwO .OwO-body .OwO-items-show .OwO-item[title*="bilibili"] {
+  max-width: calc(7% - 10px) !important;
+  box-sizing: content-box;
+}
+
+#twikoo .OwO-items li img {
+  width: 100% !important;
+}
+
+.tk-comment .vemoji[alt|="Menhera"],
+.tk-comment .tk-owo-emotion[alt*="Menhera"],
+.tk-comment .vemoji[alt|="Snow"],
+.tk-comment .tk-owo-emotion[alt*="Snow"],
+.tk-comment .vemoji[alt|="Sweetie"],
+.tk-comment .tk-owo-emotion[alt*="Sweetie"],
+.tk-comment .vemoji[alt|="Tsuri"],
+.tk-comment .tk-owo-emotion[alt*="Tsuri"],
+.tk-comment .vemoji[alt|="Yurui"],
+.tk-comment .tk-owo-emotion[alt*="Yurui"] {
+  max-width: 120px !important;
+  max-height: 120px !important;
+  width: 120px;
+  margin: 8px 1px;
+  display: block !important;
+}
+
+/* 手机端适配 */
+@media screen and (max-width: 768px) {
+  .tk-comment .vemoji[alt|="Menhera"],
+  .tk-comment .tk-owo-emotion[alt*="Menhera"],
+  .tk-comment .vemoji[alt|="Snow"],
+  .tk-comment .tk-owo-emotion[alt*="Snow"],
+  .tk-comment .vemoji[alt|="Sweetie"],
+  .tk-comment .tk-owo-emotion[alt*="Sweetie"],
+  .tk-comment .vemoji[alt|="Tsuri"],
+  .tk-comment .tk-owo-emotion[alt*="Tsuri"],
+  .tk-comment .vemoji[alt|="Yurui"],
+  .tk-comment .tk-owo-emotion[alt*="Yurui"] {
+    max-width: calc(100% - 30px) !important;
+    max-height: calc(100% - 30px) !important;
+  }
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="Menhera"],
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="Snow"],
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="Sweetie"],
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="Tsuri"],
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="Yurui"] {
+    max-width: calc(33% - 10px);
+    box-sizing: border-box;
+  }
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="Heybox"],
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="bilibili"],
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="Tieba"],
+  .OwO .OwO-body .OwO-items-image .OwO-item[title*="QQ"] {
+    max-width: calc(18% - 10px) !important;
+    box-sizing: content-box;
+  }
+}
+
+/* 右下角闭眼 */
+.el-textarea__inner {
+  background-image: url(https://tuchuang.voooe.cn/images/2023/01/02/open.webp) !important;
+}
+.el-textarea__inner:focus {
+  background-image: url(https://tuchuang.voooe.cn/images/2023/01/02/close.webp) !important;
+}
+
+/* ********************************************************************************************************************************* */
