@@ -178,7 +178,7 @@ if (false) {
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'https://twikoo-f9rf.vercel.app/',
+      envId: 'https://twikoo.shenyanwu.top/',
       region: '',
       onCommentLoaded: function () {
         btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
@@ -190,7 +190,7 @@ if (false) {
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'https://twikoo-f9rf.vercel.app/',
+      envId: 'https://twikoo.shenyanwu.top/',
       region: '',
       urls: [window.location.pathname],
       includeReply: false
