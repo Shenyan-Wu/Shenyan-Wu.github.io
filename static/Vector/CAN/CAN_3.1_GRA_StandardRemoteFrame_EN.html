@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)https://elearning.vector.com/pluginfile.php/12194/mod_page/content/6/CAN_3.1_GRA_StandardRemoteFrame_EN.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>CAN_3.1_GRA_StandardRemoteFrame_EN</title>
+<style>
+	html, body{
+		background-color:#FFF;
+	}
+</style>
+<!-- write your code here -->
+<script src="https://shenyanwu.oss-cn-guangzhou.aliyuncs.com/Article/Vector/CAN/JS/CAN_3.1_GRA_StandardRemoteFrame_EN.download"></script>
+<script>
+function LoadGFonts(families, comp) {				
+	var lib=comp.getLibrary();				
+	var googleObject = {type: "Google", loadedFonts: 0, totalFonts: families.length, callOnLoad: lib.gfontAvailable};				
+	for(var i =0; i < families.length; i++)				
+		isFontAvailable(gFontsFamilies[i], googleObject);				
+}
+function isFontAvailable(font, obj) {				
+	var timeOut = 5000;				
+	var delay = 200;				
+	var interval = 0;				
+	var timeElapsed = 0;				
+	function checkFont() {				
+		var node = document.createElement("span");				
+		node.innerHTML = "giItT1WQy@!-/#";				
+		node.style.position      = "absolute";				
+		node.style.left          = "-1000px";				
+		node.style.top           = "-1000px";				
+		node.style.fontSize      = "300px";				
+		node.style.fontFamily    = "sans-serif";				
+		node.style.fontVariant   = "normal";				
+		node.style.fontStyle     = "normal";				
+		node.style.fontWeight    = "normal";				
+		node.style.letterSpacing = "0";				
+		document.body.appendChild(node);				
+		var width = node.offsetWidth;				
+		node.style.fontFamily = font+","+node.style.fontFamily;				
+		var returnVal = false;				
+		if((node && node.offsetWidth != width) || timeElapsed >=timeOut) {				
+			obj.loadedFonts++;				
+			if(interval)				
+				clearInterval(interval);				
+			obj.callOnLoad(font, obj.totalFonts);				
+			returnVal = true;				
+		}				
+		if(node) {				
+			node.parentNode.removeChild(node);				
+			node = null;				
+		}				
+		timeElapsed += delay;				
+		return returnVal;				
+	}				
+	if(!checkFont()) {				
+		interval = setInterval(checkFont, delay);				
+	}				
+}
+</script>
+<script>
+	var gFontsFamilies = ["Roboto"];
+</script>
+<style>
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v16/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}</style>
+<script>
+(function (cjs, an) {
+var p; // shortcut to reference prototypes
+var lib={};var ss={};var img={};
+lib.webFontTxtInst = {}; 
+var loadedTypekitCount = 0;
+var loadedGoogleCount = 0;
+var gFontsUpdateCacheList = [];
+var tFontsUpdateCacheList = [];
+lib.ssMetadata = [];
+lib.updateListCache = function (cacheList) {		
+	for(var i = 0; i < cacheList.length; i++) {		
+		if(cacheList[i].cacheCanvas)		
+			cacheList[i].updateCache();		
+	}		
+};		
+lib.addElementsToCache = function (textInst, cacheList) {		
+	var cur = textInst;		
+	while(cur != null && cur != exportRoot) {		
+		if(cacheList.indexOf(cur) != -1)		
+			break;		
+		cur = cur.parent;		
+	}		
+	if(cur != exportRoot) {		
+		var cur2 = textInst;		
+		var index = cacheList.indexOf(cur);		
+		while(cur2 != null && cur2 != cur) {		
+			cacheList.splice(index, 0, cur2);		
+			cur2 = cur2.parent;		
+			index++;		
+		}		
+	}		
+	else {		
+		cur = textInst;		
+		while(cur != null && cur != exportRoot) {		
+			cacheList.push(cur);		
+			cur = cur.parent;		
+		}		
+	}		
+};		
+lib.gfontAvailable = function(family, totalGoogleCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
+	loadedGoogleCount++;		
+	if(loadedGoogleCount == totalGoogleCount) {		
+		lib.updateListCache(gFontsUpdateCacheList);		
+	}		
+};		
+lib.tfontAvailable = function(family, totalTypekitCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
+	loadedTypekitCount++;		
+	if(loadedTypekitCount == totalTypekitCount) {		
+		lib.updateListCache(tFontsUpdateCacheList);		
+	}		
+};
+// symbols:
+// helper functions:
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
+(lib.sof_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("S\nO\nF", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 13;
+	this.text.lineWidth = 26;
+	this.text.parent = this;
+	this.text.setTransform(15,5,1.004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("ACWjlIAAHBIkrAAIAAnB");
+	this.shape.setTransform(15,23);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B1B6BA").s().p("AiVDhIAAnBIErAAIAAHBg");
+	this.shape_1.setTransform(15,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.sof_mc, new cjs.Rectangle(-1,-1,32,48.4), null);
+(lib.rtr_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("R\nT\nR", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 13;
+	this.text.lineWidth = 26;
+	this.text.parent = this;
+	this.text.setTransform(15,5,1,1.001);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AiVDmIAAnBIErAAIAAHB");
+	this.shape.setTransform(15,22);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#92C255").s().p("AiVDhIAAnBIErAAIAAHBg");
+	this.shape_1.setTransform(15,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.rtr_mc, new cjs.Rectangle(-1,-1,32,48.5), null);
+(lib.r_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("r", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 26;
+	this.text.parent = this;
+	this.text.setTransform(15,17);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("ACWjlIAAHBIkrAAIAAnB");
+	this.shape.setTransform(15,23);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#00A765").s().p("AiVDhIAAnBIErAAIAAHBg");
+	this.shape_1.setTransform(15,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.r_mc, new cjs.Rectangle(-1,-1,32,47), null);
+(lib.pfeil_rechts_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#848B8E").s().p("AgdgnIA7AnIg7Aog");
+	this.shape.setTransform(3,4);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.pfeil_rechts_mc, new cjs.Rectangle(0,0,6,8), null);
+(lib.pfeil_links_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#848B8E").s().p("AgdAAIA7gnIAABPg");
+	this.shape.setTransform(3,4);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.pfeil_links_mc, new cjs.Rectangle(0,0,6,8), null);
+(lib.itm_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("ITM", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 36;
+	this.text.parent = this;
+	this.text.setTransform(20,17);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AjHDmIAAnBIGPAAIAAHB");
+	this.shape.setTransform(20,22);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#DADEE1").s().p("AjHDhIAAnBIGPAAIAAHBg");
+	this.shape_1.setTransform(20,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.itm_mc, new cjs.Rectangle(-1,-1,42,47), null);
+(lib.close_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		/* stop();*/
+	}
+	this.frame_2 = function() {
+		/* stop();*/
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(2));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#848B8E").ss(1,1,1).p("Ah4h9IDxAAIAAD7IjxAAg");
+	this.shape.setTransform(11.9,12.2);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#848B8E").s().p("Ah4B+IAAj7IDxAAIAAD7g");
+	this.shape_1.setTransform(11.9,12.2);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_1},{t:this.shape}]},3).wait(1));
+	// active
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("rgba(255,255,255,0)").s().p("Ah8B9IAAj5ID5AAIAAD5g");
+	this.shape_2.setTransform(12.5,12.5);
+	this.timeline.addTween(cjs.Tween.get(this.shape_2).to({_off:true},3).wait(1));
+	// Ebene 3
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f().s("#000000").ss(1,0,0,4).p("AAAh8IAAD5");
+	this.shape_3.setTransform(0,12.5);
+	this.shape_4 = new cjs.Shape();
+	this.shape_4.graphics.f("#FFFFFF").s().p("AAmA8IgmgyIgnAyIgUAAIAxg7Igwg8IAWAAIAlAxIAmgxIAVAAIgxA7IAxA8g");
+	this.shape_4.setTransform(12,13);
+	this.shape_5 = new cjs.Shape();
+	this.shape_5.graphics.f("#000000").s().p("AAmA8IgmgyIgnAyIgUAAIAxg7Igwg8IAWAAIAlAxIAmgxIAVAAIgxA7IAxA8g");
+	this.shape_5.setTransform(12,13);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_4},{t:this.shape_3}]}).to({state:[{t:this.shape_5},{t:this.shape_3}]},1).to({state:[{t:this.shape_4},{t:this.shape_3}]},1).to({state:[]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1,-1,26,27);
+(lib.identifier_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("Identifier", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 66;
+	this.text.parent = this;
+	this.text.setTransform(35,17,1,1.002);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AFeDhIq7AAIAAnBIK7AAg");
+	this.shape.setTransform(35,22.5);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#92C255").s().p("AldDhIAAnBIK7AAIAAHBg");
+	this.shape_1.setTransform(35,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.identifier_mc, new cjs.Rectangle(-1,-1,72,47), null);
+(lib.ide_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("I\nD\nE", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 13;
+	this.text.lineWidth = 26;
+	this.text.parent = this;
+	this.text.setTransform(15,5,1,1.001);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("ACWjlIAAHBIkrAAIAAnB");
+	this.shape.setTransform(15,23);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#00A765").s().p("AiVDhIAAnBIErAAIAAHBg");
+	this.shape_1.setTransform(15,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.ide_mc, new cjs.Rectangle(-1,-1,32,48.5), null);
+(lib.Instructions_EN = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Text
+	this.text = new cjs.Text("Instructions", "normal 400 12px 'Roboto'", "#848B8E");
+	this.text.textAlign = "right";
+	this.text.lineHeight = 18;
+	this.text.lineWidth = 76;
+	this.text.parent = this;
+	this.text.setTransform(11,42);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1).to({_off:false},0).to({_off:true},2).wait(1));
+	// help.ai
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#848B8E").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape.setTransform(6.5,11);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape_1.setTransform(6.5,11);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#000000").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape_2.setTransform(6.5,11);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#565C5E").s().dr(-7.4,-12.55,14.8,25.1);
+	this.shape_3.setTransform(6.5,11,0.876,0.876);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).to({state:[{t:this.shape_2}]},1).to({state:[{t:this.shape_3}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,13,22);
+(lib.farbe_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#B70032").s().p("ApXBkIAAjHISvAAIAADHg");
+	this.shape.setTransform(60,10);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.farbe_mc, new cjs.Rectangle(0,0,120,20), null);
+(lib.eof_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("EOF", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 46;
+	this.text.parent = this;
+	this.text.setTransform(25,17);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("Aj5DmIAAnBIHzAAIAAHB");
+	this.shape.setTransform(25,22);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#EF7C00").s().p("Aj5DhIAAnBIHzAAIAAHBg");
+	this.shape_1.setTransform(25,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.eof_mc, new cjs.Rectangle(-1,-1,52,47), null);
+(lib.dlc_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("DLC", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 56;
+	this.text.parent = this;
+	this.text.setTransform(30,17);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AEsDhIpXAAIAAnBIJXAAg");
+	this.shape.setTransform(30,22.5);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#00A765").s().p("AkrDhIAAnBIJXAAIAAHBg");
+	this.shape_1.setTransform(30,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.dlc_mc, new cjs.Rectangle(-1,-1,62,47), null);
+(lib.crcdel_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("D\nE\nL", "normal 400 11px 'Roboto'", "#FFFFFF");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 13;
+	this.text.lineWidth = 26;
+	this.text.parent = this;
+	this.text.setTransform(15,5,1,1.001);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AiVDmIAAnBIErAAIAAHB");
+	this.shape.setTransform(15,22);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s().p("AiVDhIAAnBIErAAIAAHBg");
+	this.shape_1.setTransform(15,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.crcdel_mc, new cjs.Rectangle(-1,-1,32,48.5), null);
+(lib.crc_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("CRC\nSequence", "normal 400 11px 'Roboto'", "#FFFFFF");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 14;
+	this.text.lineWidth = 76;
+	this.text.parent = this;
+	this.text.setTransform(40,10,1,1.002);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AGQDhIsfAAIAAnBIMfAAg");
+	this.shape.setTransform(40,22.5);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s().p("AmPDhIAAnBIMfAAIAAHBg");
+	this.shape_1.setTransform(40,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.crc_mc, new cjs.Rectangle(-1,-1,82,47), null);
+(lib.busidle2_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("Bus\nidle", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 14;
+	this.text.lineWidth = 41;
+	this.text.parent = this;
+	this.text.setTransform(22.5,10,1,1.002);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AjbDmIAAnBIHBAA");
+	this.shape.setTransform(22,22);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#43BFDE").s().p("AjgDhIAAnBIHBAAIAAHBg");
+	this.shape_1.setTransform(22.5,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.busidle2_mc, new cjs.Rectangle(-1,-1,47,47), null);
+(lib.busidle1_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("Bus\nidle", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 14;
+	this.text.lineWidth = 41;
+	this.text.parent = this;
+	this.text.setTransform(22.5,10,1,1.002);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AjljbIHBAAIAAHB");
+	this.shape.setTransform(23,22);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#43BFDE").s().p("AjgDhIAAnBIHBAAIAAHBg");
+	this.shape_1.setTransform(22.5,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.busidle1_mc, new cjs.Rectangle(-1,-1,47,47), null);
+(lib.anleitung_transparent_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("EgzjAW+MAAAgt7MBnHAAAMAAAAt7g");
+	this.shape.setTransform(330,147);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_transparent_mc, new cjs.Rectangle(0,0,660,294), null);
+(lib.ackdel_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("D\nE\nL", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 13;
+	this.text.lineWidth = 26;
+	this.text.parent = this;
+	this.text.setTransform(15,5,1,1.001);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("AiVDmIAAnBIErAAIAAHB");
+	this.shape.setTransform(15,22);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FBB900").s().p("AiVDhIAAnBIErAAIAAHBg");
+	this.shape_1.setTransform(15,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.ackdel_mc, new cjs.Rectangle(-1,-1,32,48.5), null);
+(lib.ack_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("A\nC\nK", "normal 400 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 13;
+	this.text.lineWidth = 26;
+	this.text.parent = this;
+	this.text.setTransform(15,5,1,1.001);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,0,0,4).p("ACWDhIkrAAIAAnBIErAAg");
+	this.shape.setTransform(15,22.5);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FBB900").s().p("AiVDhIAAnBIErAAIAAHBg");
+	this.shape_1.setTransform(15,22.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.ack_mc, new cjs.Rectangle(-1,-1,32,48.5), null);
+(lib.header_muli_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// text
+	this.text = new cjs.Text("CAN Framing", "normal 700 16px 'Roboto'", "#848B8E");
+	this.text.lineHeight = 21;
+	this.text.lineWidth = 296;
+	this.text.parent = this;
+	this.text.setTransform(32,32);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Standard Remote Frame", "normal 700 20px 'Roboto'", "#B70032");
+	this.text_1.lineHeight = 27;
+	this.text_1.lineWidth = 446;
+	this.text_1.parent = this;
+	this.text_1.setTransform(32,62);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_1},{t:this.text}]}).wait(1));
+	// icons
+	this.instruction_btn = new lib.Instructions_EN();
+	this.instruction_btn.parent = this;
+	this.instruction_btn.setTransform(617,33);
+	new cjs.ButtonHelper(this.instruction_btn, 0, 1, 2, false, new lib.Instructions_EN(), 3);
+	this.timeline.addTween(cjs.Tween.get(this.instruction_btn).wait(1));
+}).prototype = getMCSymbolPrototype(lib.header_muli_mc, new cjs.Rectangle(30,30,600,68), null);
+(lib.grafik_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// label_frame
+	this.text = new cjs.Text("Standard Remote Frame", "normal 400 12px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 466;
+	this.text.parent = this;
+	this.text.setTransform(280,7);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.instance = new lib.pfeil_links_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(50,14.8,0.998,0.999,0,0,0,5,5.8);
+	this.instance_1 = new lib.pfeil_rechts_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(514,14.9,1,1.001,0,0,0,5,5.9);
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AtRAyIAAhjIajAAIAABjg");
+	this.shape.setTransform(280,13);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#848B8E").s().p("EAkqAEwQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgEgkxAEwQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgEAkqADgQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgEgkxADgQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgEAkqACPQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEgkxACPQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAAAQgBABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEAkqAA/QAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEgkxAA/QAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAAAQgBABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEAkqgAQQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEgkxgAQQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABAAQAAABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAAAQgBABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEAkqgBgQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEgkxgBgQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABAAQAAABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAAAQgBABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEAkqgCwQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEgkxgCwQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABAAQAAABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAAAQgBABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgEAkqgD/QAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgEgkxgD/QAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABAAQAAABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgEgj7gESIAAgKMBH3AAAIAAAKg");
+	this.shape_1.setTransform(280,41);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.instance_1},{t:this.instance},{t:this.text}]}).wait(1));
+	// other_label
+	this.instance_2 = new lib.pfeil_rechts_mc();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(174.2,62.8,0.999,0.997,0,0,0,5.2,5.8);
+	this.instance_3 = new lib.pfeil_links_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(80,62.8,1.004,0.997,0,0,0,5,5.8);
+	this.text_1 = new cjs.Text("Arbitration\nField", "normal 400 12px 'Roboto'");
+	this.text_1.textAlign = "center";
+	this.text_1.lineHeight = 15;
+	this.text_1.lineWidth = 96;
+	this.text_1.parent = this;
+	this.text_1.setTransform(125,28,1.001,1.002);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.instance_4 = new lib.pfeil_rechts_mc();
+	this.instance_4.parent = this;
+	this.instance_4.setTransform(464.2,62.8,0.999,0.998,0,0,0,5.2,5.8);
+	this.instance_5 = new lib.pfeil_links_mc();
+	this.instance_5.parent = this;
+	this.instance_5.setTransform(410,62.8,1.004,0.997,0,0,0,5,5.8);
+	this.instance_6 = new lib.pfeil_rechts_mc();
+	this.instance_6.parent = this;
+	this.instance_6.setTransform(404,62.8,0.999,0.998,0,0,0,5,5.8);
+	this.instance_7 = new lib.pfeil_links_mc();
+	this.instance_7.parent = this;
+	this.instance_7.setTransform(300,62.8,1.004,0.998,0,0,0,5,5.8);
+	this.text_2 = new cjs.Text("ACK\nField", "normal 400 12px 'Roboto'");
+	this.text_2.textAlign = "center";
+	this.text_2.lineHeight = 15;
+	this.text_2.lineWidth = 56;
+	this.text_2.parent = this;
+	this.text_2.setTransform(435,28);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_2);
+	}
+	this.text_3 = new cjs.Text("CRC Field", "normal 400 12px 'Roboto'");
+	this.text_3.textAlign = "center";
+	this.text_3.lineHeight = 16;
+	this.text_3.lineWidth = 106;
+	this.text_3.parent = this;
+	this.text_3.setTransform(350,43,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_3);
+	}
+	this.instance_8 = new lib.pfeil_rechts_mc();
+	this.instance_8.parent = this;
+	this.instance_8.setTransform(294,62.8,0.999,0.998,0,0,0,5,5.8);
+	this.instance_9 = new lib.pfeil_links_mc();
+	this.instance_9.parent = this;
+	this.instance_9.setTransform(180,62.8,1.004,0.998,0,0,0,5,5.8);
+	this.text_4 = new cjs.Text("Control Field", "normal 400 12px 'Roboto'");
+	this.text_4.textAlign = "center";
+	this.text_4.lineHeight = 16;
+	this.text_4.lineWidth = 116;
+	this.text_4.parent = this;
+	this.text_4.setTransform(235,43,1.001,1.002);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_4);
+	}
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#848B8E").s().p("AebBoQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAVCBoQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgAD3BoQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAu4BoQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgA+hBoQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgAebAYQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgnQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAnQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAVCAYQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgnQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAnQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgAD3AYQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgnQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAnQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAABQgBAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAu4AYQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgnQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAnQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgA+hAYQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgnQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAnQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgAVuAFIAAgJIITAAIAAAJgAEiAFIAAgJIQGAAIAAAJgAuNAFIAAgJIRfAAIAAAJgA9/AFIAAgJIOiAAIAAAJgAebg4QgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAAAQgBABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAVCg4QAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAAAQgBABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAD3g4QgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAABABQAAAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAAAAAQgBABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAu4g4QgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgA+hg4QAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBg");
+	this.shape_2.setTransform(270,61);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.text_4},{t:this.instance_9},{t:this.instance_8},{t:this.text_3},{t:this.text_2},{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.text_1},{t:this.instance_3},{t:this.instance_2}]}).wait(1));
+	// frame_elements
+	this.instance_10 = new lib.busidle2_mc();
+	this.instance_10.parent = this;
+	this.instance_10.setTransform(570,91.8,1,1,0,0,0,15,16.8);
+	this.itm_mc = new lib.itm_mc();
+	this.itm_mc.parent = this;
+	this.itm_mc.setTransform(533,92.3,1,1,0,0,0,18,17.3);
+	this.eof_mc = new lib.eof_mc();
+	this.eof_mc.parent = this;
+	this.eof_mc.setTransform(490,92.3,1,1,0,0,0,25,17.3);
+	this.ackdel_mc = new lib.ackdel_mc();
+	this.ackdel_mc.parent = this;
+	this.ackdel_mc.setTransform(444,95,1,1,0,0,0,9,20);
+	this.ack_mc = new lib.ack_mc();
+	this.ack_mc.parent = this;
+	this.ack_mc.setTransform(414,95,1,1,0,0,0,9,20);
+	this.crcdel_mc = new lib.crcdel_mc();
+	this.crcdel_mc.parent = this;
+	this.crcdel_mc.setTransform(384,95.1,1,0.999,0,0,0,9,20.1);
+	this.crc_mc = new lib.crc_mc();
+	this.crc_mc.parent = this;
+	this.crc_mc.setTransform(329.9,92.5,1,1,0,0,0,34.9,17.5);
+	this.dlc_mc = new lib.dlc_mc();
+	this.dlc_mc.parent = this;
+	this.dlc_mc.setTransform(260,92.5,1,1,0,0,0,25,17.5);
+	this.r_mc = new lib.r_mc();
+	this.r_mc.parent = this;
+	this.r_mc.setTransform(214,94.4,1,1,0,0,0,9,19.4);
+	this.ide_mc = new lib.ide_mc();
+	this.ide_mc.parent = this;
+	this.ide_mc.setTransform(184,95,1,1,0,0,0,9,20);
+	this.rtr_mc = new lib.rtr_mc();
+	this.rtr_mc.parent = this;
+	this.rtr_mc.setTransform(154,95.1,1,0.999,0,0,0,9,20.1);
+	this.identifier_mc = new lib.identifier_mc();
+	this.identifier_mc.parent = this;
+	this.identifier_mc.setTransform(110,92.5,1,1,0,0,0,35,17.5);
+	this.sof_mc = new lib.sof_mc();
+	this.sof_mc.parent = this;
+	this.sof_mc.setTransform(54,95,1,1,0,0,0,9,20);
+	this.instance_11 = new lib.busidle1_mc();
+	this.instance_11.parent = this;
+	this.instance_11.setTransform(15,91.9,1,1,0,0,0,15,16.9);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_11},{t:this.sof_mc},{t:this.identifier_mc},{t:this.rtr_mc},{t:this.ide_mc},{t:this.r_mc},{t:this.dlc_mc},{t:this.crc_mc},{t:this.crcdel_mc},{t:this.ack_mc},{t:this.ackdel_mc},{t:this.eof_mc},{t:this.itm_mc},{t:this.instance_10}]}).wait(1));
+	// bits
+	this.itm_txt = new cjs.Text("3 Bit", "normal 400 11px 'Roboto'");
+	this.itm_txt.name = "itm_txt";
+	this.itm_txt.textAlign = "center";
+	this.itm_txt.lineHeight = 15;
+	this.itm_txt.lineWidth = 36;
+	this.itm_txt.parent = this;
+	this.itm_txt.setTransform(535,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.itm_txt);
+	}
+	this.eof_txt = new cjs.Text("7 Bit", "normal 400 11px 'Roboto'");
+	this.eof_txt.name = "eof_txt";
+	this.eof_txt.textAlign = "center";
+	this.eof_txt.lineHeight = 15;
+	this.eof_txt.lineWidth = 46;
+	this.eof_txt.parent = this;
+	this.eof_txt.setTransform(490,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.eof_txt);
+	}
+	this.ackdel_txt = new cjs.Text("1 Bit", "normal 400 11px 'Roboto'");
+	this.ackdel_txt.name = "ackdel_txt";
+	this.ackdel_txt.textAlign = "center";
+	this.ackdel_txt.lineHeight = 15;
+	this.ackdel_txt.lineWidth = 36;
+	this.ackdel_txt.parent = this;
+	this.ackdel_txt.setTransform(450,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.ackdel_txt);
+	}
+	this.ack_txt = new cjs.Text("1 Bit", "normal 400 11px 'Roboto'");
+	this.ack_txt.name = "ack_txt";
+	this.ack_txt.textAlign = "center";
+	this.ack_txt.lineHeight = 15;
+	this.ack_txt.lineWidth = 36;
+	this.ack_txt.parent = this;
+	this.ack_txt.setTransform(420,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.ack_txt);
+	}
+	this.crcdel_txt = new cjs.Text("1 Bit", "normal 400 11px 'Roboto'");
+	this.crcdel_txt.name = "crcdel_txt";
+	this.crcdel_txt.textAlign = "center";
+	this.crcdel_txt.lineHeight = 15;
+	this.crcdel_txt.lineWidth = 36;
+	this.crcdel_txt.parent = this;
+	this.crcdel_txt.setTransform(390,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.crcdel_txt);
+	}
+	this.crc_txt = new cjs.Text("15 Bit", "normal 400 11px 'Roboto'");
+	this.crc_txt.name = "crc_txt";
+	this.crc_txt.textAlign = "center";
+	this.crc_txt.lineHeight = 15;
+	this.crc_txt.lineWidth = 76;
+	this.crc_txt.parent = this;
+	this.crc_txt.setTransform(335,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.crc_txt);
+	}
+	this.dlc_txt = new cjs.Text("4 Bit", "normal 400 11px 'Roboto'");
+	this.dlc_txt.name = "dlc_txt";
+	this.dlc_txt.textAlign = "center";
+	this.dlc_txt.lineHeight = 15;
+	this.dlc_txt.lineWidth = 56;
+	this.dlc_txt.parent = this;
+	this.dlc_txt.setTransform(265,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.dlc_txt);
+	}
+	this.r_txt = new cjs.Text("1 Bit", "normal 400 11px 'Roboto'");
+	this.r_txt.name = "r_txt";
+	this.r_txt.textAlign = "center";
+	this.r_txt.lineHeight = 15;
+	this.r_txt.lineWidth = 36;
+	this.r_txt.parent = this;
+	this.r_txt.setTransform(220,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.r_txt);
+	}
+	this.ide_txt = new cjs.Text("1 Bit", "normal 400 11px 'Roboto'");
+	this.ide_txt.name = "ide_txt";
+	this.ide_txt.textAlign = "center";
+	this.ide_txt.lineHeight = 15;
+	this.ide_txt.lineWidth = 36;
+	this.ide_txt.parent = this;
+	this.ide_txt.setTransform(190,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.ide_txt);
+	}
+	this.rtr_txt = new cjs.Text("1 Bit", "normal 400 11px 'Roboto'");
+	this.rtr_txt.name = "rtr_txt";
+	this.rtr_txt.textAlign = "center";
+	this.rtr_txt.lineHeight = 15;
+	this.rtr_txt.lineWidth = 36;
+	this.rtr_txt.parent = this;
+	this.rtr_txt.setTransform(160,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.rtr_txt);
+	}
+	this.identifier_txt = new cjs.Text("11 Bit", "normal 400 11px 'Roboto'");
+	this.identifier_txt.name = "identifier_txt";
+	this.identifier_txt.textAlign = "center";
+	this.identifier_txt.lineHeight = 15;
+	this.identifier_txt.lineWidth = 66;
+	this.identifier_txt.parent = this;
+	this.identifier_txt.setTransform(110,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.identifier_txt);
+	}
+	this.sof_txt = new cjs.Text("1 Bit", "normal 400 11px 'Roboto'");
+	this.sof_txt.name = "sof_txt";
+	this.sof_txt.textAlign = "center";
+	this.sof_txt.lineHeight = 15;
+	this.sof_txt.lineWidth = 36;
+	this.sof_txt.parent = this;
+	this.sof_txt.setTransform(60,132,1,0.997);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.sof_txt);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.sof_txt},{t:this.identifier_txt},{t:this.rtr_txt},{t:this.ide_txt},{t:this.r_txt},{t:this.dlc_txt},{t:this.crc_txt},{t:this.crcdel_txt},{t:this.ack_txt},{t:this.ackdel_txt},{t:this.eof_txt},{t:this.itm_txt}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.grafik_mc, new cjs.Rectangle(-1,5,602,143.6), null);
+(lib.anleitung_titelzeile_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 3
+	this.text = new cjs.Text("Instructions", "normal 700 12px 'Roboto'", "#FFFFFF");
+	this.text.lineHeight = 18;
+	this.text.lineWidth = 96;
+	this.text.parent = this;
+	this.text.setTransform(17,9,1.001,1.004);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(1,0,0,4).p("AAAh8IAAD5");
+	this.shape.setTransform(295,12.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.text}]}).wait(1));
+	// Ebene 1
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f().s("#000000").ss(1,2,0,4).p("AZAAAMgx/AAA");
+	this.shape_1.setTransform(160,25);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("#000000").ss(2,2,0,4).p("A4/B9IAAj5MAx/AAAIAAD5");
+	this.shape_2.setTransform(160,12.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1}]}).wait(1));
+	// Ebene 4
+	this.instance = new lib.farbe_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(160,12.5,2.667,1.25,0,0,0,60,10);
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_titelzeile_mc, new cjs.Rectangle(-1,-1,322,28), null);
+(lib.anleitung_drag_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// titelzeile
+	this.close = new lib.close_btn();
+	this.close.parent = this;
+	this.close.setTransform(307.3,12.5,1,1,0,0,0,12.3,12.5);
+	new cjs.ButtonHelper(this.close, 0, 1, 2, false, new lib.close_btn(), 3);
+	this.titlebar_mc = new lib.anleitung_titelzeile_mc();
+	this.titlebar_mc.parent = this;
+	this.titlebar_mc.setTransform(107,4.9,1,1.001,0,0,0,107,4.9);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.titlebar_mc},{t:this.close}]}).wait(1));
+	// text
+	this.text = new cjs.Text("The media object shows the layout of a remote frame in standard format. When you move the mouse over a data frame field, the length of that field is displayed to you.", "normal 400 12px 'Roboto'");
+	this.text.lineHeight = 18;
+	this.text.lineWidth = 286;
+	this.text.parent = this;
+	this.text.setTransform(17,42);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// back
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,2,0,4).p("AZAKKMgx/AAAIAA0TMAx/AAAg");
+	this.shape.setTransform(160,65);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FFFFFF").s().p("A4/KKIAA0TMAx/AAAIAAUTg");
+	this.shape_1.setTransform(160,65);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+	// back_white
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("#E5E5E5").ss(1,1,1).p("AZyK8MgzjAAAIAA13MAzjAAAg");
+	this.shape_2.setTransform(160,65);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#FFFFFF").s().p("A5xK8IAA13MAzjAAAIAAV3g");
+	this.shape_3.setTransform(160,65);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_3},{t:this.shape_2}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_drag_mc, new cjs.Rectangle(-6,-6,332,142), null);
+(lib.Anleitung = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// anleitung
+	this.instructions_drag_mc = new lib.anleitung_drag_mc();
+	this.instructions_drag_mc.parent = this;
+	this.instructions_drag_mc.setTransform(174.7,80.1,1,1,0,0,0,-5.3,-4.9);
+	this.timeline.addTween(cjs.Tween.get(this.instructions_drag_mc).wait(1));
+	// transparent
+	this.transparent_mc = new lib.anleitung_transparent_mc();
+	this.transparent_mc.parent = this;
+	this.transparent_mc.setTransform(276.9,176.9,1,1,0,0,0,276.9,176.9);
+	this.transparent_mc.alpha = 0.801;
+	this.timeline.addTween(cjs.Tween.get(this.transparent_mc).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Anleitung, new cjs.Rectangle(0,0,660,294), null);
+// stage content:
+(lib.CAN_31_GRA_StandardRemoteFrame_EN = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		var grafik = this.grafik_mc;
+		var sof_txt = grafik.sof_txt;
+		var identifier_txt = grafik.identifier_txt;
+		var rtr_txt = grafik.rtr_txt;
+		var ide_txt = grafik.ide_txt;
+		var r_txt = grafik.r_txt;
+		var dlc_txt = grafik.dlc_txt;
+		var crc_txt = grafik.crc_txt;
+		var crcdel_txt = grafik.crcdel_txt;
+		var ack_txt = grafik.ack_txt;
+		var ackdel_txt = grafik.ackdel_txt;
+		var eof_txt = grafik.eof_txt;
+		var itm_txt = grafik.itm_txt;
+		var sof = grafik.sof_mc;
+		var identifier = grafik.identifier_mc;
+		var rtr = grafik.rtr_mc;
+		var ide = grafik.ide_mc;
+		var r = grafik.r_mc;
+		var dlc = grafik.dlc_mc;
+		var crc = grafik.crc_mc;
+		var crcdel = grafik.crcdel_mc;
+		var ack = grafik.ack_mc;
+		var ackdel = grafik.ackdel_mc;
+		var eof = grafik.eof_mc;
+		var itm = grafik.itm_mc;
+		//Instructions:
+		var instruction = this.instruction_mc;
+		var cursorX;
+		var cursorY;
+		var scale = stage.scaleX;
+		var offSetXInstr;
+		var offSetYInstr;
+		var titel_instruction = this.instruction_mc.instructions_drag_mc.titlebar_mc;
+		var drag_instr = this.instruction_mc.instructions_drag_mc;
+		var transparent_instr = this.instruction_mc.transparent_mc;
+		var dragInstrBounds = drag_instr.nominalBounds;
+		var instruction_btn = this.graphic.instruction_btn;
+		var instruction_close_btn = this.instruction_mc.instructions_drag_mc.close;
+		var borderInstrLeft = 2;
+		var borderInstrTop = 2;
+		var borderInstrBottom = canvas.height/scale - dragInstrBounds.height;
+		var borderInstrRight = canvas.width/scale - dragInstrBounds.width;
+		//Get mouse position
+		document.onmousemove = function(e){
+		    cursorX = e.pageX;
+		    cursorY = e.pageY;
+		}
+		//Make everything behind transparent inaktiv
+		transparent_instr.addEventListener("mouseover", function(){
+		      //Do nothing, just get focus
+		});
+		//Instruction Configuration
+		instruction.visible = false;
+		instruction_close_btn.cursor = "pointer";
+		//Open-Button Instruction
+		instruction_btn.addEventListener("click", function(){
+			instruction.visible = true;
+		});
+		//Close-Button Instruction
+		instruction_close_btn.addEventListener("click", function(){
+			instruction.visible = false;
+		});
+		//Cursor Setup
+		titel_instruction.cursor = "move";
+		//Drag even when cursor is still clicked outside of the stage
+		stage.mouseMoveOutside = true;
+		//Calculate x-Offset/y-Offset for Instruction
+		titel_instruction.addEventListener("mousedown", function(){
+			offSetXInstr = drag_instr.x - cursorX;
+			offSetYInstr = drag_instr.y - cursorY;
+		});
+		//Drag-Function for instruction
+		titel_instruction.on("pressmove", function(evt){
+			var scale = stage.scaleX;
+			transparent_instr.visible=false;
+			//Block "jump"-behaviour in x-direction
+			drag_instr.x = (evt.stageX / scale + offSetXInstr) ;
+			//Block "jump"-behaviour in y-direction
+			drag_instr.y = (evt.stageY / scale + offSetYInstr) ;
+			//Border-Handling
+			if(drag_instr.x >= borderInstrRight) 
+				drag_instr.x = borderInstrRight;
+			if(drag_instr.x <= borderInstrLeft)
+				drag_instr.x = borderInstrLeft;
+			if(drag_instr.y >= borderInstrBottom)
+				drag_instr.y = borderInstrBottom;
+			if(drag_instr.y <= borderInstrTop)
+				drag_instr.y = borderInstrTop;
+		});
+		titel_instruction.on("pressup", function(evt){
+			transparent_instr.visible=true;
+		});
+		itm.addEventListener("mouseover", function(){
+			itm_txt.visible=true;
+		})
+		itm.addEventListener("mouseout", function(){
+			itm_txt.visible=false;
+		})
+		itm.cursor="pointer";
+		eof.addEventListener("mouseover", function(){
+			eof_txt.visible=true;
+		})
+		eof.addEventListener("mouseout", function(){
+			eof_txt.visible=false;
+		})
+		eof.cursor="pointer";
+		ackdel.addEventListener("mouseover", function(){
+			ackdel_txt.visible=true;
+		})
+		ackdel.addEventListener("mouseout", function(){
+			ackdel_txt.visible=false;
+		})
+		ackdel.cursor="pointer";
+		ack.addEventListener("mouseover", function(){
+			ack_txt.visible=true;
+		})
+		ack.addEventListener("mouseout", function(){
+			ack_txt.visible=false;
+		})
+		ack.cursor="pointer";
+		crcdel.addEventListener("mouseover", function(){
+			crcdel_txt.visible=true;
+		})
+		crcdel.addEventListener("mouseout", function(){
+			crcdel_txt.visible=false;
+		})
+		crcdel.cursor="pointer";
+		crc.addEventListener("mouseover", function(){
+			crc_txt.visible=true;
+		})
+		crc.addEventListener("mouseout", function(){
+			crc_txt.visible=false;
+		})
+		crc.cursor="pointer";
+		dlc.addEventListener("mouseover", function(){
+			dlc_txt.visible=true;
+		})
+		dlc.addEventListener("mouseout", function(){
+			dlc_txt.visible=false;
+		})
+		dlc.cursor="pointer";
+		r.addEventListener("mouseover", function(){
+			r_txt.visible=true;
+		})
+		r.addEventListener("mouseout", function(){
+			r_txt.visible=false;
+		})
+		r.cursor="pointer";
+		ide.addEventListener("mouseover", function(){
+			ide_txt.visible=true;
+		})
+		ide.addEventListener("mouseout", function(){
+			ide_txt.visible=false;
+		})
+		ide.cursor="pointer";
+		rtr.addEventListener("mouseover", function(){
+			rtr_txt.visible=true;
+		})
+		rtr.addEventListener("mouseout", function(){
+			rtr_txt.visible=false;
+		})
+		rtr.cursor="pointer";
+		sof.addEventListener("mouseover", function(){
+			sof_txt.visible=true;
+		})
+		sof.addEventListener("mouseout", function(){
+			sof_txt.visible=false;
+		})
+		sof.cursor="pointer";
+		identifier.addEventListener("mouseover", function(){
+			identifier_txt.visible=true;
+		})
+		identifier.addEventListener("mouseout", function(){
+			identifier_txt.visible=false;
+		})
+		identifier.cursor="pointer";
+		sof_txt.visible=false;
+		identifier_txt.visible=false;
+		rtr_txt.visible=false;
+		ide_txt.visible=false;
+		r_txt.visible=false;
+		dlc_txt.visible=false;
+		crc_txt.visible=false;
+		crcdel_txt.visible=false;
+		ack_txt.visible=false;
+		ackdel_txt.visible=false;
+		eof_txt.visible=false;
+		itm_txt.visible=false;
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+	// Instructions
+	this.instruction_mc = new lib.Anleitung();
+	this.instruction_mc.parent = this;
+	this.timeline.addTween(cjs.Tween.get(this.instruction_mc).wait(1));
+	// Content
+	this.grafik_mc = new lib.grafik_mc();
+	this.grafik_mc.parent = this;
+	this.grafik_mc.setTransform(330,183,1,1,0,0,0,300,73);
+	this.timeline.addTween(cjs.Tween.get(this.grafik_mc).wait(1));
+	// Framework
+	this.graphic = new lib.header_muli_mc();
+	this.graphic.parent = this;
+	this.graphic.setTransform(342.5,52.8,1,1,0,0,0,342.5,52.8);
+	this.text = new cjs.Text("© 2010-2017. Vector Informatik GmbH. All rights reserved. Any distribution or copying is subject to prior written approval by Vector. V2.0", "normal 400 10px 'Roboto'", "#848B8E");
+	this.text.lineHeight = 13;
+	this.text.lineWidth = 558;
+	this.text.parent = this;
+	this.text.setTransform(32,265.5);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text},{t:this.graphic}]}).wait(1));
+	// White_Background
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#848B8E").ss(1,1,1).p("EgzjgW9MBnHAAAMAAAAt7MhnHAAAg");
+	this.shape.setTransform(330,147);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FFFFFF").s().p("EgzjAW+MAAAgt7MBnHAAAMAAAAt7g");
+	this.shape_1.setTransform(330,147);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(329,146,662,296);
+// library properties:
+lib.properties = {
+	id: 'ECA04785434C5E40A545F42D8369EC30',
+	width: 660,
+	height: 294,
+	fps: 24,
+	color: "#FFFFFF",
+	opacity: 1.00,
+	webfonts: {},
+	manifest: [],
+	preloads: []
+};
+// bootstrap callback support:
+(lib.Stage = function(canvas) {
+	createjs.Stage.call(this, canvas);
+}).prototype = p = new createjs.Stage();
+p.setAutoPlay = function(autoPlay) {
+	this.tickEnabled = autoPlay;
+}
+p.play = function() { this.tickEnabled = true; this.getChildAt(0).gotoAndPlay(this.getTimelinePosition()) }
+p.stop = function(ms) { if(ms) this.seek(ms); this.tickEnabled = false; }
+p.seek = function(ms) { this.tickEnabled = true; this.getChildAt(0).gotoAndStop(lib.properties.fps * ms / 1000); }
+p.getDuration = function() { return this.getChildAt(0).totalFrames / lib.properties.fps * 1000; }
+p.getTimelinePosition = function() { return this.getChildAt(0).currentFrame / lib.properties.fps * 1000; }
+an.bootcompsLoaded = an.bootcompsLoaded || [];
+if(!an.bootstrapListeners) {
+	an.bootstrapListeners=[];
+}
+an.bootstrapCallback=function(fnCallback) {
+	an.bootstrapListeners.push(fnCallback);
+	if(an.bootcompsLoaded.length > 0) {
+		for(var i=0; i<an.bootcompsLoaded.length; ++i) {
+			fnCallback(an.bootcompsLoaded[i]);
+		}
+	}
+};
+an.compositions = an.compositions || {};
+an.compositions['ECA04785434C5E40A545F42D8369EC30'] = {
+	getStage: function() { return exportRoot.getStage(); },
+	getLibrary: function() { return lib; },
+	getSpriteSheet: function() { return ss; },
+	getImages: function() { return img; }
+};
+an.compositionLoaded = function(id) {
+	an.bootcompsLoaded.push(id);
+	for(var j=0; j<an.bootstrapListeners.length; j++) {
+		an.bootstrapListeners[j](id);
+	}
+}
+an.getComposition = function(id) {
+	return an.compositions[id];
+}
+})(createjs = createjs||{}, AdobeAn = AdobeAn||{});
+var createjs, AdobeAn;
+</script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	canvas = document.getElementById("canvas");
+	var comp=AdobeAn.getComposition("ECA04785434C5E40A545F42D8369EC30");
+	var lib=comp.getLibrary();
+	try {
+		if(!(typeof gFontsFamilies === 'undefined' || gFontsFamilies === null))
+			LoadGFonts(gFontsFamilies, comp);		
+		if(!(typeof totalTypekitFonts === 'undefined' || totalTypekitFonts === null)) {			
+			var typekitObject = {type: 'Typekit', loadedFonts: 0, totalFonts: totalTypekitFonts, callOnLoad: lib.tfontAvailable};		
+			Typekit.load({
+			async: true,
+			'fontactive': function(family) {
+				isFontAvailable(family, typekitObject);
+				}
+			});
+		}
+	} catch(e) {};
+	handleComplete({},comp);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	exportRoot = new lib.CAN_31_GRA_StandardRemoteFrame_EN();
+	stage = new lib.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = w*sRatio+'px';				
+			canvas.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+<style>
+/* Roboto normal is MarkWeb normal */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://elearning.vector.com/resources/fonts/MarkWeb.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto light italic is MarkWeb light italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-LightItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto light is MarkWeb light */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Light.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto medium is MarkWeb medium */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Medium.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto medium italic is MarkWeb medium italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-MediumItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto bold is MarkWeb bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Bold.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto bold italic is MarkWeb bold italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-BoldItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto black is MarkWeb bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Bold.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto black italic is MarkWeb italic bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-BoldItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto italic is MarkWeb italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Italic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto regular is MarkWeb normal */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://elearning.vector.com/resources/fonts/MarkWeb.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+</style>
+</head>
+<body onload="init();" style="margin:0px;">
+	<canvas id="canvas" width="825" height="367" style="display: block; background-color: rgb(255, 255, 255); width: 660px; height: 294px;"></canvas>
+
+</body></html>

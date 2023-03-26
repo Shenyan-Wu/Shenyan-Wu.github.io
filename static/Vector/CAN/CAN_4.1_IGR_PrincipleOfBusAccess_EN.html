@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)https://elearning.vector.com/pluginfile.php/12200/mod_page/content/6/CAN_4.1_IGR_PrincipleOfBusAccess_EN.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>CAN_4.1_IGR_PrincipleOfBusAccess_EN</title>
+<style>
+	html, body{
+		background-color:#FFF;
+	}
+</style>
+<!-- write your code here -->
+<script src="https://shenyanwu.oss-cn-guangzhou.aliyuncs.com/Article/Vector/CAN/JS/CAN_4.1_IGR_PrincipleOfBusAccess_EN.download"></script>
+<script>
+function LoadGFonts(families, comp) {				
+	var lib=comp.getLibrary();				
+	var googleObject = {type: "Google", loadedFonts: 0, totalFonts: families.length, callOnLoad: lib.gfontAvailable};				
+	for(var i =0; i < families.length; i++)				
+		isFontAvailable(gFontsFamilies[i], googleObject);				
+}
+function isFontAvailable(font, obj) {				
+	var timeOut = 5000;				
+	var delay = 200;				
+	var interval = 0;				
+	var timeElapsed = 0;				
+	function checkFont() {				
+		var node = document.createElement("span");				
+		node.innerHTML = "giItT1WQy@!-/#";				
+		node.style.position      = "absolute";				
+		node.style.left          = "-1000px";				
+		node.style.top           = "-1000px";				
+		node.style.fontSize      = "300px";				
+		node.style.fontFamily    = "sans-serif";				
+		node.style.fontVariant   = "normal";				
+		node.style.fontStyle     = "normal";				
+		node.style.fontWeight    = "normal";				
+		node.style.letterSpacing = "0";				
+		document.body.appendChild(node);				
+		var width = node.offsetWidth;				
+		node.style.fontFamily = font+","+node.style.fontFamily;				
+		var returnVal = false;				
+		if((node && node.offsetWidth != width) || timeElapsed >=timeOut) {				
+			obj.loadedFonts++;				
+			if(interval)				
+				clearInterval(interval);				
+			obj.callOnLoad(font, obj.totalFonts);				
+			returnVal = true;				
+		}				
+		if(node) {				
+			node.parentNode.removeChild(node);				
+			node = null;				
+		}				
+		timeElapsed += delay;				
+		return returnVal;				
+	}				
+	if(!checkFont()) {				
+		interval = setInterval(checkFont, delay);				
+	}				
+}
+</script>
+<script>
+	var gFontsFamilies = ["Roboto"];
+</script>
+<style>
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v16/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}</style>
+<script>
+(function (cjs, an) {
+var p; // shortcut to reference prototypes
+var lib={};var ss={};var img={};
+lib.webFontTxtInst = {}; 
+var loadedTypekitCount = 0;
+var loadedGoogleCount = 0;
+var gFontsUpdateCacheList = [];
+var tFontsUpdateCacheList = [];
+lib.ssMetadata = [];
+lib.updateListCache = function (cacheList) {		
+	for(var i = 0; i < cacheList.length; i++) {		
+		if(cacheList[i].cacheCanvas)		
+			cacheList[i].updateCache();		
+	}		
+};		
+lib.addElementsToCache = function (textInst, cacheList) {		
+	var cur = textInst;		
+	while(cur != null && cur != exportRoot) {		
+		if(cacheList.indexOf(cur) != -1)		
+			break;		
+		cur = cur.parent;		
+	}		
+	if(cur != exportRoot) {		
+		var cur2 = textInst;		
+		var index = cacheList.indexOf(cur);		
+		while(cur2 != null && cur2 != cur) {		
+			cacheList.splice(index, 0, cur2);		
+			cur2 = cur2.parent;		
+			index++;		
+		}		
+	}		
+	else {		
+		cur = textInst;		
+		while(cur != null && cur != exportRoot) {		
+			cacheList.push(cur);		
+			cur = cur.parent;		
+		}		
+	}		
+};		
+lib.gfontAvailable = function(family, totalGoogleCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
+	loadedGoogleCount++;		
+	if(loadedGoogleCount == totalGoogleCount) {		
+		lib.updateListCache(gFontsUpdateCacheList);		
+	}		
+};		
+lib.tfontAvailable = function(family, totalTypekitCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
+	loadedTypekitCount++;		
+	if(loadedTypekitCount == totalTypekitCount) {		
+		lib.updateListCache(tFontsUpdateCacheList);		
+	}		
+};
+// symbols:
+// helper functions:
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
+(lib.rahmen_lernmarken_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// paperclip
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#4C4C4C").ss(3,1,1).p("AA8hdQAOD4gHARQgIAQgSASQgWAVgNgCQgNgDgVgTQgVgTgJgSQgMgUgCigQgCioASgVQASgVAzAAQAqAAASAI");
+	this.shape.setTransform(22.3,18.5);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	// white
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FFFFFF").s().dr(-155,-70,310,140);
+	this.shape_1.setTransform(160,75);
+	this.timeline.addTween(cjs.Tween.get(this.shape_1).wait(1));
+	// back_red
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#B70032").s("#909090").ss(1,1,1).dr(-160.05,-75,320.1,150);
+	this.shape_2.setTransform(160,75);
+	this.timeline.addTween(cjs.Tween.get(this.shape_2).wait(1));
+	// paperclip_back
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f().s("#4C4C4C").ss(3,1,1).p("AAMATQgBgMgJgLQgHgLgGgD");
+	this.shape_3.setTransform(30.8,-1.2);
+	this.timeline.addTween(cjs.Tween.get(this.shape_3).wait(1));
+}).prototype = getMCSymbolPrototype(lib.rahmen_lernmarken_mc, new cjs.Rectangle(-1,-5.5,322,156.5), null);
+(lib.pfeilspitze_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#848B8E").s().p("AgdgnIA7AnIg7Aog");
+	this.shape.setTransform(3,4);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.pfeilspitze_mc, new cjs.Rectangle(0,0,6,8), null);
+(lib.lm4_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		this.stop();
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	// Ebene 3
+	this.text = new cjs.Text("4", "normal 700 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 20;
+	this.text.parent = this;
+	this.text.setTransform(12,8,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s("#B70032").ss(2,2,0,1).de(-23,-16,46,32);
+	this.shape.setTransform(12,12,0.522,0.75);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s("#909090").ss(2,2,0,1).de(-23,-16,46,32);
+	this.shape_1.setTransform(12,12,0.522,0.75);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1,-1,26,26);
+(lib.lm3_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		this.stop();
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	// Ebene 3
+	this.text = new cjs.Text("3", "normal 700 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 20;
+	this.text.parent = this;
+	this.text.setTransform(12,8,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s("#B70032").ss(2,2,0,1).de(-23,-16,46,32);
+	this.shape.setTransform(12,12,0.522,0.75);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s("#909090").ss(2,2,0,1).de(-23,-16,46,32);
+	this.shape_1.setTransform(12,12,0.522,0.75);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1,-1,26,26);
+(lib.lm2_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		this.stop();
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	// Ebene 3
+	this.text = new cjs.Text("2", "normal 700 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 20;
+	this.text.parent = this;
+	this.text.setTransform(12,8,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s("#B70032").ss(2,2,0,1).de(-23,-16,46,32);
+	this.shape.setTransform(12,12,0.522,0.75);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s("#909090").ss(2,2,0,1).de(-23,-16,46,32);
+	this.shape_1.setTransform(12,12,0.522,0.75);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1,-1,26,26);
+(lib.lm1_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		this.stop();
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	// Ebene 3
+	this.text = new cjs.Text("1", "normal 700 11px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 20;
+	this.text.parent = this;
+	this.text.setTransform(12,8,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s("#B70032").ss(2,2,0,1).de(-23,-16,46,32);
+	this.shape.setTransform(12,12,0.522,0.75);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s("#909090").ss(2,2,0,1).de(-23,-16,46,32);
+	this.shape_1.setTransform(12,12,0.522,0.75);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1,-1,26,26);
+(lib.itm_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("ITM", "normal 400 12px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 56;
+	this.text.parent = this;
+	this.text.setTransform(30,9);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s("#848B8E").ss(1,2,0,1).dr(-30,-15,60,30);
+	this.shape.setTransform(30,15);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.itm_mc, new cjs.Rectangle(-1,-1,62,32), null);
+(lib.close_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		/* stop();*/
+	}
+	this.frame_2 = function() {
+		/* stop();*/
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
+	// active
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("rgba(255,255,255,0)").s().p("Ah8B9IAAj5ID5AAIAAD5g");
+	this.shape.setTransform(12.5,12.5);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(3));
+	// Ebene 3
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f().s("#000000").ss(1,0,0,4).p("AAAh8IAAD5");
+	this.shape_1.setTransform(0,12.5);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#FFFFFF").s().p("AAmA8IgmgyIgnAyIgUAAIAxg7Igwg8IAWAAIAlAxIAmgxIAVAAIgxA7IAxA8g");
+	this.shape_2.setTransform(12,13);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#000000").s().p("AAmA8IgmgyIgnAyIgUAAIAxg7Igwg8IAWAAIAlAxIAmgxIAVAAIgxA7IAxA8g");
+	this.shape_3.setTransform(12,13);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1}]}).to({state:[{t:this.shape_3},{t:this.shape_1}]},1).to({state:[{t:this.shape_2},{t:this.shape_1}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1,-1,26,27);
+(lib.Reset_EN = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Text
+	this.text = new cjs.Text("Reset", "normal 400 12px 'Roboto'", "#848B8E");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 76;
+	this.text.parent = this;
+	this.text.setTransform(11,42);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1).to({_off:false},0).to({_off:true},2).wait(1));
+	// reset.ai
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#848B8E").s().p("AhpAYIBaAAIgiAjQAWARAbAAQAhAAAXgYQAYgYAAgfQAAgigYgYQgXgXghAAQgdAAgXATQgXAUgEAcQgBAHgFADQgFAEgGgBQgHgBgDgFQgEgFABgGQAGgoAggbQAfgaAoAAQAtAAAhAgQAgAhAAAuQAAAsggAgQghAhgtAAQgoAAgegaIgjAjg");
+	this.shape.setTransform(11,11.5);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s().p("AhpAYIBaAAIgiAjQAWARAbAAQAhAAAXgYQAYgYAAgfQAAgigYgYQgXgXghAAQgdAAgXATQgXAUgEAcQgBAHgFADQgFAEgGgBQgHgBgDgFQgEgFABgGQAGgoAggbQAfgaAoAAQAtAAAhAgQAgAhAAAuQAAAsggAgQghAhgtAAQgoAAgegaIgjAjg");
+	this.shape_1.setTransform(11,11.5);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#000000").s().p("AhpAYIBaAAIgiAjQAWARAbAAQAhAAAXgYQAYgYAAgfQAAgigYgYQgXgXghAAQgdAAgXATQgXAUgEAcQgBAHgFADQgFAEgGgBQgHgBgDgFQgEgFABgGQAGgoAggbQAfgaAoAAQAtAAAhAgQAgAhAAAuQAAAsggAgQghAhgtAAQgoAAgegaIgjAjg");
+	this.shape_2.setTransform(11,11.5);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#565C5E").s().dr(-14.6,-15.3,29.2,30.6);
+	this.shape_3.setTransform(11,11.5,0.755,0.752);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).to({state:[{t:this.shape_2}]},1).to({state:[{t:this.shape_3}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,22,23);
+(lib.Instructions_EN = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Text
+	this.text = new cjs.Text("Instructions", "normal 400 12px 'Roboto'", "#848B8E");
+	this.text.textAlign = "right";
+	this.text.lineHeight = 18;
+	this.text.lineWidth = 76;
+	this.text.parent = this;
+	this.text.setTransform(11,42);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1).to({_off:false},0).to({_off:true},2).wait(1));
+	// help.ai
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#848B8E").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape.setTransform(6.5,11);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape_1.setTransform(6.5,11);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#000000").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape_2.setTransform(6.5,11);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#565C5E").s().dr(-7.4,-12.55,14.8,25.1);
+	this.shape_3.setTransform(6.5,11,0.876,0.876);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).to({state:[{t:this.shape_2}]},1).to({state:[{t:this.shape_3}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,13,22);
+(lib.frame_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("CAN Frame", "normal 400 12px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 146;
+	this.text.parent = this;
+	this.text.setTransform(75,8,1,1.006);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FBB900").s("#848B8E").ss(1,2,0,1).dr(-75,-15,150,30);
+	this.shape.setTransform(75,15);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.frame_mc, new cjs.Rectangle(-1,-1,152,32), null);
+(lib.frame_b1_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("CAN Frame B\n(Low Priority)", "normal 400 12px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 146;
+	this.text.parent = this;
+	this.text.setTransform(75,6,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#92C255").s("#909090").ss(1,2,0,1).dr(-75,-20,150,40);
+	this.shape.setTransform(75,20);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.frame_b1_mc, new cjs.Rectangle(-1,-1,152,42), null);
+(lib.frame_b_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("CAN Frame B", "normal 400 12px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 146;
+	this.text.parent = this;
+	this.text.setTransform(75,9,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#92C255").s("#848B8E").ss(1,2,0,1).dr(-75,-15,150,30);
+	this.shape.setTransform(75,15);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.frame_b_mc, new cjs.Rectangle(-1,-1,152,32), null);
+(lib.frame_a1_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("CAN Frame A\n(High Priority)", "normal 400 12px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 15;
+	this.text.lineWidth = 146;
+	this.text.parent = this;
+	this.text.setTransform(75,6.1,1,1.006);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#43BFDE").s("#909090").ss(1,2,0,1).dr(-75,-20,150,40);
+	this.shape.setTransform(75,20);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.frame_a1_mc, new cjs.Rectangle(-1,-1,152,42), null);
+(lib.frame_a_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("CAN Frame A", "normal 400 12px 'Roboto'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 146;
+	this.text.parent = this;
+	this.text.setTransform(75,9,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#43BFDE").s("#848B8E").ss(1,2,0,1).dr(-75,-15,150,30);
+	this.shape.setTransform(75,15);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.frame_a_mc, new cjs.Rectangle(-1,-1,152,32), null);
+(lib.farbe_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		this.stop();
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#B70032").s().p("ApXBkIAAjHISvAAIAADHg");
+	this.shape.setTransform(60,10);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FAFAFA").s().p("ApXBkIAAjHISvAAIAADHg");
+	this.shape_1.setTransform(60,10);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,120,20);
+(lib.blitz_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#B70032").s().p("AADAIIhmgGIBfjZIBjgEIhZCsIBeAAIjHELg");
+	this.shape.setTransform(10,22);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.blitz_mc, new cjs.Rectangle(0,0,20,44), null);
+(lib.arrow_two_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(1,1,1).p("ABBiVIEECVIkECWgAlEiVIEECVIkECWg");
+	this.shape.setTransform(32.5,15);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.arrow_two_mc, new cjs.Rectangle(-1,-1,67,32), null);
+(lib.anleitung_transparent_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("EhBnAuGMAAAhcLMCDPAAAMAAABcLg");
+	this.shape.setTransform(420,295);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_transparent_mc, new cjs.Rectangle(0,0,840,590), null);
+(lib.anleitung_close_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#909090").s().p("AhIBJIAAiRICRAAIAACRg");
+	this.shape.setTransform(7.3,7.3);
+	this.shape._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(3).to({_off:false},0).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = null;
+(lib.lernmarke_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		this.stop();
+	}
+	this.frame_2 = function() {
+		this.stop();
+	}
+	this.frame_3 = function() {
+		this.stop();
+	}
+	this.frame_4 = function() {
+		this.stop();
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1).call(this.frame_3).wait(1).call(this.frame_4).wait(1));
+	// Text
+	this.text = new cjs.Text("Effect", "normal 700 11px 'Roboto'");
+	this.text.lineHeight = 20;
+	this.text.lineWidth = 96;
+	this.text.parent = this;
+	this.text.setTransform(432,-23,1,1.001);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.ereignis_txt = new cjs.Text("Event", "normal 700 11px 'Roboto'");
+	this.ereignis_txt.name = "ereignis_txt";
+	this.ereignis_txt.lineHeight = 20;
+	this.ereignis_txt.lineWidth = 96;
+	this.ereignis_txt.parent = this;
+	this.ereignis_txt.setTransform(2,-23,1,1.001);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.ereignis_txt);
+	}
+	this.text1_txt = new cjs.Text("", "normal 400 12px 'Roboto'");
+	this.text1_txt.name = "text1_txt";
+	this.text1_txt.lineHeight = 21;
+	this.text1_txt.lineWidth = 256;
+	this.text1_txt.parent = this;
+	this.text1_txt.setTransform(47,17,1,1.001);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text1_txt);
+	}
+	this.text2_txt = new cjs.Text("", "normal 400 12px 'Roboto'");
+	this.text2_txt.name = "text2_txt";
+	this.text2_txt.lineHeight = 21;
+	this.text2_txt.lineWidth = 256;
+	this.text2_txt.parent = this;
+	this.text2_txt.setTransform(477,17,1,1.002);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text2_txt);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text2_txt,p:{y:17,text:"",lineHeight:20.9}},{t:this.text1_txt,p:{y:17,text:"",lineHeight:20.9}},{t:this.ereignis_txt,p:{text:"Event"}},{t:this.text,p:{text:"Effect"}}]}).to({state:[{t:this.text2_txt,p:{y:41,text:"CAN node A cannot access the CAN bus until it is available. This occurs after the ITM expires. CAN node A monitors the CAN bus (Carrier Sense) to detect this.",lineHeight:17.9}},{t:this.text1_txt,p:{y:41,text:"CAN node A wishes to access the CAN bus to transmit its high-priority CAN message.\nHowever, it cannot do so, because the CAN bus is busy.",lineHeight:17.9}},{t:this.ereignis_txt,p:{text:"Event 1"}},{t:this.text,p:{text:"Effect"}}]},1).to({state:[{t:this.text2_txt,p:{y:41,text:"Can node B may not access the CAN bus until it is available. This occurs after the ITM expires. Can node B monitors the CAN bus (Carrier Sense) to detect this.",lineHeight:17.9}},{t:this.text1_txt,p:{y:41,text:"CAN node B wishes to access the CAN bus to transmit its low-priority CAN message. However, it cannot do so, because the CAN bus is busy,",lineHeight:17.9}},{t:this.ereignis_txt,p:{text:"Event 2"}},{t:this.text,p:{text:"Folge"}}]},1).to({state:[{t:this.text2_txt,p:{y:55,text:"CAN node B waits until the CAN bus is available again",lineHeight:17.9}},{t:this.text1_txt,p:{y:27,text:"After the ITM expires, the CAN bus is idle. CAN node A and CAN node B, both wishing to send, may now access the CAN bus.\nCAN message A will be transmitted, because it has a higher priority compared to CAN frame B.",lineHeight:17.9}},{t:this.ereignis_txt,p:{text:"Event 3"}},{t:this.text,p:{text:"Effect"}}]},1).to({state:[{t:this.text2_txt,p:{y:54,text:"CAN node B accesses the CAN bus and transmits its CAN message.",lineHeight:17.9}},{t:this.text1_txt,p:{y:54,text:"After the ITM expires the CAN bus is available again.",lineHeight:17.9}},{t:this.ereignis_txt,p:{text:"Event 4"}},{t:this.text,p:{text:"Effect"}}]},1).wait(1));
+	// pfeil
+	this.instance = new lib.arrow_two_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(347.5,66.5,1,1,0,0,0,2.5,2.5);
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(5));
+	// Rahmen
+	this.instance_1 = new lib.rahmen_lernmarken_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(542.7,62.7,1,1,0,0,0,112.7,58.7);
+	this.rahmen_mc = new lib.rahmen_lernmarken_mc();
+	this.rahmen_mc.parent = this;
+	this.rahmen_mc.setTransform(112.8,62.6,1,1,0,0,0,112.8,58.6);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.rahmen_mc},{t:this.instance_1}]}).to({state:[{t:this.rahmen_mc},{t:this.instance_1}]},1).to({state:[{t:this.rahmen_mc},{t:this.instance_1}]},1).to({state:[{t:this.rahmen_mc},{t:this.instance_1}]},1).to({state:[{t:this.rahmen_mc},{t:this.instance_1}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-0.5,-25,751,179.5);
+(lib.header_muli_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// text
+	this.text = new cjs.Text("Bus Access in the CAN Network", "normal 700 16px 'Roboto'", "#848B8E");
+	this.text.lineHeight = 21;
+	this.text.lineWidth = 296;
+	this.text.parent = this;
+	this.text.setTransform(32,32);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Principle of Bus Access in the CAN Network", "normal 700 20px 'Roboto'", "#B70032");
+	this.text_1.lineHeight = 27;
+	this.text_1.lineWidth = 446;
+	this.text_1.parent = this;
+	this.text_1.setTransform(32,62);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_1},{t:this.text}]}).wait(1));
+	// icons
+	this.Reset = new lib.Reset_EN();
+	this.Reset.parent = this;
+	this.Reset.setTransform(785,33);
+	new cjs.ButtonHelper(this.Reset, 0, 1, 2, false, new lib.Reset_EN(), 3);
+	this.Instruction_btn = new lib.Instructions_EN();
+	this.Instruction_btn.parent = this;
+	this.Instruction_btn.setTransform(817,33);
+	new cjs.ButtonHelper(this.Instruction_btn, 0, 1, 2, false, new lib.Instructions_EN(), 3);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.Instruction_btn},{t:this.Reset}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.header_muli_mc, new cjs.Rectangle(30,30,806,68), null);
+(lib.grafik_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// text
+	this.text = new cjs.Text("ITM: Intermission", "normal 400 12px 'Roboto'");
+	this.text.textAlign = "right";
+	this.text.lineHeight = 19;
+	this.text.lineWidth = 146;
+	this.text.parent = this;
+	this.text.setTransform(798,202,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Carrier Sense", "normal 400 12px 'Roboto'");
+	this.text_1.textAlign = "center";
+	this.text_1.lineHeight = 19;
+	this.text_1.lineWidth = 146;
+	this.text_1.parent = this;
+	this.text_1.setTransform(305,191,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.text_2 = new cjs.Text("Carrier Sense", "normal 400 12px 'Roboto'");
+	this.text_2.textAlign = "center";
+	this.text_2.lineHeight = 19;
+	this.text_2.lineWidth = 176;
+	this.text_2.parent = this;
+	this.text_2.setTransform(290,70,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_2);
+	}
+	this.text_3 = new cjs.Text("Carrier Sense", "normal 400 12px 'Roboto'");
+	this.text_3.textAlign = "center";
+	this.text_3.lineHeight = 19;
+	this.text_3.lineWidth = 206;
+	this.text_3.parent = this;
+	this.text_3.setTransform(485,191,1,1.003);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_3);
+	}
+	this.text_4 = new cjs.Text("CAN Bus", "normal 700 12px 'Roboto'");
+	this.text_4.textAlign = "right";
+	this.text_4.lineHeight = 16;
+	this.text_4.lineWidth = 146;
+	this.text_4.parent = this;
+	this.text_4.setTransform(148,131);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_4);
+	}
+	this.text_5 = new cjs.Text("CAN Node B", "normal 700 12px 'Roboto'");
+	this.text_5.textAlign = "right";
+	this.text_5.lineHeight = 16;
+	this.text_5.lineWidth = 146;
+	this.text_5.parent = this;
+	this.text_5.setTransform(148,192);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_5);
+	}
+	this.text_6 = new cjs.Text("CAN Node A", "normal 700 12px 'Roboto'");
+	this.text_6.textAlign = "right";
+	this.text_6.lineHeight = 16;
+	this.text_6.lineWidth = 146;
+	this.text_6.parent = this;
+	this.text_6.setTransform(148,70);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_6);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_6},{t:this.text_5},{t:this.text_4},{t:this.text_3},{t:this.text_2},{t:this.text_1},{t:this.text}]}).wait(1));
+	// lernmarken
+	this.lernmarke_mc = new lib.lernmarke_mc();
+	this.lernmarke_mc.parent = this;
+	this.lernmarke_mc.setTransform(271.1,373.6,1,1,0,0,0,271.1,48.6);
+	this.timeline.addTween(cjs.Tween.get(this.lernmarke_mc).wait(1));
+	// nachrichten
+	this.instance = new lib.itm_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(770,138,1,1,0,0,0,30,15);
+	this.instance_1 = new lib.itm_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(560,138,1,1,0,0,0,30,15);
+	this.instance_2 = new lib.itm_mc();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(350,138,1,1,0,0,0,30,15);
+	this.instance_3 = new lib.frame_b1_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(75,252,1,1,0,0,0,75,15);
+	this.instance_4 = new lib.frame_a1_mc();
+	this.instance_4.parent = this;
+	this.instance_4.setTransform(75,15,1,1,0,0,0,75,15);
+	this.instance_5 = new lib.frame_b_mc();
+	this.instance_5.parent = this;
+	this.instance_5.setTransform(665,138,1,1,0,0,0,75,15);
+	this.instance_6 = new lib.frame_a_mc();
+	this.instance_6.parent = this;
+	this.instance_6.setTransform(455,138,1,1,0,0,0,75,15);
+	this.instance_7 = new lib.frame_mc();
+	this.instance_7.parent = this;
+	this.instance_7.setTransform(245,138,1,1,0,0,0,75,15);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+	// buttons
+	this.lm3_btn = new lib.lm3_btn();
+	this.lm3_btn.parent = this;
+	this.lm3_btn.setTransform(383,15,1,1,0,0,0,15,15);
+	this.lm4_btn = new lib.lm4_btn();
+	this.lm4_btn.parent = this;
+	this.lm4_btn.setTransform(593,15.1,1,0.997,0,0,0,15,15.1);
+	this.lm2_btn = new lib.lm2_btn();
+	this.lm2_btn.parent = this;
+	this.lm2_btn.setTransform(219,267,1,1,0,0,0,15,15);
+	this.lm1_btn = new lib.lm1_btn();
+	this.lm1_btn.parent = this;
+	this.lm1_btn.setTransform(215,15,1,1,0,0,0,15,15);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.lm1_btn},{t:this.lm2_btn},{t:this.lm4_btn},{t:this.lm3_btn}]}).wait(1));
+	// lightning
+	this.instance_8 = new lib.blitz_mc();
+	this.instance_8.parent = this;
+	this.instance_8.setTransform(220,219,1,1,180,0,0,10,22);
+	this.instance_9 = new lib.blitz_mc();
+	this.instance_9.parent = this;
+	this.instance_9.setTransform(210,55,1,1,0,0,0,10,22);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_9},{t:this.instance_8}]}).wait(1));
+	// arrows
+	this.instance_10 = new lib.pfeilspitze_mc();
+	this.instance_10.parent = this;
+	this.instance_10.setTransform(587,185,1,1,0,0,0,3,4);
+	this.instance_11 = new lib.pfeilspitze_mc();
+	this.instance_11.parent = this;
+	this.instance_11.setTransform(377,185,1,1,0,0,0,3,4);
+	this.instance_12 = new lib.pfeilspitze_mc();
+	this.instance_12.parent = this;
+	this.instance_12.setTransform(230,156,1,1,-90,0,0,3,4);
+	this.instance_13 = new lib.pfeilspitze_mc();
+	this.instance_13.parent = this;
+	this.instance_13.setTransform(377,90,1,1,0,0,0,3,4);
+	this.instance_14 = new lib.pfeilspitze_mc();
+	this.instance_14.parent = this;
+	this.instance_14.setTransform(200,120,1,1,90,0,0,3,4);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_14},{t:this.instance_13},{t:this.instance_12},{t:this.instance_11},{t:this.instance_10}]}).wait(1));
+	// lines
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#848B8E").ss(1,2,0,1).p("Av7AAIf3AA");
+	this.shape.setTransform(482,185);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f().s("#848B8E").ss(1,0,0,1).p("AtvAAIbfAA");
+	this.shape_1.setTransform(288,90);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("#909090").ss(1,0,0,1).p("ArUAAIWpAA");
+	this.shape_2.setTransform(302.5,185);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1},{t:this.shape}]}).wait(1));
+	// lines_dashed
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#848B8E").s().p("AebM9QgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAiZM9QAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgA50MAQgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAebLZQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAiZLZQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgA50KcQgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAebJ1QgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAiZJ1QAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgA50I5QgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAebIQQgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAiZIQQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgA50HVQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAebGsQgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAiZGsQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAebATQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgnQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAnQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAiZATQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgnQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAnQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgA+hgfQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAebhQQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAiZhQQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgA+hiDQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAebi0QgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAiZi0QAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgA+hjnQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAebkZQgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAiZkZQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgA+hlKQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAgAebl9QgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAiZl9QAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAebnhQgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABgBQAAAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAiZnhQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAgBQABAAAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAAAQABABAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAebpFQgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAiZpFQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAebqpQgBAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAgBgAiZqpQAAAAAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBAAQAAABAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBgBgAebsMQgBgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAABAAQAAgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAAAAAgAiZsMQAAgBAAAAQAAgBgBAAQAAgBAAAAQAAAAAAgBIAAgoQAAgBAAAAQAAAAAAgBQABAAAAgBQAAAAAAAAQABgBAAAAQABAAAAgBQABAAAAAAQAAAAABAAQABAAAAAAQAAAAABAAQAAABABAAQAAAAAAABQABAAAAAAQAAABABAAQAAABAAAAQAAAAAAABIAAAoQAAABAAAAQAAAAAAABQgBAAAAABQAAAAgBABQAAAAAAAAQgBAAAAABQgBAAAAAAQAAAAgBAAQgBAAAAAAQAAAAgBAAQAAgBgBAAQAAAAgBAAg");
+	this.shape_3.setTransform(395,114.5);
+	this.timeline.addTween(cjs.Tween.get(this.shape_3).wait(1));
+}).prototype = getMCSymbolPrototype(lib.grafik_mc, new cjs.Rectangle(-0.6,-1.3,801.3,480.8), null);
+(lib.anleitung_titelzeile_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 2
+	this.text = new cjs.Text("Instructions", "normal 700 12px 'Roboto'", "#FFFFFF");
+	this.text.lineHeight = 18;
+	this.text.lineWidth = 116;
+	this.text.parent = this;
+	this.text.setTransform(17,7,1.001,1.004);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(1,0,0,4).p("AAAh8IAAD5");
+	this.shape.setTransform(325,12.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.text}]}).wait(1));
+	// Ebene 1
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f().s("#000000").ss(1,2,0,4).p("AbWAAMg2rAAA");
+	this.shape_1.setTransform(175,25);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("#000000").ss(2,2,0,4).p("A7VB9IAAj5MA2rAAAIAAD5");
+	this.shape_2.setTransform(175,12.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1}]}).wait(1));
+	// Ebene 4
+	this.instance = new lib.farbe_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(175,12.5,2.917,1.25,0,0,0,60,10);
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_titelzeile_mc, new cjs.Rectangle(-1,-1,352,27), null);
+(lib.anleitung_drag_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// close_btn
+	this.close_btn = new lib.anleitung_close_btn();
+	this.close_btn.parent = this;
+	this.close_btn.setTransform(337.7,12.7,1.719,1.718,0,0,0,7.4,7.4);
+	new cjs.ButtonHelper(this.close_btn, 0, 1, 2, false, new lib.anleitung_close_btn(), 3);
+	this.timeline.addTween(cjs.Tween.get(this.close_btn).wait(1));
+	// titelzeile
+	this.close = new lib.close_btn();
+	this.close.parent = this;
+	this.close.setTransform(337.3,12.5,1,1,0,0,0,12.3,12.5);
+	this.titelzeile_mc = new lib.anleitung_titelzeile_mc();
+	this.titelzeile_mc.parent = this;
+	this.titelzeile_mc.setTransform(107,4.9,1,1.001,0,0,0,107,4.9);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.titelzeile_mc},{t:this.close}]}).wait(1));
+	// text
+	this.text = new cjs.Text("This media object helps you to understand bus access in the CAN network. It assumes a scenario of two CAN nodes wanting to access the bus during an ongoing message transmission on the CAN bus. All events occuring during the access scenario that are relevant to understanding the process are numbered in sequence. Click a number for a description of the associated event.", "normal 400 12px 'Roboto'");
+	this.text.lineHeight = 21;
+	this.text.lineWidth = 306;
+	this.text.parent = this;
+	this.text.setTransform(17,42);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// white
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,2,0,4).p("AbWRMMg2rAAAMAAAgiXMA2rAAAg");
+	this.shape.setTransform(175,110);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FFFFFF").s().p("A7VRMMAAAgiXMA2rAAAMAAAAiXg");
+	this.shape_1.setTransform(175,110);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+	// back
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("#E5E5E5").ss(1,1,1).p("A8HyvMA4PAAAMAAAAlfMg4PAAAg");
+	this.shape_2.setTransform(175,110,1,0.958);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#FFFFFF").s().p("A8HSwMAAAglfMA4PAAAMAAAAlfg");
+	this.shape_3.setTransform(175,110,1,0.958);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_3},{t:this.shape_2}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_drag_mc, new cjs.Rectangle(-6,-6,362,232), null);
+(lib.Anleitung = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// anleitung
+	this.anleitung_drag_mc = new lib.anleitung_drag_mc();
+	this.anleitung_drag_mc.parent = this;
+	this.anleitung_drag_mc.setTransform(452,196,1,1,0,0,0,175,8);
+	this.timeline.addTween(cjs.Tween.get(this.anleitung_drag_mc).wait(1));
+	// transparent
+	this.transparent_mc = new lib.anleitung_transparent_mc();
+	this.transparent_mc.parent = this;
+	this.transparent_mc.setTransform(457.7,295.3,1.029,1.136,0,0,0,445,260);
+	this.transparent_mc.alpha = 0.801;
+	this.timeline.addTween(cjs.Tween.get(this.transparent_mc).wait(1));
+}).prototype = getMCSymbolPrototype(lib.Anleitung, new cjs.Rectangle(0,0,864,670), null);
+// stage content:
+(lib.CAN_41_IGR_PrincipleOfBusAccess_EN = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		var grafik = this.grafik_mc;
+		var lernmarke = grafik.lernmarke_mc;
+		var lm1 = grafik.lm1_btn;
+		var lm2 = grafik.lm2_btn;
+		var lm3 = grafik.lm3_btn;
+		var lm4 = grafik.lm4_btn;
+		var chosen=0;
+		var instruction = this.Instruction;
+		var instruction_btn = this.graphic.Instruction_btn;
+		var close_btn = instruction.anleitung_drag_mc.close_btn;
+		var reset = this.graphic.Reset;
+		/*
+		Instruction handling
+		*/
+		instruction.visible=false;
+		instruction_btn.addEventListener("click", function(){
+			instruction.visible=true;
+		})
+		close_btn.addEventListener("click", function(){
+			instruction.visible=false;
+		})
+		close_btn.addEventListener("mouseover", function(){
+			instruction.anleitung_drag_mc.close.gotoAndStop(1);
+		});
+		close_btn.addEventListener("mouseout", function(){
+			instruction.anleitung_drag_mc.close.gotoAndStop(0);
+		});
+		instruction.transparent_mc.addEventListener("mouseover", function(){
+			//Do nothing, just take the focus
+		});
+		//This part kann make the instructions draggable
+		var titel_instruction = instruction.anleitung_drag_mc.titelzeile_mc;
+		var drag_instr = instruction.anleitung_drag_mc;
+		var transparent_instr = instruction.transparent_mc;
+		titel_instruction.cursor="move";
+		titel_instruction.on("pressmove", function(evt){
+			var scale = stage.scaleX;		
+			drag_instr.x = evt.stageX/scale;
+			drag_instr.y = evt.stageY/scale;
+			transparent_instr.visible=false;
+		});
+		titel_instruction.on("pressup", function(evt){
+			transparent_instr.visible=true;
+		});
+		/*
+		Reset Button handling
+		*/
+		reset.addEventListener("click", function(){
+			resetButtons();
+			lernmarke.gotoAndStop(0);
+		})
+		//Adding the show info functionality
+		lm1.cursor="pointer";
+		lm1.addEventListener("click", function(){
+			resetButtons();
+			lernmarke.gotoAndStop(1);
+			lm1.gotoAndStop(1);
+			chosen = 1;
+		})
+		lm2.cursor="pointer";
+		lm2.addEventListener("click", function(){
+			resetButtons();
+			lm2.gotoAndStop(1);	
+			lernmarke.gotoAndStop(2);
+			chosen = 2;
+		})
+		lm3.cursor="pointer";
+		lm3.addEventListener("click", function(){
+			resetButtons();
+			lernmarke.gotoAndStop(3);
+			lm3.gotoAndStop(1);
+			chosen = 3;
+		})
+		lm4.cursor="pointer";
+		lm4.addEventListener("click", function(){
+			resetButtons();
+			lernmarke.gotoAndStop(4);
+			lm4.gotoAndStop(1);
+			chosen = 4;
+		})
+		//Adding the function that makes the buttons turn red when moving over
+		lm1.addEventListener("mouseover", function(){
+			lm1.gotoAndStop(1);
+		})
+		lm1.addEventListener("mouseout", function(){
+			if (chosen!=1){
+				lm1.gotoAndStop(0);
+			}	
+		})
+		lm2.addEventListener("mouseover", function(){
+			lm2.gotoAndStop(1);
+		})
+		lm2.addEventListener("mouseout", function(){
+			if (chosen!=2){
+				lm2.gotoAndStop(0);
+			}	
+		})
+		lm3.addEventListener("mouseover", function(){
+			lm3.gotoAndStop(1);
+		})
+		lm3.addEventListener("mouseout", function(){
+			if (chosen!=3){
+				lm3.gotoAndStop(0);
+			}	
+		})
+		lm4.addEventListener("mouseover", function(){
+			lm4.gotoAndStop(1);
+		})
+		lm4.addEventListener("mouseout", function(){
+			if (chosen!=4){
+				lm4.gotoAndStop(0);
+			}	
+		})
+		/*
+		When a button is clicked all other buttons have to be resetted
+		*/
+		function resetButtons(){
+			lm1.gotoAndStop(0);
+			lm2.gotoAndStop(0);
+			lm3.gotoAndStop(0);
+			lm4.gotoAndStop(0);
+		}
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+	// Pop Ups
+	this.Instruction = new lib.Anleitung();
+	this.Instruction.parent = this;
+	this.Instruction.setTransform(420,295,1,1,0,0,0,420,295);
+	this.timeline.addTween(cjs.Tween.get(this.Instruction).wait(1));
+	// Content
+	this.grafik_mc = new lib.grafik_mc();
+	this.grafik_mc.parent = this;
+	this.grafik_mc.setTransform(65.5,165.5,1,1,0,0,0,35.5,25.5);
+	this.timeline.addTween(cjs.Tween.get(this.grafik_mc).wait(1));
+	// Framework
+	this.graphic = new lib.header_muli_mc();
+	this.graphic.parent = this;
+	this.graphic.setTransform(342.5,52.8,1,1,0,0,0,342.5,52.8);
+	this.text = new cjs.Text("© 2010-2017. Vector Informatik GmbH. All rights reserved. Any distribution or copying is subject to prior written approval by Vector. V2.0", "normal 400 10px 'Roboto'", "#848B8E");
+	this.text.lineHeight = 23;
+	this.text.lineWidth = 799;
+	this.text.parent = this;
+	this.text.setTransform(32,633.8);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text},{t:this.graphic}]}).wait(1));
+	// White_Background
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#848B8E").ss(1,1,1).p("EhDLgysMCGXAAAMAAABlZMiGXAAAg");
+	this.shape.setTransform(430,324.5);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FFFFFF").s().p("EhDLAytMAAAhlZMCGXAAAMAAABlZg");
+	this.shape_1.setTransform(430,324.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(429.1,323.5,864.9,671);
+// library properties:
+lib.properties = {
+	id: 'E4FF794336E01244952042092604426B',
+	width: 860,
+	height: 649,
+	fps: 24,
+	color: "#FFFFFF",
+	opacity: 1.00,
+	webfonts: {},
+	manifest: [],
+	preloads: []
+};
+// bootstrap callback support:
+(lib.Stage = function(canvas) {
+	createjs.Stage.call(this, canvas);
+}).prototype = p = new createjs.Stage();
+p.setAutoPlay = function(autoPlay) {
+	this.tickEnabled = autoPlay;
+}
+p.play = function() { this.tickEnabled = true; this.getChildAt(0).gotoAndPlay(this.getTimelinePosition()) }
+p.stop = function(ms) { if(ms) this.seek(ms); this.tickEnabled = false; }
+p.seek = function(ms) { this.tickEnabled = true; this.getChildAt(0).gotoAndStop(lib.properties.fps * ms / 1000); }
+p.getDuration = function() { return this.getChildAt(0).totalFrames / lib.properties.fps * 1000; }
+p.getTimelinePosition = function() { return this.getChildAt(0).currentFrame / lib.properties.fps * 1000; }
+an.bootcompsLoaded = an.bootcompsLoaded || [];
+if(!an.bootstrapListeners) {
+	an.bootstrapListeners=[];
+}
+an.bootstrapCallback=function(fnCallback) {
+	an.bootstrapListeners.push(fnCallback);
+	if(an.bootcompsLoaded.length > 0) {
+		for(var i=0; i<an.bootcompsLoaded.length; ++i) {
+			fnCallback(an.bootcompsLoaded[i]);
+		}
+	}
+};
+an.compositions = an.compositions || {};
+an.compositions['E4FF794336E01244952042092604426B'] = {
+	getStage: function() { return exportRoot.getStage(); },
+	getLibrary: function() { return lib; },
+	getSpriteSheet: function() { return ss; },
+	getImages: function() { return img; }
+};
+an.compositionLoaded = function(id) {
+	an.bootcompsLoaded.push(id);
+	for(var j=0; j<an.bootstrapListeners.length; j++) {
+		an.bootstrapListeners[j](id);
+	}
+}
+an.getComposition = function(id) {
+	return an.compositions[id];
+}
+})(createjs = createjs||{}, AdobeAn = AdobeAn||{});
+var createjs, AdobeAn;
+</script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	canvas = document.getElementById("canvas");
+	var comp=AdobeAn.getComposition("E4FF794336E01244952042092604426B");
+	var lib=comp.getLibrary();
+	try {
+		if(!(typeof gFontsFamilies === 'undefined' || gFontsFamilies === null))
+			LoadGFonts(gFontsFamilies, comp);		
+		if(!(typeof totalTypekitFonts === 'undefined' || totalTypekitFonts === null)) {			
+			var typekitObject = {type: 'Typekit', loadedFonts: 0, totalFonts: totalTypekitFonts, callOnLoad: lib.tfontAvailable};		
+			Typekit.load({
+			async: true,
+			'fontactive': function(family) {
+				isFontAvailable(family, typekitObject);
+				}
+			});
+		}
+	} catch(e) {};
+	handleComplete({},comp);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	exportRoot = new lib.CAN_41_IGR_PrincipleOfBusAccess_EN();
+	stage = new lib.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = w*sRatio+'px';				
+			canvas.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+<style>
+/* Roboto normal is MarkWeb normal */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://elearning.vector.com/resources/fonts/MarkWeb.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto light italic is MarkWeb light italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-LightItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto light is MarkWeb light */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Light.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto medium is MarkWeb medium */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Medium.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto medium italic is MarkWeb medium italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-MediumItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto bold is MarkWeb bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Bold.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto bold italic is MarkWeb bold italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-BoldItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto black is MarkWeb bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Bold.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto black italic is MarkWeb italic bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-BoldItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto italic is MarkWeb italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Italic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto regular is MarkWeb normal */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://elearning.vector.com/resources/fonts/MarkWeb.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+</style>
+</head>
+<body onload="init();" style="margin:0px;">
+	<canvas id="canvas" width="1075" height="811" style="display: block; background-color: rgb(255, 255, 255); width: 860px; height: 649px;"></canvas>
+
+</body></html>

@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://elearning.vector.com/pluginfile.php/12207/mod_page/content/12/CAN_5.5_IGR_ErrorDetection_EN.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>CAN_5.5_IGR_ErrorDetection_EN</title>
+<style>
+	html, body{
+		background-color:#FFF;
+	}
+</style>
+<!-- write your code here -->
+<script src="https://shenyanwu.oss-cn-guangzhou.aliyuncs.com/Article/Vector/CAN/JS/CAN_5.5_IGR_ErrorDetection_EN.download"></script>
+<script>
+function LoadGFonts(families, comp) {				
+	var lib=comp.getLibrary();				
+	var googleObject = {type: "Google", loadedFonts: 0, totalFonts: families.length, callOnLoad: lib.gfontAvailable};				
+	for(var i =0; i < families.length; i++)				
+		isFontAvailable(gFontsFamilies[i], googleObject);				
+}
+function isFontAvailable(font, obj) {				
+	var timeOut = 5000;				
+	var delay = 200;				
+	var interval = 0;				
+	var timeElapsed = 0;				
+	function checkFont() {				
+		var node = document.createElement("span");				
+		node.innerHTML = "giItT1WQy@!-/#";				
+		node.style.position      = "absolute";				
+		node.style.left          = "-1000px";				
+		node.style.top           = "-1000px";				
+		node.style.fontSize      = "300px";				
+		node.style.fontFamily    = "sans-serif";				
+		node.style.fontVariant   = "normal";				
+		node.style.fontStyle     = "normal";				
+		node.style.fontWeight    = "normal";				
+		node.style.letterSpacing = "0";				
+		document.body.appendChild(node);				
+		var width = node.offsetWidth;				
+		node.style.fontFamily = font+","+node.style.fontFamily;				
+		var returnVal = false;				
+		if((node && node.offsetWidth != width) || timeElapsed >=timeOut) {				
+			obj.loadedFonts++;				
+			if(interval)				
+				clearInterval(interval);				
+			obj.callOnLoad(font, obj.totalFonts);				
+			returnVal = true;				
+		}				
+		if(node) {				
+			node.parentNode.removeChild(node);				
+			node = null;				
+		}				
+		timeElapsed += delay;				
+		return returnVal;				
+	}				
+	if(!checkFont()) {				
+		interval = setInterval(checkFont, delay);				
+	}				
+}
+</script>
+<script>
+	var gFontsFamilies = ["Roboto"];
+</script>
+<link rel="stylesheet" type="text/css" href="https://shenyanwu.oss-cn-guangzhou.aliyuncs.com/Article/Vector/CAN/JS/CAN_5.5_IGR_ErrorDetection_EN_css">
+<link rel="stylesheet" type="text/css" href="https://shenyanwu.oss-cn-guangzhou.aliyuncs.com/Article/Vector/CAN/JS/CAN_5.5_IGR_ErrorDetection_EN_css%281%29">
+<script>
+(function (cjs, an) {
+var p; // shortcut to reference prototypes
+var lib={};var ss={};var img={};
+lib.webFontTxtInst = {}; 
+var loadedTypekitCount = 0;
+var loadedGoogleCount = 0;
+var gFontsUpdateCacheList = [];
+var tFontsUpdateCacheList = [];
+lib.ssMetadata = [];
+lib.updateListCache = function (cacheList) {		
+	for(var i = 0; i < cacheList.length; i++) {		
+		if(cacheList[i].cacheCanvas)		
+			cacheList[i].updateCache();		
+	}		
+};		
+lib.addElementsToCache = function (textInst, cacheList) {		
+	var cur = textInst;		
+	while(cur != null && cur != exportRoot) {		
+		if(cacheList.indexOf(cur) != -1)		
+			break;		
+		cur = cur.parent;		
+	}		
+	if(cur != exportRoot) {		
+		var cur2 = textInst;		
+		var index = cacheList.indexOf(cur);		
+		while(cur2 != null && cur2 != cur) {		
+			cacheList.splice(index, 0, cur2);		
+			cur2 = cur2.parent;		
+			index++;		
+		}		
+	}		
+	else {		
+		cur = textInst;		
+		while(cur != null && cur != exportRoot) {		
+			cacheList.push(cur);		
+			cur = cur.parent;		
+		}		
+	}		
+};		
+lib.gfontAvailable = function(family, totalGoogleCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
+	loadedGoogleCount++;		
+	if(loadedGoogleCount == totalGoogleCount) {		
+		lib.updateListCache(gFontsUpdateCacheList);		
+	}		
+};		
+lib.tfontAvailable = function(family, totalTypekitCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
+	loadedTypekitCount++;		
+	if(loadedTypekitCount == totalTypekitCount) {		
+		lib.updateListCache(tFontsUpdateCacheList);		
+	}		
+};
+// symbols:
+// helper functions:
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
+(lib.pfeil_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#848B8E").s().p("AgdgnIA7AnIg7Aog");
+	this.shape.setTransform(3,4);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.pfeil_mc, new cjs.Rectangle(0,0,6,8), null);
+(lib.close_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		/* stop();*/
+	}
+	this.frame_2 = function() {
+		/* stop();*/
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(2));
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#B1B6BA").ss(1,1,1).p("Ah+h+ID9AAIAAD9Ij9AAg");
+	this.shape.setTransform(12.5,11.9);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#DADEE1").s().p("Ah+B/IAAj9ID9AAIAAD9g");
+	this.shape_1.setTransform(12.5,11.9);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_1},{t:this.shape}]},3).wait(1));
+	// active
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("rgba(255,255,255,0)").s().p("Ah8B9IAAj5ID5AAIAAD5g");
+	this.shape_2.setTransform(12.5,12.5);
+	this.timeline.addTween(cjs.Tween.get(this.shape_2).to({_off:true},3).wait(1));
+	// Ebene 3
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f().s("#000000").ss(1,0,0,4).p("AAAh8IAAD5");
+	this.shape_3.setTransform(0,12.5);
+	this.shape_4 = new cjs.Shape();
+	this.shape_4.graphics.f("#FFFFFF").s().p("AAmA8IgmgyIgnAyIgUAAIAxg7Igwg8IAWAAIAlAxIAmgxIAVAAIgxA7IAxA8g");
+	this.shape_4.setTransform(12,13);
+	this.shape_5 = new cjs.Shape();
+	this.shape_5.graphics.f("#000000").s().p("AAmA8IgmgyIgnAyIgUAAIAxg7Igwg8IAWAAIAlAxIAmgxIAVAAIgxA7IAxA8g");
+	this.shape_5.setTransform(12,13);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_4},{t:this.shape_3}]}).to({state:[{t:this.shape_5},{t:this.shape_3}]},1).to({state:[{t:this.shape_4},{t:this.shape_3}]},1).to({state:[]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1.2,-1.8,27.4,27.8);
+(lib.Instructions_EN = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Text
+	this.text = new cjs.Text("Instructions", "normal 400 12px 'Roboto'", "#848B8E");
+	this.text.textAlign = "right";
+	this.text.lineHeight = 18;
+	this.text.lineWidth = 76;
+	this.text.parent = this;
+	this.text.setTransform(11,42);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1).to({_off:false},0).to({_off:true},2).wait(1));
+	// help.ai
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#848B8E").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape.setTransform(6.5211,11);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#B70032").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape_1.setTransform(6.5211,11);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#000000").s().p("AgLBoQgGgFAAgHQAAgJAGgFQAFgGAIAAQAIAAAFAGQAGAFAAAJQAAAHgGAFQgFAGgIAAQgIAAgFgGgAABA+QgIAAgEgGQgFgFABgJQADgTANgUIARgZQAJgNACgHQACgOgIgJQgGgJgPgBQgWgBgKAYQgEAKgLAAIgCAAQgJABgFgJQgFgHAEgIQAUgrAqgBQAgAAARASQASATgCAcQgBAMgCAHQgEAKgNAPQgMAQgFAIQgGALgBANQgBAFgFAEQgEAEgGABg");
+	this.shape_2.setTransform(6.5211,11);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#565C5E").s().dr(-7.4,-12.55,14.8,25.1);
+	this.shape_3.setTransform(6.4949,11.0028,0.8764,0.8758);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape}]}).to({state:[{t:this.shape_1}]},1).to({state:[{t:this.shape_2}]},1).to({state:[{t:this.shape_3}]},1).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-67,0,80,65);
+(lib.farbe_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#B70032").s().p("ApXBkIAAjHISvAAIAADHg");
+	this.shape.setTransform(60,10);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.farbe_mc, new cjs.Rectangle(0,0,120,20), null);
+(lib.pressed_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#B70032").s("#D8D8D8").ss(1,1,1).dr(-130,-20,260,40);
+	this.shape.setTransform(130,20);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.pressed_mc, new cjs.Rectangle(-1,-1,262,42), null);
+(lib.pfeil_mc_1 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#848B8E").s().p("AgdgnIA7AnIg7Aog");
+	this.shape_1.setTransform(3,4);
+	this.timeline.addTween(cjs.Tween.get(this.shape_1).wait(1));
+}).prototype = getMCSymbolPrototype(lib.pfeil_mc_1, new cjs.Rectangle(0,0,6,8), null);
+(lib.hover_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#000000").s().p("A0TDIIAAmPMAonAAAIAAGPg");
+	this.shape.setTransform(130,20);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.hover_mc, new cjs.Rectangle(0,0,260,40), null);
+(lib.hover_mc_1 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#DADEE1").s("#B1B6BA").ss(1,1,1).dr(-130,-20,260,40);
+	this.shape.setTransform(130,20);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.hover_mc_1, new cjs.Rectangle(-1,-1,262,42), null);
+(lib.background = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s("#848B8E").ss(1,1,1).dr(-400,-200,800,400);
+	this.shape.setTransform(400,200);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.background, new cjs.Rectangle(-1,-1,802,402), null);
+(lib.anleitung_transparent_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("EhBOAbWMAAAg2rMCCdAAAMAAAA2rg");
+	this.shape.setTransform(417.5,175);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_transparent_mc, new cjs.Rectangle(0,0,835,350), null);
+(lib.stuffcheck_txt_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("Detection of a sixth homogeneous bit indicates a bit stuffing error and results in error handling", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 416;
+	this.text.parent = this;
+	this.text.setTransform(27,131.2,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Comparison in the so-called bit stuffing area (from SOF up to and including CRC sequence)", "normal 400 13px 'Roboto'");
+	this.text_1.lineHeight = 16;
+	this.text_1.lineWidth = 416;
+	this.text_1.parent = this;
+	this.text_1.setTransform(27,91.2,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.text_2 = new cjs.Text("Compares arriving bit stream for a sequence of six homogeneous bits", "normal 400 13px 'Roboto'");
+	this.text_2.lineHeight = 16;
+	this.text_2.lineWidth = 416;
+	this.text_2.parent = this;
+	this.text_2.setTransform(27,52,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_2);
+	}
+	this.instance = new lib.pfeil_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(13,137.6,1,1,0,0,0,3,4);
+	this.instance.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance.cache(-2,-2,10,12);
+	this.instance_1 = new lib.pfeil_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(13,97.6,1,1,0,0,0,3,4);
+	this.instance_1.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_1.cache(-2,-2,10,12);
+	this.instance_2 = new lib.pfeil_mc();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(13,58.4,1,1,0,0,0,3,4);
+	this.instance_2.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_2.cache(-2,-2,10,12);
+	this.instance_3 = new lib.pfeil_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(13,38.4,1,1,0,0,0,3,4);
+	this.instance_3.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_3.cache(-2,-2,10,12);
+	this.text_3 = new cjs.Text("Receiver Task", "normal 400 13px 'Roboto'");
+	this.text_3.lineHeight = 16;
+	this.text_3.lineWidth = 416;
+	this.text_3.parent = this;
+	this.text_3.setTransform(27,32,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_3);
+	}
+	this.text_4 = new cjs.Text("Stuff Check", "normal 700 15px 'Roboto'");
+	this.text_4.lineHeight = 22;
+	this.text_4.lineWidth = 446;
+	this.text_4.parent = this;
+	this.text_4.setTransform(2,2);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_4);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_4},{t:this.text_3},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.text_2},{t:this.text_1},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.stuffcheck_txt_mc, new cjs.Rectangle(0,0,450,167.4), null);
+(lib.header_muli_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// text
+	this.text = new cjs.Text("CAN Data Protection", "normal 700 16px 'Roboto'", "#848B8E");
+	this.text.lineHeight = 21;
+	this.text.lineWidth = 296;
+	this.text.parent = this;
+	this.text.setTransform(32,32);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Error Detection", "normal 700 20px 'Roboto'", "#B70032");
+	this.text_1.lineHeight = 27;
+	this.text_1.lineWidth = 446;
+	this.text_1.parent = this;
+	this.text_1.setTransform(32,62);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_1},{t:this.text}]}).wait(1));
+	// icons
+	this.instruction_btn = new lib.Instructions_EN();
+	this.instruction_btn.name = "instruction_btn";
+	this.instruction_btn.parent = this;
+	this.instruction_btn.setTransform(792,33);
+	new cjs.ButtonHelper(this.instruction_btn, 0, 1, 2, false, new lib.Instructions_EN(), 3);
+	this.timeline.addTween(cjs.Tween.get(this.instruction_btn).wait(1));
+}).prototype = getMCSymbolPrototype(lib.header_muli_mc, new cjs.Rectangle(30,30,775,68), null);
+(lib.formcheck_txt_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("Detection of a dominant delimiter bit (CRC delimiter, ACK delimiter) or a dominant bit within EOF indicates a format error and results in error handling", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 416;
+	this.text.parent = this;
+	this.text.setTransform(27,75.2,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Comparison of the arriving bit stream with the message format", "normal 400 13px 'Roboto'");
+	this.text_1.lineHeight = 16;
+	this.text_1.lineWidth = 416;
+	this.text_1.parent = this;
+	this.text_1.setTransform(27,52,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.instance = new lib.pfeil_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(13,81.6,1,1,0,0,0,3,4);
+	this.instance.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance.cache(-2,-2,10,12);
+	this.instance_1 = new lib.pfeil_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(13,58.4,1,1,0,0,0,3,4);
+	this.instance_1.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_1.cache(-2,-2,10,12);
+	this.instance_2 = new lib.pfeil_mc();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(13,38.4,1,1,0,0,0,3,4);
+	this.instance_2.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_2.cache(-2,-2,10,12);
+	this.text_2 = new cjs.Text("Receiver Task", "normal 400 13px 'Roboto'");
+	this.text_2.lineHeight = 16;
+	this.text_2.lineWidth = 416;
+	this.text_2.parent = this;
+	this.text_2.setTransform(27,32,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_2);
+	}
+	this.text_3 = new cjs.Text("Form Check", "normal 700 15px 'Roboto'");
+	this.text_3.lineHeight = 22;
+	this.text_3.lineWidth = 446;
+	this.text_3.parent = this;
+	this.text_3.setTransform(2,2);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_3);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_3},{t:this.text_2},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.text_1},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.formcheck_txt_mc, new cjs.Rectangle(0,0,450,147.6), null);
+(lib.crc_txt_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("Detection of a CRC error results in error handling", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 416;
+	this.text.parent = this;
+	this.text.setTransform(27,96.6,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Utilizes the arriving bit stream and generator polynomial for the Cyclic Redundancy Check defined in ISO 11898-1", "normal 400 13px 'Roboto'");
+	this.text_1.lineHeight = 16;
+	this.text_1.lineWidth = 416;
+	this.text_1.parent = this;
+	this.text_1.setTransform(27,52,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.instance = new lib.pfeil_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(13,103,1,1,0,0,0,3,4);
+	this.instance.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance.cache(-2,-2,10,12);
+	this.instance_1 = new lib.pfeil_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(13,58.4,1,1,0,0,0,3,4);
+	this.instance_1.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_1.cache(-2,-2,10,12);
+	this.instance_2 = new lib.pfeil_mc();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(13,38.4,1,1,0,0,0,3,4);
+	this.instance_2.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_2.cache(-2,-2,10,12);
+	this.text_2 = new cjs.Text("Receiver Task", "normal 400 13px 'Roboto'");
+	this.text_2.lineHeight = 16;
+	this.text_2.lineWidth = 416;
+	this.text_2.parent = this;
+	this.text_2.setTransform(27,32,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_2);
+	}
+	this.text_3 = new cjs.Text("Cyclic Redundancy Check", "normal 700 15px 'Roboto'");
+	this.text_3.lineHeight = 22;
+	this.text_3.lineWidth = 446;
+	this.text_3.parent = this;
+	this.text_3.setTransform(2,2);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_3);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_3},{t:this.text_2},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.text_1},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.crc_txt_mc, new cjs.Rectangle(0,0,450,132.8), null);
+(lib.stuffcheck_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		/* stop();*/
+	}
+	this.frame_2 = function() {
+		/* stop();*/
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
+	// invisible
+	this.invisible_btn = new lib.hover_mc_1();
+	this.invisible_btn.name = "invisible_btn";
+	this.invisible_btn.parent = this;
+	this.invisible_btn.setTransform(125,20,1,1,0,0,0,125,20);
+	this.invisible_btn.alpha = 0;
+	this.timeline.addTween(cjs.Tween.get(this.invisible_btn).wait(3));
+	// arrow
+	this.instance = new lib.pfeil_mc_1();
+	this.instance.parent = this;
+	this.instance.setTransform(243,20,1,1,0,0,0,3,4);
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AgdgnIA7AnIg7Aog");
+	this.shape.setTransform(243,20);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.shape}]},1).wait(1));
+	// text
+	this.text = new cjs.Text("Stuff Check", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 19;
+	this.text.lineWidth = 226;
+	this.text.parent = this;
+	this.text.setTransform(12,13);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(2).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 2
+	this.instance_1 = new lib.hover_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_1.alpha = 0.1016;
+	this.instance_1._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).to({_off:true},1).wait(1));
+	// Ebene 7
+	this.instance_2 = new lib.hover_mc_1();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_3 = new lib.pressed_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_3}]},2).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-0.5,-0.5,261,41);
+(lib.formcheck_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		/* stop();*/
+	}
+	this.frame_2 = function() {
+		/* stop();*/
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
+	// invisible
+	this.invisible_btn = new lib.hover_mc_1();
+	this.invisible_btn.name = "invisible_btn";
+	this.invisible_btn.parent = this;
+	this.invisible_btn.setTransform(125,20,1,1,0,0,0,125,20);
+	this.invisible_btn.alpha = 0;
+	this.timeline.addTween(cjs.Tween.get(this.invisible_btn).wait(3));
+	// arrow
+	this.instance = new lib.pfeil_mc_1();
+	this.instance.parent = this;
+	this.instance.setTransform(243,20,1,1,0,0,0,3,4);
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AgdgnIA7AnIg7Aog");
+	this.shape.setTransform(243,20);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.shape}]},1).wait(1));
+	// text
+	this.text = new cjs.Text("Form Check", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 19;
+	this.text.lineWidth = 226;
+	this.text.parent = this;
+	this.text.setTransform(12,13);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(2).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 2
+	this.instance_1 = new lib.hover_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_1.alpha = 0.1016;
+	this.instance_1._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).to({_off:true},1).wait(1));
+	// Ebene 4
+	this.instance_2 = new lib.hover_mc_1();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_3 = new lib.pressed_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_3}]},2).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-0.5,-0.5,261,41);
+(lib.crc_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		/* stop();*/
+	}
+	this.frame_2 = function() {
+		/* stop();*/
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
+	// invisible
+	this.invisible_btn = new lib.hover_mc_1();
+	this.invisible_btn.name = "invisible_btn";
+	this.invisible_btn.parent = this;
+	this.invisible_btn.setTransform(125,20,1,1,0,0,0,125,20);
+	this.invisible_btn.alpha = 0;
+	this.timeline.addTween(cjs.Tween.get(this.invisible_btn).wait(3));
+	// arrow
+	this.instance = new lib.pfeil_mc_1();
+	this.instance.parent = this;
+	this.instance.setTransform(243,20,1,1,0,0,0,3,4);
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AgdgnIA7AnIg7Aog");
+	this.shape.setTransform(243,20);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.shape}]},1).wait(1));
+	// text
+	this.text = new cjs.Text("Cyclic Redundancy Check", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 19;
+	this.text.lineWidth = 226;
+	this.text.parent = this;
+	this.text.setTransform(12,13);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(2).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 2
+	this.instance_1 = new lib.hover_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_1.alpha = 0.1016;
+	this.instance_1._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).to({_off:true},1).wait(1));
+	// Ebene 4
+	this.instance_2 = new lib.hover_mc_1();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_3 = new lib.pressed_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_3}]},2).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-0.5,-0.5,261,41);
+(lib.bitmonitoring_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		/* stop();*/
+	}
+	this.frame_2 = function() {
+		/* stop();*/
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
+	// invisible
+	this.invisible_btn = new lib.hover_mc_1();
+	this.invisible_btn.name = "invisible_btn";
+	this.invisible_btn.parent = this;
+	this.invisible_btn.setTransform(125,20,1,1,0,0,0,125,20);
+	this.invisible_btn.alpha = 0;
+	this.timeline.addTween(cjs.Tween.get(this.invisible_btn).wait(3));
+	// arrow
+	this.instance = new lib.pfeil_mc_1();
+	this.instance.parent = this;
+	this.instance.setTransform(243,20,1,1,0,0,0,3,4);
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AgdgnIA7AnIg7Aog");
+	this.shape.setTransform(243,20);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.shape}]},1).wait(1));
+	// text
+	this.text = new cjs.Text("Bit Monitoring", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 19;
+	this.text.lineWidth = 226;
+	this.text.parent = this;
+	this.text.setTransform(12,13);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(2).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 2
+	this.instance_1 = new lib.hover_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_1.alpha = 0.1016;
+	this.instance_1._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).to({_off:true},1).wait(1));
+	// Ebene 5
+	this.instance_2 = new lib.hover_mc_1();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_3 = new lib.pressed_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_3}]},2).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-0.5,-0.5,261,41);
+(lib.ackcheck_btn = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		this.stop();
+	}
+	this.frame_1 = function() {
+		/* stop();*/
+	}
+	this.frame_2 = function() {
+		/* stop();*/
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
+	// invisible
+	this.invisible_btn = new lib.hover_mc_1();
+	this.invisible_btn.name = "invisible_btn";
+	this.invisible_btn.parent = this;
+	this.invisible_btn.setTransform(125,20,1,1,0,0,0,125,20);
+	this.invisible_btn.alpha = 0;
+	this.timeline.addTween(cjs.Tween.get(this.invisible_btn).wait(3));
+	// arrow
+	this.instance = new lib.pfeil_mc_1();
+	this.instance.parent = this;
+	this.instance.setTransform(243,20,1,1,0,0,0,3,4);
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FFFFFF").s().p("AgdgnIA7AnIg7Aog");
+	this.shape.setTransform(243,20);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance}]},1).to({state:[{t:this.shape}]},1).wait(1));
+	// text
+	this.text = new cjs.Text("ACK Check", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 19;
+	this.text.lineWidth = 226;
+	this.text.parent = this;
+	this.text.setTransform(12,13);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(2).to({color:"#FFFFFF"},0).wait(1));
+	// Ebene 2
+	this.instance_1 = new lib.hover_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_1.alpha = 0.1016;
+	this.instance_1._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).to({_off:true},1).wait(1));
+	// Ebene 4
+	this.instance_2 = new lib.hover_mc_1();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.instance_3 = new lib.pressed_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(105,17.5,1,1,0,0,0,105,17.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_3}]},2).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-0.5,-0.5,261,41);
+(lib.bitmonitoring_txt_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("Exceptions during Arbitration Field and Ack Slot ", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 416;
+	this.text.parent = this;
+	this.text.setTransform(27,116,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Discrepency indicates a bit monitoring error and results in error handling", "normal 400 13px 'Roboto'");
+	this.text_1.lineHeight = 16;
+	this.text_1.lineWidth = 416;
+	this.text_1.parent = this;
+	this.text_1.setTransform(27,76,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.text_2 = new cjs.Text("Compares every bit placed on the CAN bus with actual bus level", "normal 400 13px 'Roboto'");
+	this.text_2.lineHeight = 16;
+	this.text_2.lineWidth = 416;
+	this.text_2.parent = this;
+	this.text_2.setTransform(27,52,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_2);
+	}
+	this.instance = new lib.pfeil_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(13,122.4,1,1,0,0,0,3,4);
+	this.instance.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance.cache(-2,-2,10,12);
+	this.instance_1 = new lib.pfeil_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(13,82.4,1,1,0,0,0,3,4);
+	this.instance_1.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_1.cache(-2,-2,10,12);
+	this.instance_2 = new lib.pfeil_mc();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(13,58.4,1,1,0,0,0,3,4);
+	this.instance_2.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_2.cache(-2,-2,10,12);
+	this.instance_3 = new lib.pfeil_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(13,38.4,1,1,0,0,0,3,4);
+	this.instance_3.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_3.cache(-2,-2,10,12);
+	this.text_3 = new cjs.Text("Sender Task", "normal 400 13px 'Roboto'");
+	this.text_3.lineHeight = 16;
+	this.text_3.lineWidth = 416;
+	this.text_3.parent = this;
+	this.text_3.setTransform(27,32,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_3);
+	}
+	this.text_4 = new cjs.Text("Bit Monitoring", "normal 700 15px 'Roboto'");
+	this.text_4.lineHeight = 22;
+	this.text_4.lineWidth = 446;
+	this.text_4.parent = this;
+	this.text_4.setTransform(2,2);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_4);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_4},{t:this.text_3},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.text_2},{t:this.text_1},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.bitmonitoring_txt_mc, new cjs.Rectangle(0,0,450,152.2), null);
+(lib.anleitung_titelzeile_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 3
+	this.text = new cjs.Text("Instructions", "normal 700 12px 'Roboto'", "#FFFFFF");
+	this.text.lineHeight = 18;
+	this.text.lineWidth = 116;
+	this.text.parent = this;
+	this.text.setTransform(17,8,1.0008,1.0044);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(1,0,0,4).p("AAAh8IAAD5");
+	this.shape.setTransform(375,12.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.text}]}).wait(1));
+	// Ebene 1
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f().s("#000000").ss(1,2,0,4).p("AfQAAMg+fAAA");
+	this.shape_1.setTransform(200,25);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("#000000").ss(2,2,0,4).p("A/PB9IAAj5MA+fAAAIAAD5");
+	this.shape_2.setTransform(200,12.5);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1}]}).wait(1));
+	// Ebene 4
+	this.instance = new lib.farbe_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(200,12.5,3.3334,1.2504,0,0,0,60,10);
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_titelzeile_mc, new cjs.Rectangle(-1,-1,402,27), null);
+(lib.anleitung_drag_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// titelzeile
+	this.close = new lib.close_btn();
+	this.close.name = "close";
+	this.close.parent = this;
+	this.close.setTransform(381.3,12.5,1,1,0,0,0,6.3,12.5);
+	new cjs.ButtonHelper(this.close, 0, 1, 2, false, new lib.close_btn(), 3);
+	this.titlebar_mc = new lib.anleitung_titelzeile_mc();
+	this.titlebar_mc.name = "titlebar_mc";
+	this.titlebar_mc.parent = this;
+	this.titlebar_mc.setTransform(200,9.8,1,1.0008,0,0,0,200,9.8);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.titlebar_mc},{t:this.close}]}).wait(1));
+	// text
+	this.text = new cjs.Text("The media object contains a list of all error detection machanisms defined in the CAN protocol. Clicking one of the error detection mechanisms displays an explanation of that mechanism for you.", "normal 400 12px 'Roboto'", "#2A2A2A");
+	this.text.lineHeight = 19;
+	this.text.lineWidth = 366;
+	this.text.parent = this;
+	this.text.setTransform(17,42,1,1.0002);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+	// back
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,2,0,4).p("AfQKKMg+fAAAIAA0TMA+fAAAg");
+	this.shape.setTransform(200,65);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#FFFFFF").s().p("A/PKKIAA0TMA+fAAAIAAUTg");
+	this.shape_1.setTransform(200,65);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+	// back_white
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("#E5E5E5").ss(1,1,1).p("EggBgK7MBADAAAIAAV3MhADAAAg");
+	this.shape_2.setTransform(200,65);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#FFFFFF").s().p("EggBAK8IAA13MBADAAAIAAV3g");
+	this.shape_3.setTransform(200,65);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_3},{t:this.shape_2}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.anleitung_drag_mc, new cjs.Rectangle(-6,-6,412,142), null);
+(lib.ackcheck_txt_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.text = new cjs.Text("Detection of an ACK error results in error handling", "normal 400 13px 'Roboto'");
+	this.text.lineHeight = 16;
+	this.text.lineWidth = 416;
+	this.text.parent = this;
+	this.text.setTransform(27,137.4,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.text_1 = new cjs.Text("Acknowledge error (ACK error) is detected if the recessive level placed by the sender is not overwritten", "normal 400 13px 'Roboto'");
+	this.text_1.lineHeight = 16;
+	this.text_1.lineWidth = 416;
+	this.text_1.parent = this;
+	this.text_1.setTransform(27,92,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_1);
+	}
+	this.text_2 = new cjs.Text("Comparison of the recessive bit placed on the CAN bus \nwith the bus level in the ACK slot", "normal 400 13px 'Roboto'");
+	this.text_2.lineHeight = 16;
+	this.text_2.lineWidth = 416;
+	this.text_2.parent = this;
+	this.text_2.setTransform(27,52,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_2);
+	}
+	this.instance = new lib.pfeil_mc();
+	this.instance.parent = this;
+	this.instance.setTransform(13,143.8,1,1,0,0,0,3,4);
+	this.instance.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance.cache(-2,-2,10,12);
+	this.instance_1 = new lib.pfeil_mc();
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(13,98.4,1,1,0,0,0,3,4);
+	this.instance_1.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_1.cache(-2,-2,10,12);
+	this.instance_2 = new lib.pfeil_mc();
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(13,58.4,1,1,0,0,0,3,4);
+	this.instance_2.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_2.cache(-2,-2,10,12);
+	this.instance_3 = new lib.pfeil_mc();
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(13,38.4,1,1,0,0,0,3,4);
+	this.instance_3.filters = [new cjs.ColorFilter(0, 0, 0, 1, 183, 0, 50, 0)];
+	this.instance_3.cache(-2,-2,10,12);
+	this.text_3 = new cjs.Text("Sender Task", "normal 400 13px 'Roboto'");
+	this.text_3.lineHeight = 16;
+	this.text_3.lineWidth = 416;
+	this.text_3.parent = this;
+	this.text_3.setTransform(27,32,1.0004,1);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_3);
+	}
+	this.text_4 = new cjs.Text("ACK Check", "normal 700 15px 'Roboto'");
+	this.text_4.lineHeight = 22;
+	this.text_4.lineWidth = 446;
+	this.text_4.parent = this;
+	this.text_4.setTransform(2,2);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text_4);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text_4},{t:this.text_3},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.text_2},{t:this.text_1},{t:this.text}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.ackcheck_txt_mc, new cjs.Rectangle(0,0,450,173.6), null);
+(lib.instruction = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Ebene 1
+	this.instructions_drag_mc = new lib.anleitung_drag_mc();
+	this.instructions_drag_mc.name = "instructions_drag_mc";
+	this.instructions_drag_mc.parent = this;
+	this.instructions_drag_mc.setTransform(217.95,106.7,1,1,0,0,0,-4.6,-4.6);
+	this.transparent_mc = new lib.anleitung_transparent_mc();
+	this.transparent_mc.name = "transparent_mc";
+	this.transparent_mc.parent = this;
+	this.transparent_mc.setTransform(392.6,168.8,1,1,0,0,0,392.6,168.8);
+	this.transparent_mc.alpha = 0.8008;
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.transparent_mc},{t:this.instructions_drag_mc}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.instruction, new cjs.Rectangle(0,0,835,350), null);
+(lib.grafik_mc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// ACK Check
+	this.ackcheck = new lib.ackcheck_txt_mc();
+	this.ackcheck.name = "ackcheck";
+	this.ackcheck.parent = this;
+	this.ackcheck.setTransform(550,100.55,1,1,0,0,0,225,90);
+	this.timeline.addTween(cjs.Tween.get(this.ackcheck).wait(1));
+	// Cyclic Redundany Check
+	this.crc = new lib.crc_txt_mc();
+	this.crc.name = "crc";
+	this.crc.parent = this;
+	this.crc.setTransform(550,80.55,1,1,0,0,0,225,70);
+	this.timeline.addTween(cjs.Tween.get(this.crc).wait(1));
+	// Form Check
+	this.formcheck = new lib.formcheck_txt_mc();
+	this.formcheck.name = "formcheck";
+	this.formcheck.parent = this;
+	this.formcheck.setTransform(550,89.55,1,1,0,0,0,225,79);
+	this.timeline.addTween(cjs.Tween.get(this.formcheck).wait(1));
+	// Stuff Check
+	this.stuffcheck = new lib.stuffcheck_txt_mc();
+	this.stuffcheck.name = "stuffcheck";
+	this.stuffcheck.parent = this;
+	this.stuffcheck.setTransform(550,93.05,1,1,0,0,0,225,82.5);
+	this.timeline.addTween(cjs.Tween.get(this.stuffcheck).wait(1));
+	// BitMonitoring
+	this.bitmonitoring = new lib.bitmonitoring_txt_mc();
+	this.bitmonitoring.name = "bitmonitoring";
+	this.bitmonitoring.parent = this;
+	this.bitmonitoring.setTransform(550,93.05,1,1,0,0,0,225,82.5);
+	this.ackCheck_btn = new lib.ackcheck_btn();
+	this.ackCheck_btn.name = "ackCheck_btn";
+	this.ackCheck_btn.parent = this;
+	this.ackCheck_btn.setTransform(130,180,1,1,0,0,0,130,20);
+	this.crc_btn = new lib.crc_btn();
+	this.crc_btn.name = "crc_btn";
+	this.crc_btn.parent = this;
+	this.crc_btn.setTransform(130,140,1,1,0,0,0,130,20);
+	this.formCheck_btn = new lib.formcheck_btn();
+	this.formCheck_btn.name = "formCheck_btn";
+	this.formCheck_btn.parent = this;
+	this.formCheck_btn.setTransform(130,100,1,1,0,0,0,130,20);
+	this.stuffCheck_btn = new lib.stuffcheck_btn();
+	this.stuffCheck_btn.name = "stuffCheck_btn";
+	this.stuffCheck_btn.parent = this;
+	this.stuffCheck_btn.setTransform(130,60,1,1,0,0,0,130,20);
+	this.bitmonitoring_btn = new lib.bitmonitoring_btn();
+	this.bitmonitoring_btn.name = "bitmonitoring_btn";
+	this.bitmonitoring_btn.parent = this;
+	this.bitmonitoring_btn.setTransform(130,20,1,1,0,0,0,130,20);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.bitmonitoring_btn},{t:this.stuffCheck_btn},{t:this.formCheck_btn},{t:this.crc_btn},{t:this.ackCheck_btn},{t:this.bitmonitoring}]}).wait(1));
+}).prototype = getMCSymbolPrototype(lib.grafik_mc, new cjs.Rectangle(-0.5,-0.5,775.5,201), null);
+// stage content:
+(lib.CAN_55_IGR_ErrorDetection_EN = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// timeline functions:
+	this.frame_0 = function() {
+		var bitmonitoring = this.grafik.bitmonitoring;
+		var stuffcheck = this.grafik.stuffcheck;
+		var formcheck = this.grafik.formcheck;
+		var crc = this.grafik.crc;
+		var ackcheck = this.grafik.ackcheck;
+		var bitmonitoring_btn = this.grafik.bitmonitoring_btn;
+		var stuffCheck_btn = this.grafik.stuffCheck_btn;
+		var formCheck_btn = this.grafik.formCheck_btn;
+		var crc_btn = this.grafik.crc_btn;
+		var ackCheck_btn = this.grafik.ackCheck_btn;
+		var background = this.background;
+		var bitmonitoringRed = false;
+		var stuffCheckRed = false;
+		var formCheckRed = false;
+		var crcRed = false;
+		var ackCheckRed = false;
+		var instruction = this.instruction_mc;
+		index();
+		//Instructions:
+		var cursorX;
+		var cursorY;
+		var scale = stage.scaleX;
+		var offSetXInstr;
+		var offSetYInstr;
+		var titel_instruction = this.instruction_mc.instructions_drag_mc.titlebar_mc;
+		var drag_instr = this.instruction_mc.instructions_drag_mc;
+		var transparent_instr = this.instruction_mc.transparent_mc;
+		var dragInstrBounds = drag_instr.nominalBounds;
+		var instruction_btn = this.graphic.instruction_btn;
+		var instruction_close_btn = this.instruction_mc.instructions_drag_mc.close;
+		var borderInstrLeft = 2;
+		var borderInstrTop = 2;
+		var borderInstrBottom = canvas.height/scale - dragInstrBounds.height;
+		var borderInstrRight = canvas.width/scale - dragInstrBounds.width;
+		//Get mouse position
+		document.onmousemove = function(e){
+		    cursorX = e.pageX;
+		    cursorY = e.pageY;
+		}
+		//Make everything behind transparent inaktiv
+		transparent_instr.addEventListener("mouseover", function(){
+		      //Do nothing, just get focus
+		});
+		//Instruction Configuration
+		instruction.visible = false;
+		instruction_close_btn.cursor = "pointer";
+		//Open-Button Instruction
+		instruction_btn.addEventListener("click", function(){
+			instruction.visible = true;
+		});
+		//Close-Button Instruction
+		instruction_close_btn.addEventListener("click", function(){
+			instruction.visible = false;
+		});
+		//Cursor Setup
+		titel_instruction.cursor = "move";
+		//Drag even when cursor is still clicked outside of the stage
+		stage.mouseMoveOutside = true;
+		//Calculate x-Offset/y-Offset for Instruction
+		titel_instruction.addEventListener("mousedown", function(){
+			offSetXInstr = drag_instr.x - cursorX;
+			offSetYInstr = drag_instr.y - cursorY;
+		});
+		//Drag-Function for instruction
+		titel_instruction.on("pressmove", function(evt){
+			var scale = stage.scaleX;
+			transparent_instr.visible=false;
+			//Block "jump"-behaviour in x-direction
+			drag_instr.x = (evt.stageX / scale + offSetXInstr) ;
+			//Block "jump"-behaviour in y-direction
+			drag_instr.y = (evt.stageY / scale + offSetYInstr) ;
+			//Border-Handling
+			if(drag_instr.x >= borderInstrRight) 
+				drag_instr.x = borderInstrRight;
+			if(drag_instr.x <= borderInstrLeft)
+				drag_instr.x = borderInstrLeft;
+			if(drag_instr.y >= borderInstrBottom)
+				drag_instr.y = borderInstrBottom;
+			if(drag_instr.y <= borderInstrTop)
+				drag_instr.y = borderInstrTop;
+		});
+		titel_instruction.on("pressup", function(evt){
+			transparent_instr.visible=true;
+		});
+		//Give the buttons functionality
+		background.addEventListener("mouseover", goBackToNormal.bind(this));
+		bitmonitoring_btn.cursor="pointer";
+		bitmonitoring_btn.addEventListener("click", showBitMonitoring.bind(this));
+		function showBitMonitoring(){
+			console.log("show Bitmonitoring");
+			hideText();
+			bitmonitoring.visible=true;
+			bitmonitoring_btn.gotoAndStop(2);
+			nothingRed();
+			bitmonitoringRed = true;
+			goBackToNormal();
+		}
+		bitmonitoring_btn.addEventListener("mouseover", function(){
+				goBackToNormal();
+				if(!bitmonitoringRed){
+					bitmonitoring_btn.gotoAndStop(1);
+				};	
+		});
+		stuffCheck_btn.cursor="pointer";
+		stuffCheck_btn.addEventListener("click", showStuffCheck.bind(this));
+		function showStuffCheck(){
+			console.log("show Stuff Check");
+			hideText();
+			stuffcheck.visible=true;
+			nothingRed();
+			stuffCheck_btn.gotoAndStop(2);
+			stuffCheckRed = true;
+			goBackToNormal();
+		}
+		stuffCheck_btn.addEventListener("mouseover", function(){
+			goBackToNormal();
+			if(!stuffCheckRed){
+				stuffCheck_btn.gotoAndStop(1);
+			};	
+		});
+		formCheck_btn.cursor="pointer";
+		formCheck_btn.addEventListener("click", showFormCheck.bind(this))
+		function showFormCheck(){
+			console.log("show Form Check");
+			hideText();
+			formcheck.visible=true;
+			nothingRed();
+			formCheck_btn.gotoAndStop(2);
+			formCheckRed = true;
+			goBackToNormal();
+		}
+		formCheck_btn.addEventListener("mouseover",function(){
+			goBackToNormal();
+			if(!formCheckRed){
+				formCheck_btn.gotoAndStop(1);
+			};	
+		});
+		crc_btn.cursor="pointer";
+		crc_btn.addEventListener("click", showcrc.bind(this));
+		function showcrc(){
+			console.log("show crc");
+			hideText();
+			crc.visible=true;
+			nothingRed();
+			crc_btn.gotoAndStop(2);
+			crcRed=true;
+			goBackToNormal();
+		}
+		crc_btn.addEventListener("mouseover", function(){
+			goBackToNormal();
+			if(!crcRed){
+				crc_btn.gotoAndStop(1);
+			};	
+		});
+		ackCheck_btn.cursor="pointer";
+		ackCheck_btn.addEventListener("click", showAck.bind(this));
+		function showAck(){
+			console.log("show ACK Check");
+			hideText();
+			ackcheck.visible=true;
+			nothingRed();
+			ackCheck_btn.gotoAndStop(2);
+			ackCheckRed = true;
+			goBackToNormal();
+		}
+		ackCheck_btn.addEventListener("mouseover", function(){
+			goBackToNormal();
+			if(!ackCheckRed){
+				ackCheck_btn.gotoAndStop(1);
+			};	
+		});
+		//Hide all text
+		function hideText(){
+			bitmonitoring.visible=false;
+			stuffcheck.visible=false;
+			formcheck.visible=false;
+			crc.visible=false;
+			ackcheck.visible=false;
+			instruction.visible=false;
+		}
+		//Reset the buttons to their deactivated state
+		function goBackToNormal(){
+			if (!bitmonitoringRed){
+				bitmonitoring_btn.gotoAndStop(0);
+			};	
+			if (!stuffCheckRed){
+				stuffCheck_btn.gotoAndStop(0);
+			};	
+			if (!formCheckRed){
+				formCheck_btn.gotoAndStop(0);
+			};	
+			if(!crcRed){
+				crc_btn.gotoAndStop(0);
+			};
+			if(!ackCheckRed){
+				ackCheck_btn.gotoAndStop(0);
+			};	
+		}
+		//Reset the red variables
+		function nothingRed(){
+			bitmonitoringRed=false;
+			stuffCheckRed = false;
+			formCheckRed = false;
+			crcRed=false;
+			ackCheckRed=false;
+		}
+		//Load the starting settings
+		function index(){
+			hideText();
+		}
+		this.stop();
+	}
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+	// PopUp
+	this.instruction_mc = new lib.instruction();
+	this.instruction_mc.name = "instruction_mc";
+	this.instruction_mc.parent = this;
+	this.instruction_mc.setTransform(208.5,7.5,1,1,0,0,0,208.5,7.5);
+	this.timeline.addTween(cjs.Tween.get(this.instruction_mc).wait(1));
+	// Framework
+	this.grafik = new lib.grafik_mc();
+	this.grafik.name = "grafik";
+	this.grafik.parent = this;
+	this.grafik.setTransform(393,209.8,1,1,0,0,0,363,99.8);
+	this.graphic = new lib.header_muli_mc();
+	this.graphic.name = "graphic";
+	this.graphic.parent = this;
+	this.graphic.setTransform(336.75,52.8,1,1,0,0,0,342.5,52.8);
+	this.text = new cjs.Text("© 2010-2017. Vector Informatik GmbH. All rights reserved. Any distribution or copying is subject to prior written approval by Vector. V2.0", "normal 400 10px 'Roboto'", "#848B8E");
+	this.text.lineHeight = 13;
+	this.text.lineWidth = 748;
+	this.text.parent = this;
+	this.text.setTransform(32,334.75);
+	if(!lib.properties.webfonts['Roboto']) {
+		lib.webFontTxtInst['Roboto'] = lib.webFontTxtInst['Roboto'] || [];
+		lib.webFontTxtInst['Roboto'].push(this.text);
+	}
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.text},{t:this.graphic},{t:this.grafik}]}).wait(1));
+	// White_Background
+	this.background = new lib.background();
+	this.background.name = "background";
+	this.background.parent = this;
+	this.background.setTransform(417.5,175,1.0437,0.875,0,0,0,400,200);
+	this.timeline.addTween(cjs.Tween.get(this.background).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(417,174.6,418.5,175.9);
+// library properties:
+lib.properties = {
+	id: '10544E357E312145B821B54128561812',
+	width: 835,
+	height: 350,
+	fps: 24,
+	color: "#FFFFFF",
+	opacity: 1.00,
+	webfonts: {},
+	manifest: [],
+	preloads: []
+};
+// bootstrap callback support:
+(lib.Stage = function(canvas) {
+	createjs.Stage.call(this, canvas);
+}).prototype = p = new createjs.Stage();
+p.setAutoPlay = function(autoPlay) {
+	this.tickEnabled = autoPlay;
+}
+p.play = function() { this.tickEnabled = true; this.getChildAt(0).gotoAndPlay(this.getTimelinePosition()) }
+p.stop = function(ms) { if(ms) this.seek(ms); this.tickEnabled = false; }
+p.seek = function(ms) { this.tickEnabled = true; this.getChildAt(0).gotoAndStop(lib.properties.fps * ms / 1000); }
+p.getDuration = function() { return this.getChildAt(0).totalFrames / lib.properties.fps * 1000; }
+p.getTimelinePosition = function() { return this.getChildAt(0).currentFrame / lib.properties.fps * 1000; }
+an.bootcompsLoaded = an.bootcompsLoaded || [];
+if(!an.bootstrapListeners) {
+	an.bootstrapListeners=[];
+}
+an.bootstrapCallback=function(fnCallback) {
+	an.bootstrapListeners.push(fnCallback);
+	if(an.bootcompsLoaded.length > 0) {
+		for(var i=0; i<an.bootcompsLoaded.length; ++i) {
+			fnCallback(an.bootcompsLoaded[i]);
+		}
+	}
+};
+an.compositions = an.compositions || {};
+an.compositions['10544E357E312145B821B54128561812'] = {
+	getStage: function() { return exportRoot.getStage(); },
+	getLibrary: function() { return lib; },
+	getSpriteSheet: function() { return ss; },
+	getImages: function() { return img; }
+};
+an.compositionLoaded = function(id) {
+	an.bootcompsLoaded.push(id);
+	for(var j=0; j<an.bootstrapListeners.length; j++) {
+		an.bootstrapListeners[j](id);
+	}
+}
+an.getComposition = function(id) {
+	return an.compositions[id];
+}
+})(createjs = createjs||{}, AdobeAn = AdobeAn||{});
+var createjs, AdobeAn;
+</script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	canvas = document.getElementById("canvas");
+	var comp=AdobeAn.getComposition("10544E357E312145B821B54128561812");
+	var lib=comp.getLibrary();
+	try {
+		if(!(typeof gFontsFamilies === 'undefined' || gFontsFamilies === null))
+			LoadGFonts(gFontsFamilies, comp);		
+		if(!(typeof totalTypekitFonts === 'undefined' || totalTypekitFonts === null)) {			
+			var typekitObject = {type: 'Typekit', loadedFonts: 0, totalFonts: totalTypekitFonts, callOnLoad: lib.tfontAvailable};		
+			Typekit.load({
+			async: true,
+			'fontactive': function(family) {
+				isFontAvailable(family, typekitObject);
+				}
+			});
+		}
+	} catch(e) {};
+	handleComplete({},comp);
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	exportRoot = new lib.CAN_55_IGR_ErrorDetection_EN();
+	stage = new lib.Stage(canvas);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	function makeResponsive(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = w*sRatio+'px';				
+			canvas.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;            
+			stage.tickOnUpdate = false;            
+			stage.update();            
+			stage.tickOnUpdate = true;		
+		}
+	}
+	makeResponsive(false,'both',false,1);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+<style>
+/* Roboto normal is MarkWeb normal */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://elearning.vector.com/resources/fonts/MarkWeb.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto light italic is MarkWeb light italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-LightItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto light is MarkWeb light */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Light.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto medium is MarkWeb medium */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Medium.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto medium italic is MarkWeb medium italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-MediumItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto bold is MarkWeb bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Bold.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto bold italic is MarkWeb bold italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-BoldItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto black is MarkWeb bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Roboto Black'), local('Roboto-Black'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Bold.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto black italic is MarkWeb italic bold */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-BoldItalic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto italic is MarkWeb italic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://elearning.vector.com/resources/fonts/MarkWeb-Italic.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+/* Roboto regular is MarkWeb normal */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://elearning.vector.com/resources/fonts/MarkWeb.woff) format('woff');
+  unicode-range: U+0-FFFF;
+}
+</style>
+</head>
+<body onload="init();" style="margin:0px;">
+	<canvas id="canvas" width="1043" height="437" style="display: block; background-color: rgb(255, 255, 255); width: 835px; height: 350px;"></canvas>
+
+</body></html>
