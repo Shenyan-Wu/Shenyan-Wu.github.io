@@ -1,1 +1,584 @@
-<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Altium Designer入门学习笔记 | Shenyan Wu</title><meta name="author" content="Shenyan Wu"><meta name="copyright" content="Shenyan Wu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="🥧本文记录学习Altium Designer入门教程，防止忘记后方便查询"><meta property="og:type" content="article"><meta property="og:title" content="Altium Designer入门学习笔记"><meta property="og:url" content="https://shenyanwu.top/2021/06/04/AltiumDesigner/index.html"><meta property="og:site_name" content="Shenyan Wu"><meta property="og:description" content="🥧本文记录学习Altium Designer入门教程，防止忘记后方便查询"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Cover.png"><meta property="article:published_time" content="2021-06-04T09:35:16.000Z"><meta property="article:modified_time" content="2023-09-04T14:02:53.989Z"><meta property="article:author" content="Shenyan Wu"><meta property="article:tag" content="AD"><meta property="article:tag" content="教程"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Cover.png"><link rel="shortcut icon" href="https://cdn.shenyanwu.top/Image/favicon.png"><link rel="canonical" href="https://shenyanwu.top/2021/06/04/AltiumDesigner/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload='this.media="all"'><script>const GLOBAL_CONFIG={root:"/",algolia:void 0,localSearch:void 0,translate:void 0,noticeOutdate:void 0,highlight:{plugin:"highlighjs",highlightCopy:!0,highlightLang:!0,highlightHeightLimit:!1},copy:{success:"Copy successfully",error:"Copy error",noSupport:"The browser does not support"},relativeDate:{homepage:!1,post:!1},runtime:"",date_suffix:{just:"Just",min:"minutes ago",hour:"hours ago",day:"days ago",month:"months ago"},copyright:void 0,lightbox:"mediumZoom",Snackbar:void 0,source:{justifiedGallery:{js:"https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js",css:"https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css"}},isPhotoFigcaption:!1,islazyload:!1,isAnchor:!1,percent:{toc:!0,rightside:!0}}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"Altium Designer入门学习笔记",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2023-09-04 22:02:53"}</script><noscript><style>#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(e=>{e.saveToLocal={set:function(e,t,o){if(0===o)return;const a=864e5*o,n={value:t,expiry:(new Date).getTime()+a};localStorage.setItem(e,JSON.stringify(n))},get:function(e){const t=localStorage.getItem(e);if(!t)return;const o=JSON.parse(t);if(!((new Date).getTime()>o.expiry))return o.value;localStorage.removeItem(e)}},e.getScript=e=>new Promise(((t,o)=>{const a=document.createElement("script");a.src=e,a.async=!0,a.onerror=o,a.onload=a.onreadystatechange=function(){const e=this.readyState;e&&"loaded"!==e&&"complete"!==e||(a.onload=a.onreadystatechange=null,t())},document.head.appendChild(a)})),e.getCSS=(e,t=!1)=>new Promise(((o,a)=>{const n=document.createElement("link");n.rel="stylesheet",n.href=e,t&&(n.id=t),n.onerror=a,n.onload=n.onreadystatechange=function(){const e=this.readyState;e&&"loaded"!==e&&"complete"!==e||(n.onload=n.onreadystatechange=null,o())},document.head.appendChild(n)})),e.activateDarkMode=function(){document.documentElement.setAttribute("data-theme","dark"),null!==document.querySelector('meta[name="theme-color"]')&&document.querySelector('meta[name="theme-color"]').setAttribute("content","#0d0d0d")},e.activateLightMode=function(){document.documentElement.setAttribute("data-theme","light"),null!==document.querySelector('meta[name="theme-color"]')&&document.querySelector('meta[name="theme-color"]').setAttribute("content","#ffffff")};const t=saveToLocal.get("theme"),o=window.matchMedia("(prefers-color-scheme: dark)").matches,a=window.matchMedia("(prefers-color-scheme: light)").matches,n=window.matchMedia("(prefers-color-scheme: no-preference)").matches,c=!o&&!a&&!n;if(void 0===t){if(a)activateLightMode();else if(o)activateDarkMode();else if(n||c){const e=(new Date).getHours();e<=6||e>=18?activateDarkMode():activateLightMode()}window.matchMedia("(prefers-color-scheme: dark)").addListener((function(e){void 0===saveToLocal.get("theme")&&(e.matches?activateDarkMode():activateLightMode())}))}else"light"===t?activateLightMode():activateDarkMode();const d=saveToLocal.get("aside-status");void 0!==d&&("hide"===d?document.documentElement.classList.add("hide-aside"):document.documentElement.classList.remove("hide-aside"));/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)&&document.documentElement.classList.add("apple")})(window)</script><link rel="stylesheet" href="/css/custom/custom.css"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3949965_zlxge6oopd.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3961691_jvjklfsnh6.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3952611_jy1uuol1v2f.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><svg aria-hidden="true" style="position:absolute;overflow:hidden;width:0;height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248 626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload='this.media="all"'><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload='this.media="all"'><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader={endLoading:()=>{document.body.style.overflow="auto",document.getElementById("loading-box").classList.add("loaded")},initLoading:()=>{document.body.style.overflow="",document.getElementById("loading-box").classList.remove("loaded")}};window.addEventListener("load",(()=>{preloader.endLoading()}))</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="an_music_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.shenyanwu.top/Image/Avatar.gif" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-home"></use></svg> <span class="menu_word" style="font-size:18px">主页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-wenzhang"></use></svg> <span class="menu_word" style="font-size:18px">文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-archiver"></use></svg> <span class="menu_word" style="font-size:18px">归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-biaoqian"></use></svg> <span class="menu_word" style="font-size:18px">标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-fenlei"></use></svg> <span class="menu_word" style="font-size:18px">分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-chat"></use></svg> <span class="menu_word" style="font-size:18px">社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-link"></use></svg> <span class="menu_word" style="font-size:18px">友链</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-chat1"></use></svg> <span class="menu_word" style="font-size:18px">留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xiangzi"></use></svg> <span class="menu_word" style="font-size:18px">工具箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://music.shenyanwu.top"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-music1"></use></svg> <span class="menu_word" style="font-size:18px">音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/videos/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-videos"></use></svg> <span class="menu_word" style="font-size:18px">视频</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/todolist/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-todolist"></use></svg> <span class="menu_word" style="font-size:18px">ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-about"></use></svg> <span class="menu_word" style="font-size:18px">关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url('https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Cover.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Shenyan Wu"><span class="site-name">Shenyan Wu</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-home"></use></svg> <span class="menu_word" style="font-size:18px">主页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-wenzhang"></use></svg> <span class="menu_word" style="font-size:18px">文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-archiver"></use></svg> <span class="menu_word" style="font-size:18px">归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-biaoqian"></use></svg> <span class="menu_word" style="font-size:18px">标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-fenlei"></use></svg> <span class="menu_word" style="font-size:18px">分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-chat"></use></svg> <span class="menu_word" style="font-size:18px">社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-link"></use></svg> <span class="menu_word" style="font-size:18px">友链</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-chat1"></use></svg> <span class="menu_word" style="font-size:18px">留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xiangzi"></use></svg> <span class="menu_word" style="font-size:18px">工具箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://music.shenyanwu.top"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-music1"></use></svg> <span class="menu_word" style="font-size:18px">音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/videos/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-videos"></use></svg> <span class="menu_word" style="font-size:18px">视频</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/todolist/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-todolist"></use></svg> <span class="menu_word" style="font-size:18px">ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-about"></use></svg> <span class="menu_word" style="font-size:18px">关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Altium Designer入门学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-calendar"></use></svg><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-06-04T09:35:16.000Z" title="Created 2021-06-04 17:35:16">2021-06-04</time><span class="post-meta-separator">|</span><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-gengxin"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-09-04T14:02:53.989Z" title="Updated 2023-09-04 22:02:53">2023-09-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-wordFile"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">382</span><span class="post-meta-separator">|</span><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>1min</span></span><span class="post-meta-separator">|</span><span data-flag-title="Altium Designer入门学习笔记"><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-yanjing1"></use></svg><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Altium-Designer-基本配置"><a href="#Altium-Designer-基本配置" class="headerlink" title="Altium Designer 基本配置"></a>Altium Designer 基本配置</h2><p>为了方便操作，下面是使用软件时初步做的一些配置项</p><div class="tabs" id="基本配置"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#基本配置-1">System</button></li><li class="tab"><button type="button" data-href="#基本配置-2">Data Management</button></li><li class="tab"><button type="button" data-href="#基本配置-3">Schematic</button></li><li class="tab"><button type="button" data-href="#基本配置-4">PCB Editor</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="基本配置-1"><p>点击配置中的 <code>System</code> -&gt; <code>Navigation</code>，配置 <code>Cross Select Mode</code> 交叉选择，勾选 <code>Dimming(变暗)</code></p><details class="folding-tag" red><summary>Navigation</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/NavDimming.png" alt="NavDimming"></p></div></details><p>点击配置中的 <code>System</code> -&gt; <code>Design Insight</code>，取消勾选所有选项</p><details class="folding-tag" red><summary>Design Insight</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/DesignInsight.png" alt="DesignInsight"></p></div></details><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="基本配置-2"><p>点击配置中的 <code>System</code> -&gt; <code>Backup</code>，配置相关备份时间与备份路径</p><details class="folding-tag" yellow><summary>Backup</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Recovery.png" alt="Recovery"></p></div></details><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="基本配置-3"><p>点击配置中的 <code>Schematic</code> -&gt; <code>Graphical Editing</code>，其中配置取消勾选 <code>Reset Parts Designators On Paste</code> （粘贴时重置元器位号）</p><details class="folding-tag" green><summary>Graphical Editing</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/ResetDesignator.png" alt="ResetDesignator"></p></div></details><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="基本配置-4"><p>点击配置中的 <code>PCB Editor</code> -&gt; <code>General</code>，其中配置勾选 <code>Cursor Type</code> 选择 <code>Large 90</code>，取消勾选文件格式改变报告</p><details class="folding-tag" blue><summary>General</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/PCBGeneral.png" alt="PCBGeneral"></p></div></details><p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Board Insight Modes</code>，其中配置取消勾选 <code>Display Heads Up Info(抬头信息)</code> 和 <code>Use Background Color(背景颜色)</code></p><details class="folding-tag" blue><summary>Board Insight Modes</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/PCBBoardInsight.png" alt="PCBBoardInsight"></p></div></details><p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Board Insight Colors &amp; DRC Violations</code>，其中配置暂时都选为 <code>Solid(实体)</code></p><details class="folding-tag" blue><summary>Board Insight Colors & DRC Violations</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/PCBSolid.png" alt="PCBSolid"></p></div></details><p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Interactive Rounting</code>，其中配置 <code>取消选择过孔/导线</code> 和 <code>选择过孔/导线</code> 为 <code>Move</code> 配置取消勾选 <code>移动元器件时相应布线移动</code></p><details class="folding-tag" blue><summary>Interactive Rounting</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Interactive.png" alt="Interactive"></p></div></details><p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Defaults</code>，其中配置 <code>via(过孔)</code> 孔径 <code>12mil</code>，盘径 <code>24mil</code>，选择手动盖油 <code>tented</code></p><details class="folding-tag" blue><summary>Defaults(Via)</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/via tented.png" alt="via tented"></p></div></details><p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Defaults</code>，其中配置 <code>Polygon</code> 选项，<code>Hatched</code> 中 <code>Track Width</code> 为 <code>5mil</code>，<code>Grid Size</code> 为 <code>4mil</code>，选择为所有相同网络对象铺铜 <code>Pour Over All Same Net Objects</code>，同时勾选去除死铜 <code>Remove Dead Copper</code></p><details class="folding-tag" blue><summary>Defaults(Polygon)</summary><div class="content"><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Polygon.png" alt="Polygon"></p></div></details><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div></article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>Altium Designer入门学习笔记</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://shenyanwu.top/2021/06/04/AltiumDesigner/">https://shenyanwu.top/2021/06/04/AltiumDesigner/</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>Shenyan Wu</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2021-06-04</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2023-09-04</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AD/">AD</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/" media="defer" onload='this.media="all"'><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">投喂一下</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.shenyanwu.top/Image/rw_wechat.png" target="_blank"><img class="post-qr-code-img" src="https://cdn.shenyanwu.top/Image/rw_wechat.png" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.shenyanwu.top/Image/rw_alipay.png" target="_blank"><img class="post-qr-code-img" src="https://cdn.shenyanwu.top/Image/rw_alipay.png" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a"></audio><script defer src="/"></script><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i> <span>Comment</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Altium-Designer-%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">Altium Designer 基本配置</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By Shenyan Wu</div><div class="framework-info"><span>Framework</span> <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme</span> <a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><br><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Hexo.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Hexo.svg" alt="" data-ll-status="loaded" class="entered loaded"></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Butterfly.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Butterfly.svg" alt="" data-ll-status="loaded" class="entered loaded"></a><a class="github-badge" target="_blank" href="https://console.dogecloud.com/" style="margin-inline:5px" title="本站使用多吉云为部分静态资源提供CDN加速"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_CDN.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_CDN.svg" alt="" data-ll-status="loaded" class="entered loaded"></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站托管于Vercel"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Vercel.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Vercel.svg" alt="" data-ll-status="loaded" class="entered loaded"></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Github.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Github.svg" alt="" data-ll-status="loaded" class="entered loaded"></a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20235551" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20235551号"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_%E8%90%8CICP%E5%A4%87-20235551.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_%E8%90%8CICP%E5%A4%87-20235551.svg" alt="" data-ll-status="loaded" class="entered loaded"></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn" style="margin-inline:5px" title="备案啦，实名冲浪! 晋ICP备2023014808号-1"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_ICP%E5%A4%872023014808%E5%8F%B7-1.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_ICP%E5%A4%872023014808%E5%8F%B7-1.svg" alt="" data-ll-status="loaded" class="entered loaded"></a><a class="github-badge" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Copyright-BY--NC--SA%204.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Copyright-BY--NC--SA%204.svg" alt="" data-ll-status="loaded" class="entered loaded"></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="Toggle Between Light And Dark Mode"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight,500)"><i class="fas fa-arrow-down"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>if(window.MathJax)MathJax.startup.document.state(0),MathJax.texReset(),MathJax.typesetPromise();else{window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],tags:"ams"},chtml:{scale:1.1},options:{renderActions:{findScript:[10,t=>{for(const e of document.querySelectorAll('script[type^="math/tex"]')){const a=!!e.type.match(/; *mode=display/),n=new t.options.MathItem(e.textContent,t.inputJax[0],a),s=document.createTextNode("");e.parentNode.replaceChild(s,e),n.start={node:s,delim:"",n:0},n.end={node:s,delim:"",n:0},t.math.push(n)}},""],insertScript:[200,()=>{document.querySelectorAll("mjx-container").forEach((t=>{t.hasAttribute("display")?btf.wrap(t,"div",{class:"mathjax-overflow"}):btf.wrap(t,"span",{class:"mathjax-overflow"})}))},"",!1]}}};const t=document.createElement("script");t.src="https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js",t.id="MathJax-script",t.async=!0,document.head.appendChild(t)}</script><script>(()=>{const t=()=>{twikoo.init(Object.assign({el:"#twikoo-wrap",envId:"https://twikoo.shenyanwu.top/",region:"",onCommentLoaded:function(){btf.loadLightbox(document.querySelectorAll("#twikoo .tk-content img:not(.tk-owo-emotion)"))}},null))},o=()=>{"object"!=typeof twikoo?getScript("https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js").then(t):setTimeout(t,0)};o()})()</script></div><script async src="/js/music_custom.js"></script><canvas id="universe"></canvas><script defer src="/js/universe_custom.js"></script><script async src="//at.alicdn.com/t/c/font_3949965_zlxge6oopd.js"></script><script async src="//at.alicdn.com/t/c/font_3961691_jvjklfsnh6.js"></script><script async src="//at.alicdn.com/t/c/font_3952611_jy1uuol1v2f.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="/js/sun_moon_custom.js"></script><script async src="/js/title_custom.js"></script><script defer src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script defer src="/js/lunar_custom.js"></script><script defer src="/js/day_custom.js"></script><script async src="/js/coin_custom.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async data-pjax src="/js/tencentmap.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script data-pjax>function butterfly_clock_anzhiyu_injector_config(){var e=document.getElementsByClassName("sticky_layout")[0];console.log("已挂载butterfly_clock_anzhiyu"),e&&e.insertAdjacentHTML("afterbegin",'<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>')}for(var elist="null".split(","),cpage=location.pathname,epage="/",qweather_key="23fedd2a680a407d8ecdd2783a008edc",gaud_map_key="e2b04289e870b005374ee030148d64fd&s=rsv3",baidu_ak_key="undefined",flag=0,clock_rectangle="113.34532,23.15624",clock_default_rectangle_enable="false",i=0;i<elist.length;i++)cpage.includes(elist[i])&&flag++;("all"===epage&&0==flag||epage===cpage)&&butterfly_clock_anzhiyu_injector_config()</script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script data-pjax>function butterfly_swiper_injector_config(){var t=document.getElementById("recent-posts");console.log("已挂载butterfly_swiper"),t.insertAdjacentHTML("afterbegin",'<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/07/28/Ethernet Protocol/" alt=""><img width="48" height="48" src="https://cdn.shenyanwu.top/Image/Article/Vector/Ethernet/image/Ethernet_cover.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-28</span><a class="blog-slider__title" href="2022/07/28/Ethernet Protocol/" alt="">Ethernet 车载以太网（Vector）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/07/28/Ethernet Protocol/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/07/22/CAN Protocol/" alt=""><img width="48" height="48" src="https://cdn.shenyanwu.top/Image/Article/Vector/CAN/image/CAN%20Controller%20title.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-22</span><a class="blog-slider__title" href="2022/07/22/CAN Protocol/" alt="">CAN 通信协议（Vector）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/07/22/CAN Protocol/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>')}for(var elist="undefined".split(","),cpage=location.pathname,epage="/",flag=0,i=0;i<elist.length;i++)cpage.includes(elist[i])&&flag++;("all"===epage&&0==flag||epage===cpage)&&butterfly_swiper_injector_config()</script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><script async src="//at.alicdn.com/t/c/font_4229898_plk7gghxaqf.js"></script></body></html>
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Altium Designer入门学习笔记 | Shenyan Wu</title><meta name="author" content="Shenyan Wu"><meta name="copyright" content="Shenyan Wu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="🥧本文记录学习Altium Designer入门教程，防止忘记后方便查询">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Altium Designer入门学习笔记">
+<meta property="og:url" content="https://shenyanwu.top/2021/06/04/AltiumDesigner/index.html">
+<meta property="og:site_name" content="Shenyan Wu">
+<meta property="og:description" content="🥧本文记录学习Altium Designer入门教程，防止忘记后方便查询">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Cover.png">
+<meta property="article:published_time" content="2021-06-04T09:35:16.000Z">
+<meta property="article:modified_time" content="2024-01-15T13:47:37.531Z">
+<meta property="article:author" content="Shenyan Wu">
+<meta property="article:tag" content="AD">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Cover.png"><link rel="shortcut icon" href="https://cdn.shenyanwu.top/Image/favicon.png"><link rel="canonical" href="https://shenyanwu.top/2021/06/04/AltiumDesigner/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Altium Designer入门学习笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-01-15 21:47:37'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom/custom.css""><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3949965_zlxge6oopd.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3961691_jvjklfsnh6.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3952611_jy1uuol1v2f.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (false) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="an_music_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.shenyanwu.top/Image/Avatar.gif" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:18px"> 主页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-wenzhang"></use></svg><span class="menu_word" style="font-size:18px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-archiver">                   </use></svg><span class="menu_word" style="font-size:18px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-biaoqian">                   </use></svg><span class="menu_word" style="font-size:18px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:18px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-chat"></use></svg><span class="menu_word" style="font-size:18px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-link">                   </use></svg><span class="menu_word" style="font-size:18px"> 友链</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-chat1">                   </use></svg><span class="menu_word" style="font-size:18px"> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:18px"> 工具箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://music.shenyanwu.top"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-music1">                   </use></svg><span class="menu_word" style="font-size:18px"> 音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/videos/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-videos">                   </use></svg><span class="menu_word" style="font-size:18px"> 视频</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/todolist/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-todolist">                   </use></svg><span class="menu_word" style="font-size:18px"> ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-about"></use></svg><span class="menu_word" style="font-size:18px"> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Cover.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Shenyan Wu"><span class="site-name">Shenyan Wu</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:18px"> 主页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-wenzhang"></use></svg><span class="menu_word" style="font-size:18px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-archiver">                   </use></svg><span class="menu_word" style="font-size:18px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-biaoqian">                   </use></svg><span class="menu_word" style="font-size:18px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:18px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-chat"></use></svg><span class="menu_word" style="font-size:18px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-link">                   </use></svg><span class="menu_word" style="font-size:18px"> 友链</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-chat1">                   </use></svg><span class="menu_word" style="font-size:18px"> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:18px"> 工具箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://music.shenyanwu.top"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-music1">                   </use></svg><span class="menu_word" style="font-size:18px"> 音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/videos/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-videos">                   </use></svg><span class="menu_word" style="font-size:18px"> 视频</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/todolist/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-todolist">                   </use></svg><span class="menu_word" style="font-size:18px"> ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about/"><svg class="menu_icon faa-tada" aria-hidden="true"><use xlink:href="#icon-about"></use></svg><span class="menu_word" style="font-size:18px"> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Altium Designer入门学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-calendar"></use></svg><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-06-04T09:35:16.000Z" title="Created 2021-06-04 17:35:16">2021-06-04</time><span class="post-meta-separator">|</span><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-gengxin"></use></svg><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-01-15T13:47:37.531Z" title="Updated 2024-01-15 21:47:37">2024-01-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-wordFile"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">3.1k</span><span class="post-meta-separator">|</span><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>11min</span></span><span class="post-meta-separator">|</span><span id="" data-flag-title="Altium Designer入门学习笔记"><svg class="post_icon" aria-hidden="true"><use xlink:href="#icon-yanjing1"></use></svg><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="Altium-Designer-基本配置"><a href="#Altium-Designer-基本配置" class="headerlink" title="Altium Designer 基本配置"></a>Altium Designer 基本配置</h2><p>为了方便操作，下面是使用软件时初步做的一些配置项</p>
+<div class="tabs" id="基本配置"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#基本配置-1">System</button></li><li class="tab"><button type="button" data-href="#基本配置-2">Data Management</button></li><li class="tab"><button type="button" data-href="#基本配置-3">Schematic</button></li><li class="tab"><button type="button" data-href="#基本配置-4">PCB Editor</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="基本配置-1"><p>点击配置中的 <code>System</code> -&gt; <code>Navigation</code>，配置 <code>Cross Select Mode</code> 交叉选择，勾选 <code>Dimming(变暗)</code> </p>
+<details class="folding-tag" red><summary> Navigation </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/NavDimming.png" alt="NavDimming"></p>
+              </div>
+            </details>
+
+<p>点击配置中的 <code>System</code> -&gt; <code>Design Insight</code>，取消勾选所有选项</p>
+<details class="folding-tag" red><summary> Design Insight </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/DesignInsight.png" alt="DesignInsight"></p>
+              </div>
+            </details><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="基本配置-2"><p>点击配置中的 <code>System</code> -&gt; <code>Backup</code>，配置相关备份时间与备份路径</p>
+<details class="folding-tag" yellow><summary> Backup </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Recovery.png" alt="Recovery"></p>
+              </div>
+            </details><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="基本配置-3"><p>点击配置中的 <code>Schematic</code> -&gt; <code>Graphical Editing</code>，其中配置取消勾选 <code>Reset Parts Designators On Paste</code> （粘贴时重置元器位号）</p>
+<details class="folding-tag" green><summary> Graphical Editing </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/ResetDesignator.png" alt="ResetDesignator"></p>
+              </div>
+            </details><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="基本配置-4"><p>点击配置中的 <code>PCB Editor</code> -&gt; <code>General</code>，其中配置勾选 <code>Cursor Type</code> 选择 <code>Large 90</code>，取消勾选文件格式改变报告</p>
+<details class="folding-tag" blue><summary> General </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/PCBGeneral.png" alt="PCBGeneral"></p>
+              </div>
+            </details>
+
+<p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Board Insight Modes</code>，其中配置取消勾选 <code>Display Heads Up Info(抬头信息)</code> 和 <code>Use Background Color(背景颜色)</code></p>
+<details class="folding-tag" blue><summary> Board Insight Modes </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/PCBBoardInsight.png" alt="PCBBoardInsight"></p>
+              </div>
+            </details>
+
+<p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Board Insight Colors &amp; DRC Violations</code>，其中配置暂时都选为 <code>Solid(实体)</code></p>
+<details class="folding-tag" blue><summary> Board Insight Colors & DRC Violations </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/PCBSolid.png" alt="PCBSolid"></p>
+              </div>
+            </details>
+
+<p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Interactive Rounting</code>，其中配置 <code>取消选择过孔/导线</code> 和 <code>选择过孔/导线</code> 为 <code>Move</code> 配置取消勾选 <code>移动元器件时相应布线移动</code></p>
+<details class="folding-tag" blue><summary> Interactive Rounting </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Interactive.png" alt="Interactive"></p>
+              </div>
+            </details>
+
+<p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Defaults</code>，其中配置 <code>via(过孔)</code> 孔径 <code>12mil</code>，盘径 <code>24mil</code>，选择手动盖油 <code>tented</code></p>
+<details class="folding-tag" blue><summary> Defaults(Via) </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/via tented.png" alt="via tented"></p>
+              </div>
+            </details>
+
+<p>点击配置中的 <code>PCB Editor</code> -&gt; <code>Defaults</code>，其中配置 <code>Polygon</code> 选项，<code>Hatched</code> 中 <code>Track Width</code> 为 <code>5mil</code>，<code>Grid Size</code> 为 <code>4mil</code>，选择为所有相同网络对象铺铜 <code>Pour Over All Same Net Objects</code>，同时勾选去除死铜 <code>Remove Dead Copper</code></p>
+<details class="folding-tag" blue><summary> Defaults(Polygon) </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Polygon.png" alt="Polygon"></p>
+              </div>
+            </details><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h2 id="工程文件创建"><a href="#工程文件创建" class="headerlink" title="工程文件创建"></a>工程文件创建</h2><details class="folding-tag" blue><summary> 工程文件创建 </summary>
+              <div class='content'>
+              <p>创建工程后为其添加原理图文件，PCB文件，原理图库，PCB图库，保证在一个工程中，能够相互交叉关联</p>
+              </div>
+            </details>
+<h2 id="原理图库器件的创建"><a href="#原理图库器件的创建" class="headerlink" title="原理图库器件的创建"></a>原理图库器件的创建</h2><p>Omit</p>
+<h2 id="原理图库器件调用"><a href="#原理图库器件调用" class="headerlink" title="原理图库器件调用"></a>原理图库器件调用</h2><p> <code>Design</code> -&gt; <code>Make Schematic ibrary</code>       快捷键 <kbd>D</kbd> </p>
+<h2 id="原理图添加导线和网络标签"><a href="#原理图添加导线和网络标签" class="headerlink" title="原理图添加导线和网络标签"></a>原理图添加导线和网络标签</h2><p>Omit</p>
+<h2 id="原理图统一编号设置"><a href="#原理图统一编号设置" class="headerlink" title="原理图统一编号设置"></a>原理图统一编号设置</h2><p><code>Tools</code> -&gt; <code>Annoation</code>       快捷键 <kbd>T</kbd> <kbd>A</kbd> <kbd>A</kbd></p>
+<h2 id="原理图统一PCB封装设置"><a href="#原理图统一PCB封装设置" class="headerlink" title="原理图统一PCB封装设置"></a>原理图统一PCB封装设置</h2><p><code>Tools</code> -&gt; <code>Footprint Manager</code></p>
+<h2 id="原理图编译检查设置"><a href="#原理图编译检查设置" class="headerlink" title="原理图编译检查设置"></a>原理图编译检查设置</h2><p><code>Projects</code> -&gt; <code>Projects Options</code></p>
+<blockquote>
+<p>Floating net labels</p>
+<p>Floating power objects</p>
+<p>Nets with multiple names (SC Fault)</p>
+<p>Nets with only one pin (Maybe use wrong net name)</p>
+<p>Fail to add alternate item</p>
+<p>Un-Designated parts requiring annotation</p>
+<p>Duplicate part Designators</p>
+</blockquote>
+<h2 id="原理图输出"><a href="#原理图输出" class="headerlink" title="原理图输出"></a>原理图输出</h2><p>BOM: <code>Reports</code> -&gt; <code>Bill Of Materials</code></p>
+<p>PDF:  <code>File</code> -&gt; <code>Smart PDF..</code></p>
+<h2 id="PCB封装创建"><a href="#PCB封装创建" class="headerlink" title="PCB封装创建"></a>PCB封装创建</h2><p>原点居中：  <code>Edit</code> -&gt; <code>Set Reference</code> -&gt; <code>Center</code>       快捷键 <kbd>E</kbd> <kbd>F</kbd> <kbd>C</kbd></p>
+<blockquote>
+<p>在复制移动时，发现无法镜像或者旋转，考虑以下问题</p>
+<ul>
+<li><p>输入法为中文输入法，建议切换为英文或者纯英</p>
+</li>
+<li><p>在设置选顼 <code>schematic</code> -&gt; <code>Graphical Editing</code> 把 <code>Always Drag</code> 钩去除</p>
+</li>
+</ul>
+</blockquote>
+<p>丝印线段打断  快捷键 <kbd>E</kbd> <kbd>K</kbd> </p>
+<p>焊盘洞，需要在 <code>Multi-Layer</code> 放置</p>
+<h2 id="PCB库器件调用"><a href="#PCB库器件调用" class="headerlink" title="PCB库器件调用"></a>PCB库器件调用</h2><p> <code>Design</code> -&gt; <code>Make PCB Library</code>       快捷键 <kbd>D</kbd> <kbd>P</kbd></p>
+<h2 id="PCB库3D模型导入"><a href="#PCB库3D模型导入" class="headerlink" title="PCB库3D模型导入"></a>PCB库3D模型导入</h2><p>3D模型放置需要在 <code>Mechanical 1 Layer</code></p>
+<p>放置后双击 3D 模型进行调整位置</p>
+<blockquote>
+<p>注意：由于 3D 模型的原点和 PCB 的不同，所以可能放置时看不到，此时在 PCB 2D 模式下建议先缩小整体布局，将 3D 模型放置到附近再进行操作</p>
+</blockquote>
+<h2 id="PCB-导入"><a href="#PCB-导入" class="headerlink" title="PCB 导入"></a>PCB 导入</h2><p> <code>Design</code> -&gt; <code>Import Changes from XXXXX.PrjPcb</code> </p>
+<p><code>Upadte</code> 从草图 <code>Schematic</code> 的 <code>Design</code> 中更新元器件和新的网络改动至 PCB 文件中，或从 PCB 的新增删改中更新至草图</p>
+<blockquote>
+<p>需要注意在原理图和PCB中的管脚编号都得一样，匹配引脚相同，不能原理图是数字，PCB是字母等</p>
+<p>还有封装要确保导入；确保PCB库写了管脚号；管脚号匹配（1 2 3 4 | 1 2 2 2）</p>
+</blockquote>
+<h2 id="PCB-绿色报错"><a href="#PCB-绿色报错" class="headerlink" title="PCB 绿色报错"></a>PCB 绿色报错</h2><p>引发报错的原因是设置的 DRC         <code>Tools</code> -&gt; <code>Design Rules Check</code></p>
+<p>通常有些芯片封装设计的焊盘间距很小，如 7.32mil，而软件默认设置间距为 10mil，就会发生报错，可以选择修改软件的焊盘检查间距，或者勾选忽略同一封装内间距</p>
+<details class="folding-tag" blue><summary> PCB Green Error </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/GreenError.png" alt="GreenError"></p><p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/PCBGreenError.png" alt="PCBGreenError"></p><blockquote><p>注意修改检查间距时，要合理，根据工业制造水平来确认设置的间距要求</p></blockquote>
+              </div>
+            </details>
+<h2 id="PCB-板框的评估与叠层设计"><a href="#PCB-板框的评估与叠层设计" class="headerlink" title="PCB 板框的评估与叠层设计"></a>PCB 板框的评估与叠层设计</h2><h3 id="板框设计"><a href="#板框设计" class="headerlink" title="板框设计"></a>板框设计</h3><p><code>Edit</code> -&gt; <code>Origin</code> -&gt; <code>Set Origin</code></p>
+<p>以原点为参考点，在 <code>Mechanical 1 Layer</code> 绘制板框线，选中后按下 <kbd>tab</kbd> 键，全选板框线，选择菜单 <code>Design</code> -&gt; <code>Board Shape</code> -&gt; <code>Define Board Shape from Selected Objects</code>，板框即被修改</p>
+<h3 id="叠层设置"><a href="#叠层设置" class="headerlink" title="叠层设置"></a>叠层设置</h3><p> <code>Design</code> -&gt; <code>Layer Stack Manager</code>  用来设计多层板</p>
+<h2 id="PCB-快捷键自定义设置"><a href="#PCB-快捷键自定义设置" class="headerlink" title="PCB 快捷键自定义设置"></a>PCB 快捷键自定义设置</h2><p>在相应的菜单栏中按 <kbd>Ctrl</kbd> 键和鼠标左键进行设置</p>
+<p> <kbd>Shift</kbd> +  <kbd>S</kbd>  高亮显示当前层</p>
+<p>在 PCB 中按 <kbd>F5</kbd> ，表示启用 PCB 的网络颜色覆写</p>
+<p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/BoardInsightColorOverrides.png" alt=""></p>
+<blockquote>
+<p>若修改颜色后没有反应，应当是没有启用，如下图所示，即快捷键 <kbd>F5</kbd> </p>
+</blockquote>
+<details class="folding-tag" blue><summary> Board Insight Color Overrrides </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/NetColorOverride.png" style="zoom: 50%;" /></p>
+              </div>
+            </details>
+<p>右键任务栏，则可以在自定义中修改冲突的快捷键，设置下图快捷键为 <kbd>F6</kbd> 可以在原理图分栏布局交叉选择时很有用</p>
+<p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/ArrangeWithRectangle.png" style="zoom:50%;" /></p>
+<p>同样对元器件交叉选择时，选 PCB 高亮原理图，则 <code>Tools</code> -&gt; <code>Cross Probe</code>     快捷键 <kbd>T</kbd> + <kbd>C</kbd> </p>
+<blockquote>
+<p>按下 <kbd>S</kbd> 呼出选择菜单</p>
+<p>推荐 <code>Select</code> -&gt; <code>Touching line</code> （线选）设置为 <kbd>2</kbd> </p>
+<p>推荐 <code>Select</code> -&gt; <code>Inside Area</code> （框选）设置为 <kbd>3</kbd> ，可以在选择的时候放置拖动别的元器件，单独框选</p>
+<p>Align -&gt; Position Component Text 快捷放置元器件编号</p>
+</blockquote>
+<h2 id="PCB-布局"><a href="#PCB-布局" class="headerlink" title="PCB 布局"></a>PCB 布局</h2><p>布局定位，可以通过在想要定位的地方添加过孔，然后通过对齐命令找中点来进行拖放对齐</p>
+<p>开启捕捉圆心，边缘等功能快捷键 <kbd>Shift</kbd> + <kbd>E</kbd> </p>
+<p>微调元器件位置  <kbd>Ctrl</kbd> + <kbd>Direction</kbd> </p>
+<p>相关 <code>Design</code> -&gt; <code>Rules</code> 中一级目录用于使能规则检查，二级及子目录用来设置具体规则</p>
+<h3 id="网络-Class-设置"><a href="#网络-Class-设置" class="headerlink" title="网络 Class 设置"></a>网络 Class 设置</h3><p><code>Design</code> -&gt; <code>Classes</code> 通过设置 <code>Netclass</code> 创建此类，添加对应的信号成员，可以设置对应类组的颜色，显示状态等</p>
+<h3 id="间距规则设置"><a href="#间距规则设置" class="headerlink" title="间距规则设置"></a>间距规则设置</h3><p><code>Design</code> -&gt; <code>Rules</code> -&gt; <code>Electrical</code> -&gt; <code>Clearance</code>      还可以针对某些焊盘过孔等元器件特征进行添加 Clearance</p>
+<h3 id="线宽规则设置"><a href="#线宽规则设置" class="headerlink" title="线宽规则设置"></a>线宽规则设置</h3><p><code>Design</code> -&gt; <code>Rules</code> -&gt; <code>Routing</code> -&gt; <code>Width</code>     可以针对分好组的网络类进行管理，比如电源一类的布线就要宽一些</p>
+<blockquote>
+<p>同时也可以右键添加 <code>Width</code> 规则</p>
+</blockquote>
+<h3 id="过孔规则设置"><a href="#过孔规则设置" class="headerlink" title="过孔规则设置"></a>过孔规则设置</h3><p>需注意一般过孔会直接盖油，即无阻焊，设置 <code>Solder Mask Expansion</code> -&gt; <code>tented</code></p>
+<p>孔的直径大小 h 与盘的直径大小 m 的经验关系为</p>
+<script type="math/tex; mode=display">
+m = 2h \pm 2 \ (mil)</script><h3 id="铺铜规则设置"><a href="#铺铜规则设置" class="headerlink" title="铺铜规则设置"></a>铺铜规则设置</h3><p><code>Design</code> -&gt; <code>Rules</code> -&gt; <code>Plane</code></p>
+<blockquote>
+<p>手工焊接的话，建议使用十字连接（接插件等可能需要手焊接的）</p>
+<p>载流强的地方，需要使用全连接（SMT）</p>
+<p>对于两层板，通孔接插件可选十字，过孔选全连接</p>
+</blockquote>
+<p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/PolygonConnect.png" alt=""></p>
+<h3 id="其他规则设置"><a href="#其他规则设置" class="headerlink" title="其他规则设置"></a>其他规则设置</h3><p>开通窗，芯片引脚焊盘之间的阻焊设置为有间隔，经验值外扩 <code>2.5mil</code>，保证焊接良品率，引脚不短接</p>
+<p><code>Design</code> -&gt; <code>Rules</code> -&gt; <code>Mask</code> -&gt; <code>SolderMaskExpansion</code> </p>
+<details class="folding-tag" blue><summary> SolderMaskExpansion </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/kaitongchuang2.png" alt=""></p>
+              </div>
+            </details>
+<p>丝印到焊盘阻焊之间的距离，建议经验值 <code>2mil</code></p>
+<p><code>Design</code> -&gt; <code>Rules</code> -&gt; <code>Manufacturing</code> -&gt; <code>SilkToSolderMaskClearance</code></p>
+<p>丝印到丝印之间的距离，建议经验值 <code>2mil</code></p>
+<p><code>Design</code> -&gt; <code>Rules</code> -&gt; <code>Manufacturing</code> -&gt; <code>SilkToSilkClearance</code></p>
+<details class="folding-tag" blue><summary> SilkToSolderMaskClearance </summary>
+              <div class='content'>
+              <p><img src="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/SilktoSolderMask.png" alt=""></p><blockquote><p>SilkToSilkClearance 同理如上图</p></blockquote>
+              </div>
+            </details>
+<h2 id="PCB-布线宏观分析"><a href="#PCB-布线宏观分析" class="headerlink" title="PCB 布线宏观分析"></a>PCB 布线宏观分析</h2><p>走线顺序建议如下：</p>
+<ol>
+<li>优先选择信号走线（避免打过孔，少打孔）</li>
+<li>选择电源走线（保证载流）打孔铺铜方便走线</li>
+<li>选择 GND 走线（铺铜处理）打孔铺铜方便走线</li>
+</ol>
+<h3 id="创建大面积铺铜"><a href="#创建大面积铺铜" class="headerlink" title="创建大面积铺铜"></a>创建大面积铺铜</h3><p>在布线完成后，切换到 <code>Mechanical 1 Layer</code> 选择板框线，然后选择 <code>Tools</code> -&gt; <code>Convert</code> -&gt; <code>Create Polygon from Selected Primitives</code> 创建一个和板框一样大小的铺铜，把图层切换到需要铺铜的层，如 <code>Top Layer</code>，然后选择网络 <code>GND</code>，设置 <code>Hatched</code>等选项，重新 Pour Polygon 即可</p>
+<h3 id="调整板框与铺铜间距"><a href="#调整板框与铺铜间距" class="headerlink" title="调整板框与铺铜间距"></a>调整板框与铺铜间距</h3><p>切换到 <code>Mechanical 1 Layer</code> 选择板框线，基于一个参考的复制后，切换到 <code>Keep-Out Layer</code>，选择菜单 <code>Edit</code> -&gt; <code>Paste Special</code>，只选择粘贴到当前层选项</p>
+<h2 id="丝印规范"><a href="#丝印规范" class="headerlink" title="丝印规范"></a>丝印规范</h2><p> 丝印的 <code>Stroke Width</code> : <code>Text Height</code> 通常经验值为  4:25  5:30  6:45  10:60</p>
+<p>丝印字符阅读排列方向为 → 或者 ↑</p>
+<p><strong>整体缩放：</strong>选中想要缩放的所有对象，右键 <code>Creat Union</code> 后可以 <code>resize union</code></p>
+<h2 id="PCB-拼版"><a href="#PCB-拼版" class="headerlink" title="PCB 拼版"></a>PCB 拼版</h2><blockquote>
+<p>节约生产成本，提高 SMT 效率，节省 PCBA 拿放时间</p>
+</blockquote>
+<h3 id="V-Cut"><a href="#V-Cut" class="headerlink" title="V-Cut"></a>V-Cut</h3><p>通常用于整齐的板型，切出 V 字槽方便折断</p>
+<ol>
+<li>线以及焊盘离外形线要保持至少 0.4mm</li>
+<li>V 割边有槽孔，特别注意拼板最好不用 V 割拼板</li>
+<li>由于设备原因，V 割最好不要小于 70mm</li>
+</ol>
+<h3 id="邮票孔"><a href="#邮票孔" class="headerlink" title="邮票孔"></a>邮票孔</h3><p>用于不规则的板型，方便折断</p>
+<p>为防止邮票孔距离器件太近，后期分板出现分层爆板，通常邮票孔添加的位置要距离板内器件和走线 0.5mm 及以上</p>
+<p>如果是添加在两个单元的中间部分，一般使用双排邮票孔，但是如果加在工艺边，还是建议单排邮票孔以节省成本</p>
+<p>邮票孔的连接位置到板边的间距应小于 15mm，如果大于 15mm，当板子在贴边机的轨道上运行时，会在贴片机内上下起伏或晃动，易致器件位置偏移，影响焊接合格率</p>
+<blockquote>
+<p>一般邮票孔使用孔的孔径为直径 0.8mm 的非金属化孔</p>
+<p>孔与孔的中心间距为 1.1mm 左右，孔的个数 5 个为宜</p>
+</blockquote>
+<h3 id="光学定位点和工艺边"><a href="#光学定位点和工艺边" class="headerlink" title="光学定位点和工艺边"></a>光学定位点和工艺边</h3><p><strong>光学定位点</strong></p>
+<p>光学定位点，也就是我们通常所说的 Mark 点，Mark 点用于锡膏印刷和元器件贴片的光学定位，为装配工艺中的所有步骤提供共同的可测量点，这能够使装配使用的每个设备精确的定位电路图案。单板上或者是工艺边上应该至少有三个 Mark 点，呈 L 型分布，且对角的 Mark 点关于中心是不对称的。如果 TOP 面与 Bottom 面都有贴片的元器件，那么每一面都需要放置 Mark 点，如果哪一面没有贴片器件，则不需要放置 Mark 点。关于 Mark 点的尺寸要求，形状是直径为 1mm 的实心圆，材料为铜，表面喷锡，需要注意平整度，边缘光滑、齐整，颜色与周围的背景色有明显区别，阻焊开窗与 Mark 点同心，而却为了减少电镀或者蚀刻不均匀对 Mark 点造成的影响，推荐 Mark 点外围增加保护环</p>
+<p><strong>工艺边</strong></p>
+<p>为了减少焊接的时候 PCB 板卡的变形，对于不拼板的 PCB 来说，我们要选择把长边做为传送边，我们拼板的的 PCB 板卡，也应该将长边做为我们的传送边.对于有些板卡，长边与短边差不多的时候，建议当短边与长边之比大于80%时，可以用短边做为传送边。当 PCB 板卡比较密的时候，需要手动添加工艺边，宽度为 3mm 或者是 5mm，以便于后期贴片</p>
+<h3 id="拼版"><a href="#拼版" class="headerlink" title="拼版"></a>拼版</h3><p><code>Place</code> -&gt; <code>Embedded Board Array/Panelize</code>，按 <kbd>Tab</kbd> 来设置路径和行列数量，同时调整间距</p>
+<p>在 <code>Mechanical 1 Layer</code> 绘制工艺边</p>
+<p>在拼板后添加字符串分别放在不同的层，在导出制造文件 <code>Gerber</code> 文件后方便制造人员识别当前层级</p>
+<h2 id="文件导出"><a href="#文件导出" class="headerlink" title="文件导出"></a>文件导出</h2><h3 id="PDF-导出"><a href="#PDF-导出" class="headerlink" title="PDF 导出"></a>PDF 导出</h3><p><code>File</code> -&gt; <code>Smart PDF</code> 在打印设置中选择图层，右键，<code>Create Assembly Drawings</code></p>
+<p>通常在 <code>Assembly</code> 中选择导出的层级为 <code>Top Overlay</code> <code>Mechanical 1 Layer</code> <code>Top Solder</code>  （丝印，板框，阻焊），同时底层可以选择镜像（Mirror）选项，方便查看</p>
+<h3 id="Gerber-导出"><a href="#Gerber-导出" class="headerlink" title="Gerber 导出"></a>Gerber 导出</h3><p><code>Gerber</code> 用做板厂生产文件， <code>File</code> -&gt; <code>Fabrication Outputs</code> -&gt; <code>Gerber Files</code></p>
+<p><strong>输出高级设置</strong></p>
+<ol>
+<li><p>输出 Gerber</p>
+<p><code>File</code> -&gt; <code>News</code> -&gt; <code>Output Job File</code> -&gt; <code>Fabrication Outputs</code> 中选择 <code>Add New Fabrication Output</code> ，选择使能后设置输出路径等选项，然后双击文件对需要导出的 <code>Gerber</code> 进行设置</p>
+</li>
+</ol>
+<p><code>Units</code> -&gt; <code>Inches</code>       <code>Decimal</code> -&gt; <code>0.1mil</code> (2:4) </p>
+<p><code>Layer to Plot</code> -&gt; 绘制层全选后删除无用的器件层 <code>Mechanical 13 Layer</code> <code>Mechanical 15 Layer</code> <code>Keep-Out Layer</code> <code>Layer Classes</code> </p>
+<p><code>Advanced</code> -&gt; <code>Aperture Tolerances</code> 默认</p>
+<ol>
+<li>输出钻孔文件</li>
+</ol>
+<p><code>Add New Fabrication Output</code> -&gt; <code>NC Drill Files</code> -&gt; <code>Units</code> -&gt; <code>Inches</code>       <code>Decimal</code> -&gt; <code>0.1mil</code> (2:4) </p>
+<ol>
+<li>输出坐标文件（不同于拼版，通常为单板）</li>
+</ol>
+<p><code>Assembly Outputs</code> -&gt; <code>Add New Assembly Output</code> -&gt; <code>Generates pick and place files</code> -&gt; <code>Units</code> -&gt; <code>Metric</code></p>
+<h3 id="制造"><a href="#制造" class="headerlink" title="制造"></a>制造</h3><p>板子厚度通常在 1.0 ~ 1.6</p>
+<p>铜箔厚度 1oz</p>
+<p>线宽与孔径按照设计来，设计时根据制造已考虑</p>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>Altium Designer入门学习笔记</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://shenyanwu.top/2021/06/04/AltiumDesigner/">https://shenyanwu.top/2021/06/04/AltiumDesigner/</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>Shenyan Wu</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2021-06-04</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2024-01-15</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AD/">AD</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.shenyanwu.top/Image/Article/AltiumDesigner/Cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><link rel="stylesheet" href="/" media="defer" onload="this.media='all'"/><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">投喂一下</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.shenyanwu.top/Image/rw_wechat.png" target="_blank"><img class="post-qr-code-img" src="https://cdn.shenyanwu.top/Image/rw_wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://cdn.shenyanwu.top/Image/rw_alipay.png" target="_blank"><img class="post-qr-code-img" src="https://cdn.shenyanwu.top/Image/rw_alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></button></div><audio id="coinAudio" src="https://npm.elemecdn.com/akilar-candyassets@1.0.36/audio/aowu.m4a"></audio><script defer="defer" src="/"></script><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Altium-Designer-%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">Altium Designer 基本配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E5%88%9B%E5%BB%BA"><span class="toc-text">工程文件创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E5%BA%93%E5%99%A8%E4%BB%B6%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-text">原理图库器件的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E5%BA%93%E5%99%A8%E4%BB%B6%E8%B0%83%E7%94%A8"><span class="toc-text">原理图库器件调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E6%B7%BB%E5%8A%A0%E5%AF%BC%E7%BA%BF%E5%92%8C%E7%BD%91%E7%BB%9C%E6%A0%87%E7%AD%BE"><span class="toc-text">原理图添加导线和网络标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E7%BB%9F%E4%B8%80%E7%BC%96%E5%8F%B7%E8%AE%BE%E7%BD%AE"><span class="toc-text">原理图统一编号设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E7%BB%9F%E4%B8%80PCB%E5%B0%81%E8%A3%85%E8%AE%BE%E7%BD%AE"><span class="toc-text">原理图统一PCB封装设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E7%BC%96%E8%AF%91%E6%A3%80%E6%9F%A5%E8%AE%BE%E7%BD%AE"><span class="toc-text">原理图编译检查设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E7%90%86%E5%9B%BE%E8%BE%93%E5%87%BA"><span class="toc-text">原理图输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB%E5%B0%81%E8%A3%85%E5%88%9B%E5%BB%BA"><span class="toc-text">PCB封装创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB%E5%BA%93%E5%99%A8%E4%BB%B6%E8%B0%83%E7%94%A8"><span class="toc-text">PCB库器件调用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB%E5%BA%933D%E6%A8%A1%E5%9E%8B%E5%AF%BC%E5%85%A5"><span class="toc-text">PCB库3D模型导入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB-%E5%AF%BC%E5%85%A5"><span class="toc-text">PCB 导入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB-%E7%BB%BF%E8%89%B2%E6%8A%A5%E9%94%99"><span class="toc-text">PCB 绿色报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB-%E6%9D%BF%E6%A1%86%E7%9A%84%E8%AF%84%E4%BC%B0%E4%B8%8E%E5%8F%A0%E5%B1%82%E8%AE%BE%E8%AE%A1"><span class="toc-text">PCB 板框的评估与叠层设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%BF%E6%A1%86%E8%AE%BE%E8%AE%A1"><span class="toc-text">板框设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%A0%E5%B1%82%E8%AE%BE%E7%BD%AE"><span class="toc-text">叠层设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB-%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE"><span class="toc-text">PCB 快捷键自定义设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB-%E5%B8%83%E5%B1%80"><span class="toc-text">PCB 布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C-Class-%E8%AE%BE%E7%BD%AE"><span class="toc-text">网络 Class 设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%B4%E8%B7%9D%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">间距规则设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E5%AE%BD%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">线宽规则设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E5%AD%94%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">过孔规则设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BA%E9%93%9C%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">铺铜规则设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">其他规则设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB-%E5%B8%83%E7%BA%BF%E5%AE%8F%E8%A7%82%E5%88%86%E6%9E%90"><span class="toc-text">PCB 布线宏观分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%A4%A7%E9%9D%A2%E7%A7%AF%E9%93%BA%E9%93%9C"><span class="toc-text">创建大面积铺铜</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E6%95%B4%E6%9D%BF%E6%A1%86%E4%B8%8E%E9%93%BA%E9%93%9C%E9%97%B4%E8%B7%9D"><span class="toc-text">调整板框与铺铜间距</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%9D%E5%8D%B0%E8%A7%84%E8%8C%83"><span class="toc-text">丝印规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB-%E6%8B%BC%E7%89%88"><span class="toc-text">PCB 拼版</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#V-Cut"><span class="toc-text">V-Cut</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%AE%E7%A5%A8%E5%AD%94"><span class="toc-text">邮票孔</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E5%AD%A6%E5%AE%9A%E4%BD%8D%E7%82%B9%E5%92%8C%E5%B7%A5%E8%89%BA%E8%BE%B9"><span class="toc-text">光学定位点和工艺边</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%BC%E7%89%88"><span class="toc-text">拼版</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%AF%BC%E5%87%BA"><span class="toc-text">文件导出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PDF-%E5%AF%BC%E5%87%BA"><span class="toc-text">PDF 导出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gerber-%E5%AF%BC%E5%87%BA"><span class="toc-text">Gerber 导出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B6%E9%80%A0"><span class="toc-text">制造</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Shenyan Wu</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><br/> <a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Hexo.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Hexo.svg" alt="" data-ll-status="loaded" class="entered loaded"></a> <a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Butterfly.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Butterfly.svg" alt="" data-ll-status="loaded" class="entered loaded"></a> <a class="github-badge" target="_blank" href="https://console.dogecloud.com/" style="margin-inline:5px" title="本站使用多吉云为部分静态资源提供CDN加速"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_CDN.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_CDN.svg" alt="" data-ll-status="loaded" class="entered loaded"></a> <a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站托管于Vercel"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Vercel.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Vercel.svg" alt="" data-ll-status="loaded" class="entered loaded"></a> <a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Github.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Github.svg" alt="" data-ll-status="loaded" class="entered loaded"></a>         <a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20235551" style="margin-inline:5px" title="本站已加入萌ICP豪华套餐，萌ICP备20235551号"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_%E8%90%8CICP%E5%A4%87-20235551.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_%E8%90%8CICP%E5%A4%87-20235551.svg" alt="" data-ll-status="loaded" class="entered loaded"></a> <a class="github-badge" target="_blank" href="https://beian.miit.gov.cn" style="margin-inline:5px" title="备案啦，实名冲浪! 晋ICP备2023014808号-1"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_ICP%E5%A4%872023014808%E5%8F%B7-1.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_ICP%E5%A4%872023014808%E5%8F%B7-1.svg" alt="" data-ll-status="loaded" class="entered loaded"></a> <a class="github-badge" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src="https://cdn.shenyanwu.top/Image/Footer/Footer_Copyright-BY--NC--SA%204.svg" data-lazy-src="https://cdn.shenyanwu.top/Image/Footer/Footer_Copyright-BY--NC--SA%204.svg" alt="" data-ll-status="loaded" class="entered loaded"></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="Toggle Between Light And Dark Mode"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container').forEach(node => {
+            if (node.hasAttribute('display')) {
+              btf.wrap(node, 'div', { class: 'mathjax-overflow' })
+            } else {
+              btf.wrap(node, 'span', { class: 'mathjax-overflow' })
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.shenyanwu.top/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.shenyanwu.top/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script async src="/js/music_custom.js"></script><canvas id="universe"></canvas><script defer src="/js/universe_custom.js"></script><script async src="//at.alicdn.com/t/c/font_3949965_zlxge6oopd.js"></script><script async src="//at.alicdn.com/t/c/font_3961691_jvjklfsnh6.js"></script><script async src="//at.alicdn.com/t/c/font_3952611_jy1uuol1v2f.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="/js/sun_moon_custom.js"></script><script async src="/js/title_custom.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script defer src="/js/lunar_custom.js"></script><script defer src="/js/day_custom.js"></script><script async src="/js/coin_custom.js"></script><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async data-pjax src="/js/tencentmap.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var qweather_key = '23fedd2a680a407d8ecdd2783a008edc';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '113.34532,23.15624';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/07/28/Ethernet Protocol/" alt=""><img width="48" height="48" src="https://cdn.shenyanwu.top/Image/Article/Vector/Ethernet/image/Ethernet_cover.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-28</span><a class="blog-slider__title" href="2022/07/28/Ethernet Protocol/" alt="">Ethernet 车载以太网（Vector）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/07/28/Ethernet Protocol/" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="2022/07/22/CAN Protocol/" alt=""><img width="48" height="48" src="https://cdn.shenyanwu.top/Image/Article/Vector/CAN/image/CAN%20Controller%20title.png" alt="" onerror="this.src=https://unpkg.zhimg.com/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-07-22</span><a class="blog-slider__title" href="2022/07/22/CAN Protocol/" alt="">CAN 通信协议（Vector）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="2022/07/22/CAN Protocol/" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><script async src="//at.alicdn.com/t/c/font_4229898_plk7gghxaqf.js"></script><!-- hexo injector body_end end --></body></html>
